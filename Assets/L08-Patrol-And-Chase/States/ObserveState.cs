@@ -33,9 +33,9 @@ namespace Wirune.L08
 
         public void OnStay(Agent agent)
         {
-            if (agent.IsTargetInRange())
+            if (agent.HasPlayer())
             {
-                agent.fsm.ChangeState(Agent.SEEK_STATE);
+                agent.GetFsm().ChangeState(Agent.SEEK_STATE);
             }
             else
             {
@@ -45,7 +45,7 @@ namespace Wirune.L08
 
                     if (m_CurrentCount >= m_MaxCount)
                     {
-                        agent.fsm.ChangeState(Agent.PATROL_STATE);
+                        agent.GetFsm().ChangeState(Agent.PATROL_STATE);
 
                         return;
                     }

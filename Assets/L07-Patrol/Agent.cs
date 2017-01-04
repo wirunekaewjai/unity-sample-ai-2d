@@ -6,71 +6,68 @@ namespace Wirune.L07
 {
     public class Agent : MonoBehaviour 
     {
-        public float moveSpeed = 2f;
-        public float rotateSpeed = 5f;
+        [SerializeField]
+        private float m_MoveSpeed = 2f;
 
-        public float minDistance = 0.25f;
+        [SerializeField]
+        private float m_RotateSpeed = 5f;
 
-        public Path path;
+        [SerializeField]
+        private Path m_Path;
 
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
         void Update()
         {
-            Vector2 currentPoint = GetCurrentPoint();
+            Vector2 currentTarget = GetCurrentPoint();
             Vector2 currentPosition = transform.position;
 
-            Vector2 displacement = currentPoint - currentPosition;
-            Vector2 direction = displacement.normalized;
-
-            RotateTo(direction);
-            MoveForward();
-
+            Vector2 displacement = currentTarget - currentPosition;
             float distance = displacement.magnitude;
-            if (distance < minDistance)
-            {
-                GoToNextPoint();
-            }
-        }
 
-        void OnDrawGizmos()
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, minDistance);
+            if (distance > 0.05f)
+            {
+                RotateTo(displacement);
+                MoveForward(distance);
+            }
+            else
+            {
+                NextPoint();
+            }
         }
 
         public void RotateTo(Vector2 direction)
         {
-            float rotateStep = rotateSpeed * Time.deltaTime;
+            float rotateSpeedPerFrame = m_RotateSpeed * Time.deltaTime;
+            Vector2 newDirection = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
 
-            Vector3 newDirection = Vector3.RotateTowards(transform.up, direction, rotateStep, 0f);
             transform.rotation = Quaternion.LookRotation(Vector3.forward, newDirection);
         }
 
-        public void MoveForward()
+        public void MoveForward(float distance)
         {
-            float moveStep = moveSpeed * Time.deltaTime;
-            Vector2 velocity = Vector2.up * moveStep;
+            float moveSpeedPerFrame = Mathf.Min(m_MoveSpeed * Time.deltaTime, distance);
+            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
 
             transform.Translate(velocity);
         }
 
         public Vector2 GetCurrentPoint()
         {
-            return path.GetPoint(m_CurrentPointIndex);
+            return m_Path.GetPoint(m_CurrentPointIndex);
         }
 
-        public void GoToNextPoint()
+        public void NextPoint()
         {
             if (m_IsForward)
             {
                 m_CurrentPointIndex++;
 
-                if (m_CurrentPointIndex >= path.Count)
+                if (m_CurrentPointIndex >= m_Path.Count)
                 {
                     m_IsForward = false;
-                    m_CurrentPointIndex = path.Count - 1;
+                    m_CurrentPointIndex = m_Path.Count - 1;
                 }
             }
             else

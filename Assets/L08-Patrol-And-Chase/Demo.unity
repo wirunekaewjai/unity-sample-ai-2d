@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  radius: 0.6
 --- !u!212 &670734043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -464,13 +465,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d35d69d6dc265b4faa249f65ef5bc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 670734044}
-  moveSpeed: 1.5
-  rotateSpeed: 10
-  minDistance: 0.6
-  maxDistance: 2
-  stopDistance: 0.25
-  path: {fileID: 855012706}
+  m_Player: {fileID: 670734042}
+  m_MoveSpeed: 2
+  m_RotateSpeed: 15
+  m_MinDistance: 0.7
+  m_MaxDistance: 2
+  m_Path: {fileID: 855012706}
 --- !u!212 &863984835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -547,13 +547,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d35d69d6dc265b4faa249f65ef5bc03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 670734044}
-  moveSpeed: 2
-  rotateSpeed: 10
-  minDistance: 0.6
-  maxDistance: 2
-  stopDistance: 0.25
-  path: {fileID: 1451696056}
+  m_Player: {fileID: 670734042}
+  m_MoveSpeed: 2
+  m_RotateSpeed: 15
+  m_MinDistance: 0.7
+  m_MaxDistance: 2
+  m_Path: {fileID: 1451696056}
 --- !u!212 &1060066653
 SpriteRenderer:
   m_ObjectHideFlags: 0

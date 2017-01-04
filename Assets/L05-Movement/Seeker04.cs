@@ -7,37 +7,54 @@ namespace Wirune.L05
     // Add 'Min Distance'
     public class Seeker04 : MonoBehaviour 
     {
-        public Transform target;
-        public float moveSpeed = 2f;
-        public float rotateSpeed = 5f;
+        [SerializeField]
+        private Player m_Player;
 
-        public float minDistance = 1f;
-        public float maxDistance = 3f;
+        [SerializeField]
+        private float m_MoveSpeed = 2f;
+
+        [SerializeField]
+        private float m_RotateSpeed = 5f;
+
+        [SerializeField]
+        private float m_MinDistance = 1f;
+
+        [SerializeField]
+        private float m_MaxDistance = 3f;
 
         void Update ()
         {
-            float moveSpeedPerFrame = moveSpeed * Time.deltaTime;
-            float rotateSpeedPerFrame = rotateSpeed * Time.deltaTime;
+            Vector2 displacement = m_Player.transform.position - transform.position;
+            float distance = displacement.magnitude - m_Player.radius;
 
-            Vector2 displacement = target.position - transform.position;
-            Vector2 direction = displacement.normalized;
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            float distance = displacement.magnitude;
-
-            if (distance <= maxDistance && distance >= minDistance)
+            if (distance <= m_MaxDistance && distance >= m_MinDistance)
             {
-                transform.up = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
-                transform.Translate(velocity);
+                RotateTo(displacement);
+                MoveForward();
             }
         }
 
         void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, m_MinDistance);
+            Gizmos.DrawWireSphere(transform.position, m_MaxDistance);
+        }
 
-            Gizmos.DrawWireSphere(transform.position, minDistance);
-            Gizmos.DrawWireSphere(transform.position, maxDistance);
+        public void RotateTo(Vector2 direction)
+        {
+            float rotateSpeedPerFrame = m_RotateSpeed * Time.deltaTime;
+            Vector2 newDirection = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
+
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, newDirection);
+        }
+
+        public void MoveForward()
+        {
+            float moveSpeedPerFrame = m_MoveSpeed * Time.deltaTime;
+            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
+
+            transform.Translate(velocity);
         }
     }
 

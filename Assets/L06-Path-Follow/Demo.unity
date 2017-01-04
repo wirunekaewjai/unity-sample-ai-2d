@@ -406,10 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946bbac0650a9db4398851836fea716b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  rotateSpeed: 8
-  minDistance: 0.25
-  path: {fileID: 1451696056}
+  m_MoveSpeed: 2
+  m_RotateSpeed: 10
+  m_MinDistance: 0.2
+  m_Path: {fileID: 1451696056}
 --- !u!212 &1060066653
 SpriteRenderer:
   m_ObjectHideFlags: 0

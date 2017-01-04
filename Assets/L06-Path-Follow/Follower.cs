@@ -6,62 +6,68 @@ namespace Wirune.L06
 {
     public class Follower : MonoBehaviour
     {
-        public float moveSpeed = 2f;
-        public float rotateSpeed = 5f;
+        [SerializeField]
+        private float m_MoveSpeed = 2f;
 
-        public float minDistance = 0.25f;
+        [SerializeField]
+        private float m_RotateSpeed = 5f;
 
-        public Path path;
+        [SerializeField]
+        private Path m_Path;
+
         private int m_CurrentPointIndex = 0;
 
         void Update()
         {
-            if (m_CurrentPointIndex >= path.Count)
+            if (!IsPathEnded())
             {
-                return;
+                Vector2 currentTarget = GetCurrentPoint();
+                Vector2 currentPosition = transform.position;
+
+                Vector2 displacement = currentTarget - currentPosition;
+                float distance = displacement.magnitude;
+
+                if (distance > 0.05f)
+                {
+                    RotateTo(displacement);
+                    MoveForward(distance);
+                }
+                else
+                {
+                    NextPoint();
+                }
             }
-
-            Vector2 currentPoint = GetCurrentPoint();
-            Vector2 currentPosition = transform.position;
-
-            Vector2 displacement = currentPoint - currentPosition;
-            Vector2 direction = displacement.normalized;
-
-            RotateTo(direction);
-            MoveForward();
-
-            float distance = displacement.magnitude;
-            if (distance < minDistance)
-            {
-                m_CurrentPointIndex++;
-            }
-        }
-
-        void OnDrawGizmos()
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, minDistance);
         }
 
         public void RotateTo(Vector2 direction)
         {
-            float rotateStep = rotateSpeed * Time.deltaTime;
+            float rotateSpeedPerFrame = m_RotateSpeed * Time.deltaTime;
+            Vector2 newDirection = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
 
-            Vector3 newDirection = Vector3.RotateTowards(transform.up, direction, rotateStep, 0f);
             transform.rotation = Quaternion.LookRotation(Vector3.forward, newDirection);
         }
 
-        public void MoveForward()
+        public void MoveForward(float distance)
         {
-            float moveStep = moveSpeed * Time.deltaTime;
-            Vector2 velocity = Vector2.up * moveStep;
+            float moveSpeedPerFrame = Mathf.Min(m_MoveSpeed * Time.deltaTime, distance);
+            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
 
             transform.Translate(velocity);
         }
 
+        public bool IsPathEnded()
+        {
+            return m_CurrentPointIndex >= m_Path.Count;
+        }
+
         public Vector2 GetCurrentPoint()
         {
-            return path.GetPoint(m_CurrentPointIndex);
+            return m_Path.GetPoint(m_CurrentPointIndex);
+        }
+
+        public void NextPoint()
+        {
+            m_CurrentPointIndex++;
         }
     }
 }

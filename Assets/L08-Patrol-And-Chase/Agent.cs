@@ -10,79 +10,88 @@ namespace Wirune.L08
         public const byte OBSERVE_STATE = 2;
         public const byte SEEK_STATE    = 3;
 
-        public Transform target;
-
-        public float moveSpeed = 2f;
-        public float rotateSpeed = 5f;
-
-        public float minDistance = 1f;
-        public float maxDistance = 3f;
-
-        public float stopDistance = 0.25f;
-
-        // Non-Serialized
-        public Wirune.L04.Fsm<Agent> fsm;
+//        public Transform target;
+//
+//        public float moveSpeed = 2f;
+//        public float rotateSpeed = 5f;
+//
+//        public float minDistance = 1f;
+//        public float maxDistance = 3f;
+//
+//        public float stopDistance = 0.25f;
 
         [SerializeField]
-        private Wirune.L07.Path path;
+        private Wirune.L05.Player m_Player;
+
+        [SerializeField]
+        private float m_MoveSpeed = 2f;
+
+        [SerializeField]
+        private float m_RotateSpeed = 5f;
+
+        [SerializeField]
+        private float m_MinDistance = 1f;
+
+        [SerializeField]
+        private float m_MaxDistance = 3f;
+
+        [SerializeField]
+        private Wirune.L07.Path m_Path;
+
+        // Non-Serialized
+        private Wirune.L04.Fsm<Agent> m_Fsm;
 
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
+        void OnValidate()
+        {
+            m_MaxDistance = Mathf.Clamp(m_MaxDistance, 0.15f, 100f);
+            m_MinDistance = Mathf.Clamp(m_MinDistance, 0.1f, m_MaxDistance);
+        }
+
         void Awake()
         {
-            fsm = new Wirune.L04.Fsm<Agent>(this);
+            m_Fsm = new Wirune.L04.Fsm<Agent>(this);
 
-            fsm.AddState(PATROL_STATE, new PatrolState());
-            fsm.AddState(OBSERVE_STATE, new ObserveState());
-            fsm.AddState(SEEK_STATE, new SeekState());
+            m_Fsm.AddState(PATROL_STATE, new PatrolState());
+            m_Fsm.AddState(OBSERVE_STATE, new ObserveState());
+            m_Fsm.AddState(SEEK_STATE, new SeekState());
         }
 
         void OnEnable()
         {
-            fsm.ChangeState(PATROL_STATE);
+            m_Fsm.ChangeState(PATROL_STATE);
         }
 
         void OnDisable()
         {
-            fsm.ChangeState(0);
+            m_Fsm.ChangeState(0);
         }
 
         void Update()
         {
-            fsm.Update();
+            m_Fsm.Update();
         }
 
         void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, minDistance);
-            Gizmos.DrawWireSphere(transform.position, maxDistance);
-
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, stopDistance);
-        }
-
-        public bool IsTargetInRange()
-        {
-            Vector2 displacement = target.position - transform.position;
-            Vector2 direction = displacement.normalized;
-
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, maxDistance);
-            return hit.transform == target && hit.distance >= minDistance;
+            Gizmos.DrawWireSphere(transform.position, m_MinDistance);
+            Gizmos.DrawWireSphere(transform.position, m_MaxDistance);
         }
 
         public void RotateTo(Vector2 direction)
         {
-            float rotateSpeedPerFrame = rotateSpeed * Time.deltaTime;
+            float rotateSpeedPerFrame = m_RotateSpeed * Time.deltaTime;
+            Vector2 newDirection = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
 
-            Vector2 stepDirection = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, stepDirection);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, newDirection);
         }
 
-        public void MoveForward()
+        public void MoveForward(float distance)
         {
-            float moveSpeedPerFrame = moveSpeed * Time.deltaTime;
+            float moveSpeedPerFrame = Mathf.Min(m_MoveSpeed * Time.deltaTime, distance);
             Vector2 velocity = Vector2.up * moveSpeedPerFrame;
 
             transform.Translate(velocity);
@@ -90,19 +99,19 @@ namespace Wirune.L08
 
         public Vector2 GetCurrentPoint()
         {
-            return path.GetPoint(m_CurrentPointIndex);
+            return m_Path.GetPoint(m_CurrentPointIndex);
         }
 
-        public void GoToNextPoint()
+        public void NextPoint()
         {
             if (m_IsForward)
             {
                 m_CurrentPointIndex++;
 
-                if (m_CurrentPointIndex >= path.Count)
+                if (m_CurrentPointIndex >= m_Path.Count)
                 {
                     m_IsForward = false;
-                    m_CurrentPointIndex = path.Count - 1;
+                    m_CurrentPointIndex = m_Path.Count - 1;
                 }
             }
             else
@@ -115,6 +124,24 @@ namespace Wirune.L08
                     m_CurrentPointIndex = 0;
                 }
             }
+        }
+
+        public Wirune.L04.Fsm<Agent> GetFsm()
+        {
+            return m_Fsm;
+        }
+
+        public bool HasPlayer()
+        {
+            Vector2 displacement = m_Player.transform.position - transform.position;
+            float distance = displacement.magnitude - m_Player.radius;
+
+            return distance <= m_MaxDistance;
+        }
+
+        public Wirune.L05.Player GetPlayer()
+        {
+            return m_Player;
         }
     }
 }
