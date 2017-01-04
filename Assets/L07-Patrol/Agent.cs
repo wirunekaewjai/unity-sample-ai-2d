@@ -2,33 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Wirune.L06
+using Wirune.L06;
+
+namespace Wirune.L07
 {
-    public class Follower02 : MonoBehaviour
+    public class Agent : MonoBehaviour 
     {
         public float moveSpeed = 2f;
         public float rotateSpeed = 5f;
 
-        public bool isLoop;
-        public Path02 path;
         public float minDistance = 0.25f;
 
+        public Path path;
+
+        private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
         void Update()
         {
-            if (m_CurrentPointIndex >= path.Count)
-            {
-                if (isLoop)
-                {
-                    m_CurrentPointIndex -= path.Count;
-                }
-                else
-                {
-                    return;
-                }
-            }
-
             float moveSpeedPerFrame = moveSpeed * Time.deltaTime;
             float rotateSpeedPerFrame = rotateSpeed * Time.deltaTime;
 
@@ -45,9 +36,33 @@ namespace Wirune.L06
 
             if (distance < minDistance)
             {
-                m_CurrentPointIndex++;
+                if (m_IsForward)
+                {
+                    m_CurrentPointIndex++;
+
+                    if (m_CurrentPointIndex >= path.Count)
+                    {
+                        m_IsForward = false;
+                        m_CurrentPointIndex = path.Count - 1;
+                    }
+                }
+                else
+                {
+                    m_CurrentPointIndex--;
+
+                    if (m_CurrentPointIndex < 0)
+                    {
+                        m_IsForward = true;
+                        m_CurrentPointIndex = 0;
+                    }
+                }
             }
+        }
+
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, minDistance);
         }
     }
 }
-

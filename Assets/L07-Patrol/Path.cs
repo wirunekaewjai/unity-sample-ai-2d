@@ -2,33 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Wirune.L06
+namespace Wirune.L07
 {
-    public class Path02 : MonoBehaviour 
+    // Edit from 'Wirune.L06.Path'
+    public class Path : MonoBehaviour 
     {
         public bool isLoop;
 
         [SerializeField]
-        private List<Vector2> m_Points = new List<Vector2>();
+        private Point[] m_Points = { };
 
         public Vector2 GetPoint(int index)
         {
-            if (isLoop && index >= m_Points.Count)
+            if (isLoop)
             {
-                index -= m_Points.Count;
+                if(index >= m_Points.Length)
+                {
+                    index -= m_Points.Length;
+                }
             }
 
-            return m_Points[index];
-        }
-
-        public void SetPoint(int index, Vector2 point)
-        {
-            if (isLoop && index >= m_Points.Count)
-            {
-                index -= m_Points.Count;
-            }
-
-            m_Points[index] = point;
+            return m_Points[index].transform.position;
         }
 
         public int Count
@@ -37,11 +31,16 @@ namespace Wirune.L06
             { 
                 if (isLoop)
                 {
-                    return m_Points.Count + 1;
+                    return m_Points.Length + 1;
                 }
 
-                return m_Points.Count; 
+                return m_Points.Length; 
             }
+        }
+
+        void Reset()
+        {
+            m_Points = GetComponentsInChildren<Point>();
         }
 
         void OnDrawGizmos()
