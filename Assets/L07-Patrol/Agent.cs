@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Wirune.L06;
-
 namespace Wirune.L07
 {
     public class Agent : MonoBehaviour 
