@@ -18,42 +18,19 @@ namespace Wirune.L07
 
         void Update()
         {
-            float moveSpeedPerFrame = moveSpeed * Time.deltaTime;
-            float rotateSpeedPerFrame = rotateSpeed * Time.deltaTime;
-
-            Vector2 currentPoint = path.GetPoint(m_CurrentPointIndex);
+            Vector2 currentPoint = GetCurrentPoint();
             Vector2 currentPosition = transform.position;
+
             Vector2 displacement = currentPoint - currentPosition;
             Vector2 direction = displacement.normalized;
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
 
-            transform.up = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
-            transform.Translate(velocity);
+            RotateTo(direction);
+            MoveForward();
 
             float distance = displacement.magnitude;
-
             if (distance < minDistance)
             {
-                if (m_IsForward)
-                {
-                    m_CurrentPointIndex++;
-
-                    if (m_CurrentPointIndex >= path.Count)
-                    {
-                        m_IsForward = false;
-                        m_CurrentPointIndex = path.Count - 1;
-                    }
-                }
-                else
-                {
-                    m_CurrentPointIndex--;
-
-                    if (m_CurrentPointIndex < 0)
-                    {
-                        m_IsForward = true;
-                        m_CurrentPointIndex = 0;
-                    }
-                }
+                GoToNextPoint();
             }
         }
 
@@ -61,6 +38,51 @@ namespace Wirune.L07
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(transform.position, minDistance);
+        }
+
+        public void RotateTo(Vector2 direction)
+        {
+            float rotateStep = rotateSpeed * Time.deltaTime;
+
+            Vector3 newDirection = Vector3.RotateTowards(transform.up, direction, rotateStep, 0f);
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, newDirection);
+        }
+
+        public void MoveForward()
+        {
+            float moveStep = moveSpeed * Time.deltaTime;
+            Vector2 velocity = Vector2.up * moveStep;
+
+            transform.Translate(velocity);
+        }
+
+        public Vector2 GetCurrentPoint()
+        {
+            return path.GetPoint(m_CurrentPointIndex);
+        }
+
+        public void GoToNextPoint()
+        {
+            if (m_IsForward)
+            {
+                m_CurrentPointIndex++;
+
+                if (m_CurrentPointIndex >= path.Count)
+                {
+                    m_IsForward = false;
+                    m_CurrentPointIndex = path.Count - 1;
+                }
+            }
+            else
+            {
+                m_CurrentPointIndex--;
+
+                if (m_CurrentPointIndex < 0)
+                {
+                    m_IsForward = true;
+                    m_CurrentPointIndex = 0;
+                }
+            }
         }
     }
 }
