@@ -26,10 +26,8 @@ namespace Wirune.L05
 
         public void RotateTo(Vector2 direction)
         {
-            float rotateSpeedPerFrame = m_RotateSpeed * Time.deltaTime;
-            Vector2 newDirection = Vector3.RotateTowards(transform.up, direction, rotateSpeedPerFrame, 0f);
-
-            transform.rotation = Quaternion.LookRotation(Vector3.forward, newDirection);
+            Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
         }
 
         public void MoveForward()
