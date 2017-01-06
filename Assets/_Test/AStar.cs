@@ -15,7 +15,10 @@ namespace Test.POV
         void OnValidate()
         {
             if (null == start || null == goal)
+            {
+                path.Clear();
                 return;
+            }
 
             DoSearch();
         }
@@ -34,7 +37,7 @@ namespace Test.POV
         {
             path.Clear();
 
-            var limit = 100;
+            var limit = 2048;
 
             var opens = new List<Node>();
             var closes = new List<Node>();
