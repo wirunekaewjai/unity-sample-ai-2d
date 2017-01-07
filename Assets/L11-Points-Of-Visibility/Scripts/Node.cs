@@ -1,25 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-namespace Test.POV
+namespace Wirune.L11
 {
-    public class Node : MonoBehaviour 
+    public class Node : MonoBehaviour
     {
-        public List<Node> neighbors = new List<Node>();
+        [SerializeField]
+        private List<Node> m_Neighbors = new List<Node>();
 
-        void OnValidate()
+        public Node this[int index]
         {
-            foreach (var n in neighbors)
+            get 
             {
-                if (!n.neighbors.Contains(this))
-                {
-                    n.neighbors.Add(this);   
-                }
+                return m_Neighbors[index];
             }
+        }
 
-            neighbors = neighbors.Distinct().ToList();  
+        public int Count
+        {
+            get
+            {
+                return m_Neighbors.Count;
+            }
         }
 
         void OnDrawGizmos()
@@ -35,12 +38,11 @@ namespace Test.POV
             Gizmos.color = Color.yellow;
 
             Vector2 p0 = transform.position;
-            foreach (var neighbor in neighbors)
+            foreach (var neighbor in m_Neighbors)
             {
                 Vector2 p1 = neighbor.transform.position;
                 Gizmos.DrawLine(p0, p1);
             }
         }
     }
-
 }
