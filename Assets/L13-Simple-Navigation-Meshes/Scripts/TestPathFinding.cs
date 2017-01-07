@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Wirune.L12
+namespace Wirune.L13
 {
-    public class TestPathFinding01 : MonoBehaviour
+    public class TestPathFinding : MonoBehaviour
     {
         // SerializeField
         public Node start;

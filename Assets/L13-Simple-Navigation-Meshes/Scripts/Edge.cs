@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Wirune.L12
+namespace Wirune.L13
 {
     public class Edge : MonoBehaviour
     {
