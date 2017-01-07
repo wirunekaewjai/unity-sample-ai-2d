@@ -4,29 +4,29 @@ using UnityEngine;
 
 namespace Wirune.L04
 {
-    public class EatState : IState<Worker>
+    public class RelaxState : IState<Worker>
     {
         #region IState implementation
         public void OnEnter(Worker owner)
         {
-            Debug.Log("Enter Eat State");
+            Debug.Log("Enter Relax State");
         }
 
         public void OnStay(Worker owner)
         {
-            Debug.Log("Eating...");
+            Debug.Log("Relaxing...");
 
-            owner.fullness += 1;
+            owner.happiness += 1;
 
-            if (owner.fullness >= 10)
+            if (owner.happiness >= 10)
             {
-                owner.fsm.ChangeState(Worker.WORK_STATE);
+                owner.Fsm.ChangeState(Worker.WORK_STATE);
             }
         }
 
         public void OnExit(Worker owner)
         {
-            Debug.Log("Exit Eat State");
+            Debug.Log("Exit Relax State");
         }
         #endregion
     }

@@ -1,27 +1,40 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Wirune.L03
+namespace Wirune.L02
 {
-    public class Worker02 : MonoBehaviour 
+    public class Worker02LoopDelayed : MonoBehaviour 
     {
+        public enum State
+        {
+            Work, Eat, Sleep, Relax
+        }
+
         public int fullness = 10;
         public int stamina = 10;
         public int happiness = 10;
 
-        private Action m_CurrentState;
-        private Action m_PreviousState;
+        public State state = State.Work;
 
-        void Awake ()
-        {
-            m_CurrentState = DoWorkState;
-        }
+        [Space]
+        public float delay = 1f;
 
-        void Update () 
+        IEnumerator Start()
         {
-            m_CurrentState.Invoke();
+            while (true)
+            {
+                if (state == State.Eat)
+                    DoEatState();
+                else if (state == State.Sleep)
+                    DoSleepState();
+                else if (state == State.Relax)
+                    DoRelaxState();
+                else
+                    DoWorkState();
+
+                yield return new WaitForSeconds(delay);
+            }
         }
 
         void DoEatState()
@@ -32,8 +45,7 @@ namespace Wirune.L03
 
             if (fullness >= 10)
             {
-                m_CurrentState = m_PreviousState;
-                m_PreviousState = null;
+                state = State.Work;
             }
         }
 
@@ -45,7 +57,7 @@ namespace Wirune.L03
 
             if (stamina >= 10)
             {
-                m_CurrentState = DoWorkState;
+                state = State.Work;
             }
         }
 
@@ -57,7 +69,7 @@ namespace Wirune.L03
 
             if (happiness >= 10)
             {
-                m_CurrentState = DoWorkState;
+                state = State.Work;
             }
         }
 
@@ -71,18 +83,17 @@ namespace Wirune.L03
 
             if (fullness <= 0)
             {
-                m_CurrentState = DoEatState;
-                m_PreviousState = DoWorkState;
+                state = State.Eat;
             }
 
             if (stamina <= 0)
             {
-                m_CurrentState = DoSleepState;
+                state = State.Sleep;
             }
 
             if (happiness <= 0)
             {
-                m_CurrentState = DoRelaxState;
+                state = State.Relax;
             }
         }
     }

@@ -22,17 +22,17 @@ namespace Wirune.L04
 
             if (owner.fullness <= 0)
             {
-                owner.fsm.ChangeState(Worker.EAT_STATE);
+                owner.Fsm.ChangeState(Worker.EAT_STATE);
             }
 
             if (owner.stamina <= 0)
             {
-                owner.fsm.ChangeState(Worker.SLEEP_STATE);
+                owner.Fsm.ChangeState(Worker.SLEEP_STATE);
             }
 
             if (owner.happiness <= 0)
             {
-                owner.fsm.ChangeState(Worker.RELAX_STATE);
+                owner.Fsm.ChangeState(Worker.RELAX_STATE);
             }
         }
 
