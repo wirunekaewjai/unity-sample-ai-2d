@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floodFill: {fileID: 1599264635}
+  heuristic: 1
   smooth: 1
   start: {fileID: 1744609154}
   goal: {fileID: 1352065287}

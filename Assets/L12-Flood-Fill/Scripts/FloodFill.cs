@@ -41,6 +41,7 @@ namespace Wirune.L12
 
                     Node node = new Node();
                     node.position = (p0 + p1) / 2f;
+                    node.size = new Vector2(size, size);
 
                     map[x, y] = node;
                     m_Nodes.Add(node);
@@ -70,6 +71,8 @@ namespace Wirune.L12
 
         }
 
+
+
         void OnValidate()
         {
             division = Mathf.Max(division, 2);
@@ -88,14 +91,14 @@ namespace Wirune.L12
                     if (node.walkable)
                     {
                         Gizmos.color = Color.grey;
-                        Gizmos.DrawWireCube(node.position, Vector2.one * size);
+                        Gizmos.DrawWireCube(node.position, node.size);
                     }
                     else
                     {
                         Vector3 p = node.position;
 
                         Gizmos.color = Color.black;
-                        Gizmos.DrawWireCube(p + Vector3.back, Vector2.one * size);
+                        Gizmos.DrawWireCube(p + Vector3.back, node.size);
                     }
                 }
             }
