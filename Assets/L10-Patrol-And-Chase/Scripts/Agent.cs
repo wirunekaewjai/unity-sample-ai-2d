@@ -67,6 +67,7 @@ namespace Wirune.L10
             Gizmos.DrawWireSphere(transform.position, m_StopDistance);
         }
 
+        // Copied from L05-Movement
         public void RotateTo(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
@@ -81,6 +82,7 @@ namespace Wirune.L10
             transform.Translate(velocity);
         }
 
+        // Copied from L08-Patrol
         public Point GetCurrentPoint()
         {
             return m_Path.GetPoint(m_CurrentPointIndex);
