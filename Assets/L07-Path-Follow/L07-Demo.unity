@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 1060066653}
   - component: {fileID: 1060066652}
   m_Layer: 0
-  m_Name: Follower
+  m_Name: Agent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,7 +408,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveSpeed: 2
   m_RotateSpeed: 10
-  m_MinDistance: 0.2
   m_Path: {fileID: 1451696056}
 --- !u!212 &1060066653
 SpriteRenderer:

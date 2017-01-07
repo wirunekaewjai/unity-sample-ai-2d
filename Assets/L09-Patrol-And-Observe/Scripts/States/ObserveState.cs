@@ -8,6 +8,7 @@ namespace Wirune.L09
 
     public class ObserveState : IState
     {
+        // Non-Serialized
         private ObservablePoint m_Point;
 
         private int m_CurrentIndex;

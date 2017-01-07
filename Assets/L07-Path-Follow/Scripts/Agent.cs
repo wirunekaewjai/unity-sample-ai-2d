@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Wirune.L07
 {
-    public class Follower : MonoBehaviour
+    public class Agent : MonoBehaviour
     {
         [SerializeField]
         private float m_MoveSpeed = 2f;
@@ -15,6 +15,7 @@ namespace Wirune.L07
         [SerializeField]
         private Path m_Path;
 
+        // Non-Serialized
         private int m_CurrentPointIndex = 0;
 
         void Update()
@@ -39,6 +40,7 @@ namespace Wirune.L07
             }
         }
 
+        // Copied from L05-Movement
         public void RotateTo(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);

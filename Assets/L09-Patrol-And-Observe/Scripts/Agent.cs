@@ -26,6 +26,7 @@ namespace Wirune.L09
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
+        // Property
         public Fsm Fsm { get; private set; }
 
         void Awake()
@@ -51,6 +52,7 @@ namespace Wirune.L09
             Fsm.Update();
         }
 
+        // Copied from L05-Movement
         public void RotateTo(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
@@ -65,6 +67,7 @@ namespace Wirune.L09
             transform.Translate(velocity);
         }
 
+        // Copied from L08-Patrol
         public Point GetCurrentPoint()
         {
             return m_Path.GetPoint(m_CurrentPointIndex);

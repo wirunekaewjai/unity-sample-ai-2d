@@ -30,13 +30,12 @@ namespace Wirune.L10
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
+        // Properties
         public CircleCollider2D Player { get; private set; }
         public Fsm Fsm { get; private set; }
 
         public float StopDistance
-        {
-            get { return m_StopDistance; }
-        }
+        { get { return m_StopDistance; } }
 
         void Awake()
         {
@@ -117,6 +116,7 @@ namespace Wirune.L10
             }
         }
 
+        // Invoked from Eye Perception
         public void OnPlayerEnter(Collider2D player)
         {
             Player = player.GetComponent<CircleCollider2D>();

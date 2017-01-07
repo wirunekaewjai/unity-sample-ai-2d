@@ -18,6 +18,7 @@ namespace Wirune.L08
         [SerializeField]
         private Path m_Path;
 
+        // Non-Serialized
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
@@ -40,6 +41,7 @@ namespace Wirune.L08
             }
         }
 
+        // Copied from L05-Movement
         public void RotateTo(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
@@ -61,6 +63,12 @@ namespace Wirune.L08
 
         public void NextPoint()
         {
+            if (m_Path.Count <= 1)
+            {
+                m_CurrentPointIndex = 0;
+                return;
+            }
+
             if (m_IsForward)
             {
                 m_CurrentPointIndex++;
