@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Wirune.L11
+namespace Wirune.L12
 {
     public static class AStar 
     {
@@ -20,7 +20,6 @@ namespace Wirune.L11
         {
             List<Node> path = new List<Node>();
             List<Node> opens = new List<Node>();
-//            List<Node> closes = new List<Node>();
 
             Dictionary<Node, Cost> costs = new Dictionary<Node, Cost>();
 
@@ -35,7 +34,6 @@ namespace Wirune.L11
                 Node lowestF = GetLowestF(opens, costs);
 
                 opens.Remove(lowestF);
-//                closes.Add(lowestF);
 
                 if (lowestF != goal)
                 {
@@ -84,15 +82,15 @@ namespace Wirune.L11
         private static Node GetLowestF(List<Node> opens, Dictionary<Node, Cost> costs)
         {
             IOrderedEnumerable<Node> nodes = (from n in opens
-                                                       orderby costs[n].f ascending
-                                                       select n);
+                orderby costs[n].f ascending
+                select n);
 
             return nodes.First();
         }
 
         private static float Distance(Node a, Node b)
         {
-            return Vector2.Distance(a.transform.position, b.transform.position);
+            return Vector2.Distance(a.Mesh.Center, b.Mesh.Center);
         }
     }
 }
