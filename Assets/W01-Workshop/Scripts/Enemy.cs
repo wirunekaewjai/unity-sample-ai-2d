@@ -142,6 +142,8 @@ namespace Wirune.W01
             Queue<Vector2> subPath = new Queue<Vector2>();
 
             List<Node> nodes = AStar.Search(start, goal, Heuristic.Euclidean);
+            nodes.Remove(start);
+
             PathSmoother.Smooth(nodes, 0.5f);
 
             foreach (var node in nodes)

@@ -157,15 +157,15 @@ namespace Wirune.W01
                         Vector3 position = node.position;
 
                         Gizmos.color = walkableGizmosColor;
-                        Gizmos.DrawWireCube(position + offset, node.size);
+                        Gizmos.DrawCube(position + offset, node.size * 0.5f);
                     }
-                    else
-                    {
-                        Vector3 position = node.position;
-
-                        Gizmos.color = obstacleGizmosColor;
-                        Gizmos.DrawWireCube(position + offset + offset, node.size);
-                    }
+//                    else
+//                    {
+//                        Vector3 position = node.position;
+//
+//                        Gizmos.color = obstacleGizmosColor;
+//                        Gizmos.DrawWireCube(position + offset + offset, node.size);
+//                    }
                 }
             }
 

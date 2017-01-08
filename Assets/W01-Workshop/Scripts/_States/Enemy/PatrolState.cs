@@ -28,12 +28,10 @@ namespace Wirune.W01
                 Vector2 displacement = currentTarget - currentPosition;
                 float distance = displacement.magnitude;
 
-                if (distance > 0.05f)
-                {
-                    enemy.RotateTo(displacement);
-                    enemy.MoveTo(displacement.normalized, distance);
-                }
-                else
+                enemy.RotateTo(displacement);
+                enemy.MoveTo(displacement.normalized, distance);
+
+                if (distance < 0.05f)
                 {
                     m_SubPath.Dequeue();
                 }

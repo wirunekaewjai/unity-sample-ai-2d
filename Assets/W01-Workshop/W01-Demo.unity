@@ -443,7 +443,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534474009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 2.5, z: 0}
+  m_LocalPosition: {x: -2, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 429179580}
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MoveSpeed: 1
-  m_RotateSpeed: 20
+  m_RotateSpeed: 5
   m_RunSpeed: 2.5
   m_StopDistance: 0.75
   m_Path: {fileID: 1713467390}
@@ -971,13 +971,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f3f2a4ed9294f42a64458838658441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0.2
-  division: 100
+  size: 0.5
+  division: 30
   eightDirection: 1
   obstacleTags:
   - Wall
   gizmos: 1
-  walkableGizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  walkableGizmosColor: {r: 0, g: 1, b: 1, a: 0.297}
   obstacleGizmosColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1229690306
 Transform:
@@ -1075,7 +1075,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328142076}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 4, y: -4, z: 0}
+  m_LocalPosition: {x: 4, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1340852983}

@@ -26,25 +26,11 @@ namespace Wirune.W01
         {
             if (null != enemy.Player)
             {
-                enemy.MoveSpeed = enemy.RunSpeed;
+                enemy.MoveSpeed = Mathf.Lerp(enemy.MoveSpeed, enemy.RunSpeed, 0.1f);
 
                 if (m_SubPath.Count > 0)
                 {
-                    Vector2 currentTarget = m_SubPath.Peek();
-                    Vector2 currentPosition = enemy.Position;
-
-                    Vector2 displacement = currentTarget - currentPosition;
-                    float distance = displacement.magnitude - enemy.Player.Radius;
-
-                    if (distance >= enemy.StopDistance)
-                    {
-                        enemy.RotateTo(displacement);
-                        enemy.MoveTo(displacement.normalized, distance);
-                    }
-                    else
-                    {
-                        m_SubPath.Dequeue();
-                    }
+                    PathFollow(enemy, enemy.Player.Radius);
                 }
 
                 if (m_PlayerNode != enemy.Player.Node)
@@ -61,8 +47,13 @@ namespace Wirune.W01
                     m_SubPath = new Queue<Vector2>(paths);
                 }
             }
+            else if (m_SubPath.Count > 0)
+            {
+                PathFollow(enemy, 0);
+            }
             else
             {
+                enemy.MoveSpeed = Mathf.Lerp(enemy.RunSpeed, enemy.MoveSpeed, 0.2f);
                 m_ElapsedTime += Time.deltaTime;
 
                 if (m_ElapsedTime > 1f)
@@ -86,6 +77,23 @@ namespace Wirune.W01
             }
         }
         #endregion
+
+        private void PathFollow(Enemy enemy, float radius)
+        {
+            Vector2 currentTarget = m_SubPath.Peek();
+            Vector2 currentPosition = enemy.Position;
+
+            Vector2 displacement = currentTarget - currentPosition;
+            float distance = displacement.magnitude - radius;
+
+            enemy.RotateTo(displacement);
+            enemy.MoveTo(displacement.normalized, distance);
+
+            if (distance <= enemy.StopDistance)
+            {
+                m_SubPath.Dequeue();
+            }
+        }
     }
 }
 
