@@ -11,6 +11,7 @@ namespace Wirune.L12
 
         public Heuristic heuristic = Heuristic.Euclidean;
         public bool smooth = true;
+        public float radius = 0.1f;
 
         public Transform start;
         public Transform goal;
@@ -29,7 +30,7 @@ namespace Wirune.L12
 
                 if (smooth)
                 {
-                    PathSmoother.Smooth(m_Path);
+                    PathSmoother.Smooth(m_Path, radius);
                 }
             }
         }

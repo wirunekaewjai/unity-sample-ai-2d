@@ -9,8 +9,12 @@ namespace Wirune.L12
     {
         public float size = 1f;
         public int division = 5;
+        public bool eightDirection = false;
 
         public bool gizmos = true;
+
+        public Color walkableGizmosColor = Color.grey;
+        public Color obstacleGizmosColor = Color.black;
 
         [SerializeField, HideInInspector]
         private List<Node> m_Nodes = new List<Node>();
@@ -46,16 +50,35 @@ namespace Wirune.L12
                     map[x, y] = node;
                     m_Nodes.Add(node);
 
+                    // Left
                     if (x > 0 && null != map[x - 1, y])
                     {
                         map[x - 1, y].neighbors.Add(node);
                         node.neighbors.Add(map[x - 1, y]);
                     }
 
+                    // Under
                     if (y > 0 && null != map[x, y - 1])
                     {
                         map[x, y - 1].neighbors.Add(node);
                         node.neighbors.Add(map[x, y - 1]);
+                    }
+
+                    if (eightDirection)
+                    {
+                        // Left-Under
+                        if (x > 0 && y > 0 && null != map[x - 1, y - 1])
+                        {
+                            map[x - 1, y - 1].neighbors.Add(node);
+                            node.neighbors.Add(map[x - 1, y - 1]);
+                        }
+
+                        // Right-Under
+                        if (x < division - 1 && y > 0 && null != map[x + 1, y - 1])
+                        {
+                            map[x + 1, y - 1].neighbors.Add(node);
+                            node.neighbors.Add(map[x + 1, y - 1]);
+                        }
                     }
 
                     if (null == Physics2D.OverlapArea(p0, p1))
@@ -90,14 +113,14 @@ namespace Wirune.L12
                 {
                     if (node.walkable)
                     {
-                        Gizmos.color = Color.grey;
+                        Gizmos.color = walkableGizmosColor;
                         Gizmos.DrawWireCube(node.position, node.size);
                     }
                     else
                     {
                         Vector3 p = node.position;
 
-                        Gizmos.color = Color.black;
+                        Gizmos.color = obstacleGizmosColor;
                         Gizmos.DrawWireCube(p + Vector3.back, node.size);
                     }
                 }
