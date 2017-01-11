@@ -46,8 +46,7 @@ namespace Wirune.L10
                     m_EndTime = Time.time + m_Point.Duration;
                 }
 
-                agent.RotateTo(m_Point.GetDirection(m_CurrentIndex));
-
+                agent.Rotate(m_Point.GetDirection(m_CurrentIndex));
             }
         }
 

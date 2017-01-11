@@ -7,6 +7,8 @@ namespace Wirune.L10
     using Fsm = Wirune.L04.Fsm<Agent>;
     using Path = Wirune.L07.Path;
     using Point = Wirune.L07.Point;
+    using Player = Wirune.L06.Player;
+    using EyeVision = Wirune.L06.EyeVision;
 
     public class Agent : MonoBehaviour 
     {
@@ -14,31 +16,71 @@ namespace Wirune.L10
         public const byte OBSERVE_STATE = 2;
         public const byte CHASE_STATE   = 3;
 
-        [SerializeField]
-        private float m_MoveSpeed = 2f;
 
-        [SerializeField]
-        private float m_RotateSpeed = 5f;
+        public bool drawGizmos = true;
 
-        [SerializeField]
-        private float m_StopDistance = 0.75f;
+        [Space]
+        public float moveSpeed = 2f;
+        public float rotateSpeed = 5f;
 
-        [SerializeField]
-        private Path m_Path;
+        public float radius = 0.5f;
+
+        [Space]
+        public EyeVision eyeVision;
+
+        [Space]
+        public float stoppingDistance = 0.1f;
+        public Path path;
+
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
+
+        // Property
+        public Fsm Fsm { get; private set; }
+        public Player Player { get; private set; }
 
         // Non-Serialized
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
 
-        // Properties
-        public CircleCollider2D Player { get; private set; }
-        public Fsm Fsm { get; private set; }
 
-        public float StopDistance
-        { get { return m_StopDistance; } }
+//        [SerializeField]
+//        private float m_MoveSpeed = 2f;
+//
+//        [SerializeField]
+//        private float m_RotateSpeed = 5f;
+//
+//        [SerializeField]
+//        private float m_StopDistance = 0.75f;
+//
+//        [SerializeField]
+//        private Path m_Path;
+//
+//        // Non-Serialized
+//        private bool m_IsForward = true;
+//        private int m_CurrentPointIndex = 0;
+//
+//        // Properties
+//        public CircleCollider2D Player { get; private set; }
+//        public Fsm Fsm { get; private set; }
+//
+//        public float StopDistance
+//        { get { return m_StopDistance; } }
 
         void Awake()
         {
+            eyeVision.onEnter.AddListener(OnObjectInSight);
+            eyeVision.onExit.AddListener(OnObjectOutSight);
+
             Fsm = new Fsm(this);
 
             Fsm.AddState(PATROL_STATE, new PatrolState());
@@ -63,34 +105,46 @@ namespace Wirune.L10
 
         void OnDrawGizmos()
         {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, m_StopDistance);
+            if (!drawGizmos)
+                return;
+
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, radius);
+
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(Position, GetCurrentPoint().Position);
+
+            if (null != Player)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(Position, Player.Position);
+            }
         }
 
         // Copied from L05-Movement
-        public void RotateTo(Vector2 direction)
+        public Vector2 Seek(Vector2 target)
+        {
+            Vector2 displacement = (target - Position);
+            Vector2 direction = displacement.normalized;
+
+            return direction * moveSpeed * Time.deltaTime;
+        }
+
+        public void Rotate(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, rotateSpeed);
         }
+        //
 
-        public void MoveForward(float distance)
-        {
-            float moveSpeedPerFrame = Mathf.Min(m_MoveSpeed * Time.deltaTime, distance);
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            transform.Translate(velocity);
-        }
-
-        // Copied from L08-Patrol
         public Point GetCurrentPoint()
         {
-            return m_Path.GetPoint(m_CurrentPointIndex);
+            return path.GetPoint(m_CurrentPointIndex);
         }
 
         public void NextPoint()
         {
-            if (m_Path.Count <= 1)
+            if (path.Count <= 1)
             {
                 m_CurrentPointIndex = 0;
                 return;
@@ -100,10 +154,10 @@ namespace Wirune.L10
             {
                 m_CurrentPointIndex++;
 
-                if (m_CurrentPointIndex >= m_Path.Count)
+                if (m_CurrentPointIndex >= path.Count)
                 {
                     m_IsForward = false;
-                    m_CurrentPointIndex = m_Path.Count - 2;
+                    m_CurrentPointIndex = path.Count - 2;
                 }
             }
             else
@@ -118,15 +172,20 @@ namespace Wirune.L10
             }
         }
 
-        // Invoked from Eye Perception
-        public void OnPlayerEnter(Collider2D player)
+        public void OnObjectInSight(Collider2D c)
         {
-            Player = player.GetComponent<CircleCollider2D>();
+            if (c.tag == "Player")
+            {
+                Player = c.GetComponent<Player>();
+            }
         }
 
-        public void OnPlayerExit(Collider2D player)
+        public void OnObjectOutSight(Collider2D c)
         {
-            Player = null;
+            if (c.tag == "Player")
+            {
+                Player = null;
+            }
         }
     }
 }

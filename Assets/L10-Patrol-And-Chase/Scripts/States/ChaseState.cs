@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Wirune.L10
 {
     using IState = Wirune.L04.IState<Agent>;
+    using Player = Wirune.L06.Player;
 
     public class ChaseState : IState
     {
@@ -20,21 +21,17 @@ namespace Wirune.L10
         {
             if (null != agent.Player)
             {
-                Vector2 currentTarget = agent.Player.transform.position;
-                Vector2 currentPosition = agent.transform.position;
+                Vector2 position = agent.Position;
+                Vector2 target = agent.Player.Position;
+                Vector2 velocity = agent.Seek(target);
 
-                Vector2 displacement = currentTarget - currentPosition;
-                float distance = displacement.magnitude - agent.Player.radius;
+                float remainingDistance = Vector2.Distance(target, position);
+                if (remainingDistance >= agent.Player.Radius + agent.radius)
+                {
+                    agent.Position = position + velocity;
+                }
 
-                if (distance >= agent.StopDistance)
-                {
-                    agent.RotateTo(displacement);
-                    agent.MoveForward(distance);
-                }
-                else
-                {
-                    agent.RotateTo(displacement);
-                }
+                agent.Rotate(velocity);
             }
             else
             {

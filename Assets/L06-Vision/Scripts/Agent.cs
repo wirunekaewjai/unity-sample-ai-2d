@@ -101,21 +101,5 @@ namespace Wirune.L06
                 m_Player = null;
             }
         }
-
-//        public void OnPlayerEnter(Collider2D player)
-//        {
-//            m_Player = player.GetComponent<Player>();
-//
-////            Vector2 origin = Position;
-////            Vector2 displacement = (m_Player.Position - origin);
-////            Vector2 direction = displacement.normalized;
-////
-////
-//        }
-//
-//        public void OnPlayerExit(Collider2D player)
-//        {
-//            m_Player = null;
-//        }
     }
 }

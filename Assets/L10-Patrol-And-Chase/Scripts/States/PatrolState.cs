@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Wirune.L10
 {
     using IState = Wirune.L04.IState<Agent>;
+    using Point = Wirune.L07.Point;
     using ObservablePoint = Wirune.L09.ObservablePoint;
 
     public class PatrolState : IState
@@ -23,18 +24,19 @@ namespace Wirune.L10
             }
             else
             {
-                Vector2 currentTarget = agent.GetCurrentPoint().Position;
-                Vector2 currentPosition = agent.transform.position;
+                Point point = agent.GetCurrentPoint();
 
-                Vector2 displacement = currentTarget - currentPosition;
-                float distance = displacement.magnitude;
+                Vector2 position = agent.Position;
+                Vector2 target = point.Position;
+                Vector2 velocity = agent.Seek(target);
 
-                if (distance > 0.05f)
+                float remainingDistance = Vector2.Distance(target, position);
+                if (remainingDistance >= agent.stoppingDistance)
                 {
-                    agent.RotateTo(displacement);
-                    agent.MoveForward(distance);
+                    agent.Position = position + velocity;
+                    agent.Rotate(velocity);
                 }
-                else if (agent.GetCurrentPoint() is ObservablePoint)
+                else if (point is ObservablePoint)
                 {
                     agent.Fsm.ChangeState(Agent.OBSERVE_STATE);
                 }

@@ -6,7 +6,6 @@ namespace Wirune.L06
 {
     public class Player : MonoBehaviour 
     {
-        [Space]
         public float moveSpeed = 2.5f;
 
         public float Radius
