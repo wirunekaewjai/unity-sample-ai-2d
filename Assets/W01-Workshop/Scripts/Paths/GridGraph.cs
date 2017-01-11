@@ -5,15 +5,17 @@ using UnityEngine;
 
 namespace Wirune.W01
 {
-    public class FloodFill : MonoBehaviour 
+    // Copied from 'Wirune.L12.FloodFill.cs'
+    public class GridGraph : MonoBehaviour 
     {
+        public bool drawGizmos = true;
+
+        [Space]
         public float size = 1f;
         public int division = 5;
         public bool eightDirection = false;
 
         public List<string> obstacleTags = new List<string>();
-
-        public bool gizmos = true;
 
         public Color walkableGizmosColor = Color.grey;
         public Color obstacleGizmosColor = Color.black;
@@ -30,6 +32,7 @@ namespace Wirune.W01
 //               position.y >= center.y - extents && position.y <= center.y + extents)
 //            {
                 return (from n in m_Nodes
+                    where n.walkable
                     orderby (n.position - position).sqrMagnitude ascending
                     select n).First();
 //            }
@@ -112,24 +115,6 @@ namespace Wirune.W01
 
                         node.walkable = walkable;
                     }
-
-//                    if (null != collider)
-//                    {
-//                        if (null != obstacleTags)
-//                        {
-//                            if (obstacleTags.Count > 0 && !obstacleTags.Contains(collider.tag))
-//                            {
-//                                node.walkable = true;
-//                                continue;
-//                            }
-//                        }
-//
-//                        node.walkable = false;
-//                    }
-//                    else
-//                    {
-//                        
-//                    }
                 }
             }
 
@@ -143,7 +128,7 @@ namespace Wirune.W01
 
         void OnDrawGizmos()
         {
-            if (!gizmos)
+            if (!drawGizmos)
                 return;
 
             if (null != m_Nodes)
@@ -159,13 +144,13 @@ namespace Wirune.W01
                         Gizmos.color = walkableGizmosColor;
                         Gizmos.DrawCube(position + offset, node.size * 0.5f);
                     }
-//                    else
-//                    {
-//                        Vector3 position = node.position;
-//
-//                        Gizmos.color = obstacleGizmosColor;
-//                        Gizmos.DrawWireCube(position + offset + offset, node.size);
-//                    }
+                    else
+                    {
+                        Vector3 position = node.position;
+
+                        Gizmos.color = obstacleGizmosColor;
+                        Gizmos.DrawCube(position + offset + offset, node.size * 0.5f);
+                    }
                 }
             }
 

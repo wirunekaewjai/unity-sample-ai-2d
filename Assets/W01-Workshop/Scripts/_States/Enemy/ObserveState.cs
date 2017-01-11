@@ -43,17 +43,12 @@ namespace Wirune.W01
                     m_EndTime = Time.time + m_Point.Duration;
                 }
 
-                enemy.RotateTo(m_Point.GetDirection(m_CurrentIndex));
+                enemy.agent.Rotate(m_Point.GetDirection(m_CurrentIndex));
 
             }
         }
 
         public void OnExit(Enemy enemy)
-        {
-
-        }
-
-        public void OnDrawGizmos(Enemy enemy)
         {
 
         }

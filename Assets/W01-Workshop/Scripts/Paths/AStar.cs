@@ -27,6 +27,7 @@ namespace Wirune.W01
             costs.Add(start, new Cost());
             opens.Add(start);
 
+//            Debug.Log("Start: " + start.walkable);
             int limit = 65535;
             while (opens.Count > 0 && limit > 0)
             {
@@ -53,7 +54,11 @@ namespace Wirune.W01
                             cost.f = cost.g + cost.h;
 
                             costs.Add(neighbor, cost);
-                            opens.Add(neighbor);
+
+                            if (neighbor.walkable)
+                            {
+                                opens.Add(neighbor);
+                            }
                         }
                     }
                 }

@@ -22,6 +22,7 @@ namespace Wirune.L12
         public Node FindNearest(Vector2 position)
         {
             return (from n in m_Nodes
+                    where n.walkable
                      orderby (n.position - position).sqrMagnitude ascending
                      select n).First();
         }

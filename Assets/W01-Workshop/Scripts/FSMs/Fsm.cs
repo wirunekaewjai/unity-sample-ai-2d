@@ -30,14 +30,6 @@ namespace Wirune.W01
             }
         }
 
-        public void DrawGizmos()
-        {
-            if (m_CurrentStateID > 0)
-            {
-                m_States[m_CurrentStateID].OnDrawGizmos(m_Owner);
-            }
-        }
-
         public void ChangeState(byte nextStateID)
         {
             if (m_CurrentStateID > 0)

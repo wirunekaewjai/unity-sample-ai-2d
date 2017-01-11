@@ -9,7 +9,5 @@ namespace Wirune.W01
         void OnEnter(T owner);
         void OnStay(T owner);
         void OnExit(T owner);
-
-        void OnDrawGizmos(T owner);
     }
 }
