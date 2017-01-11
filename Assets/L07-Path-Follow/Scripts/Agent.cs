@@ -6,14 +6,27 @@ namespace Wirune.L07
 {
     public class Agent : MonoBehaviour
     {
-        [SerializeField]
-        private float m_MoveSpeed = 2f;
+        public bool drawGizmos = true;
 
-        [SerializeField]
-        private float m_RotateSpeed = 5f;
+        [Space]
+        public float moveSpeed = 2f;
+        public float rotateSpeed = 5f;
 
-        [SerializeField]
-        private Path m_Path;
+        [Space]
+        public float stoppingDistance = 0.1f;
+        public Path path;
+
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
 
         // Non-Serialized
         private int m_CurrentPointIndex = 0;
@@ -22,16 +35,14 @@ namespace Wirune.L07
         {
             if (!IsPathEnded())
             {
-                Vector2 currentTarget = GetCurrentPoint().Position;
-                Vector2 currentPosition = transform.position;
+                Vector2 target = GetCurrentPoint().Position;
+                Vector2 velocity = Seek(target);
 
-                Vector2 displacement = currentTarget - currentPosition;
-                float distance = displacement.magnitude;
-
-                if (distance > 0.05f)
+                float remainingDistance = Vector2.Distance(target, Position);
+                if (remainingDistance >= stoppingDistance)
                 {
-                    RotateTo(displacement);
-                    MoveForward(distance);
+                    Position = Position + velocity;
+                    Rotate(velocity);
                 }
                 else
                 {
@@ -40,29 +51,44 @@ namespace Wirune.L07
             }
         }
 
+        void OnDrawGizmos()
+        {
+            if (!drawGizmos)
+                return;
+
+            if (!IsPathEnded())
+            {
+                Vector2 target = GetCurrentPoint().Position;
+
+                Gizmos.color = Color.cyan;
+                Gizmos.DrawLine(Position, target);
+            }
+        }
+
         // Copied from L05-Movement
-        public void RotateTo(Vector2 direction)
+        public Vector2 Seek(Vector2 target)
+        {
+            Vector2 displacement = (target - Position);
+            Vector2 direction = displacement.normalized;
+
+            return direction * moveSpeed * Time.deltaTime;
+        }
+
+        public void Rotate(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, rotateSpeed);
         }
-
-        public void MoveForward(float distance)
-        {
-            float moveSpeedPerFrame = Mathf.Min(m_MoveSpeed * Time.deltaTime, distance);
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            transform.Translate(velocity);
-        }
+        //
 
         public bool IsPathEnded()
         {
-            return m_CurrentPointIndex >= m_Path.Count;
+            return m_CurrentPointIndex >= path.Count;
         }
 
         public Point GetCurrentPoint()
         {
-            return m_Path.GetPoint(m_CurrentPointIndex);
+            return path.GetPoint(m_CurrentPointIndex);
         }
 
         public void NextPoint()

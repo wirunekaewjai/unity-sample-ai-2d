@@ -4,38 +4,48 @@ using UnityEngine;
 
 namespace Wirune.L05
 {
-    // Add 'Look At' Code
     public class Seeker02 : MonoBehaviour 
     {
-        [SerializeField]
-        private Transform m_Player;
+        public Player player;
 
-        [SerializeField]
-        private float m_MoveSpeed = 2f;
+        public float moveSpeed = 2f;
+        public float rotateSpeed = 5f;
 
-        [SerializeField]
-        private float m_RotateSpeed = 5f;
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
+
+        public Quaternion Rotation
+        {
+            get
+            {
+                return transform.rotation;
+            }
+            set
+            {
+                transform.rotation = value;
+            }
+        }
 
         void Update ()
         {
-            Vector2 displacement = m_Player.position - transform.position;
+            // Move
+            Vector2 displacement = player.Position - Position;
+            Vector2 direction = displacement.normalized;
+            Vector2 velocity = direction * moveSpeed * Time.deltaTime;
+            Position = Position + velocity;
 
-            RotateTo(displacement);
-            MoveForward();
-        }
-
-        public void RotateTo(Vector2 direction)
-        {
+            // Rotate
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
-        }
-
-        public void MoveForward()
-        {
-            float moveSpeedPerFrame = m_MoveSpeed * Time.deltaTime;
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            transform.Translate(velocity);
+            Rotation = Quaternion.RotateTowards(Rotation, lookAt, rotateSpeed);
         }
     }
 

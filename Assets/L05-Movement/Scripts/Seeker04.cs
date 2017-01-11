@@ -4,55 +4,73 @@ using UnityEngine;
 
 namespace Wirune.L05
 {
-    // Add 'Min Distance'
     public class Seeker04 : MonoBehaviour 
     {
-        [SerializeField]
-        private Player m_Player;
+        public bool drawGizmos = true;
 
-        [SerializeField]
-        private float m_MoveSpeed = 2f;
+        [Space]
+        public Player player;
 
-        [SerializeField]
-        private float m_RotateSpeed = 5f;
+        public float moveSpeed = 2;
+        public float rotateSpeed = 5f;
 
-        [SerializeField]
-        private float m_MinDistance = 1f;
+        public float radius = 0.5f;
 
-        [SerializeField]
-        private float m_MaxDistance = 3f;
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
 
         void Update ()
         {
-            Vector2 displacement = m_Player.transform.position - transform.position;
-            float distance = displacement.magnitude - m_Player.radius;
+            Vector2 velocity = Seek(player.Position);
 
-            if (distance <= m_MaxDistance && distance >= m_MinDistance)
+            float remainingDistance = Vector2.Distance(player.Position, Position);
+            if (remainingDistance >= player.radius + radius)
             {
-                RotateTo(displacement);
-                MoveForward();
+                Position = Position + velocity;
             }
+
+            Rotate(velocity);
         }
 
         void OnDrawGizmos()
         {
+            if (!drawGizmos)
+                return;
+
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, m_MinDistance);
-            Gizmos.DrawWireSphere(transform.position, m_MaxDistance);
+            Gizmos.DrawWireSphere(transform.position, radius);
+
+            if (null != player)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(Position, player.Position);
+            }
+
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawRay(Position, transform.up);
         }
 
-        public void RotateTo(Vector2 direction)
+        public Vector2 Seek(Vector2 target)
+        {
+            Vector2 displacement = (target - Position);
+            Vector2 direction = displacement.normalized;
+
+            return direction * moveSpeed * Time.deltaTime;
+        }
+
+        public void Rotate(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
-        }
-
-        public void MoveForward()
-        {
-            float moveSpeedPerFrame = m_MoveSpeed * Time.deltaTime;
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            transform.Translate(velocity);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, rotateSpeed);
         }
     }
 

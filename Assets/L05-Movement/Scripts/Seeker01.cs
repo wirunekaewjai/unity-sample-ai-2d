@@ -6,16 +6,29 @@ namespace Wirune.L05
 {
     public class Seeker01 : MonoBehaviour 
     {
-        public Transform target;
-        public float speed = 2f;
+        public Player player;
+
+        public float moveSpeed = 2f;
+
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
 
         void Update ()
         {
-            Vector2 displacement = target.position - transform.position;
+            Vector2 displacement = player.Position - Position;
             Vector2 direction = displacement.normalized;
-            Vector2 velocity = direction * speed * Time.deltaTime;
+            Vector2 velocity = direction * moveSpeed * Time.deltaTime;
 
-            transform.Translate(velocity);
+            Position = Position + velocity;
         }
     }
 

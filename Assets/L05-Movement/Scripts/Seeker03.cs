@@ -4,51 +4,66 @@ using UnityEngine;
 
 namespace Wirune.L05
 {
-    // Add 'Max Distance'
     public class Seeker03 : MonoBehaviour 
     {
-        [SerializeField]
-        private Player m_Player;
+        public bool drawGizmos = true;
 
-        [SerializeField]
-        private float m_MoveSpeed = 2f;
+        [Space]
+        public Player player;
 
-        [SerializeField]
-        private float m_RotateSpeed = 5f;
+        public float moveSpeed = 2f;
+        public float rotateSpeed = 5f;
+        public float radius = 0.5f;
 
-        [SerializeField]
-        private float m_MaxDistance = 3f;
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
+
+        public Quaternion Rotation
+        {
+            get
+            {
+                return transform.rotation;
+            }
+            set
+            {
+                transform.rotation = value;
+            }
+        }
 
         void Update ()
         {
-            Vector2 displacement = m_Player.transform.position - transform.position;
-            float distance = displacement.magnitude - m_Player.radius;
+            // Move
+            Vector2 displacement = player.Position - Position;
+            Vector2 direction = displacement.normalized;
+            Vector2 velocity = direction * moveSpeed * Time.deltaTime;
 
-            if (distance <= m_MaxDistance)
+            float remainingDistance = Vector2.Distance(player.Position, Position);
+            if (remainingDistance >= player.radius + radius)
             {
-                RotateTo(displacement);
-                MoveForward();
+                Position = Position + velocity;
             }
+
+            // Rotate
+            Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
+            Rotation = Quaternion.RotateTowards(Rotation, lookAt, rotateSpeed);
         }
 
         void OnDrawGizmos()
         {
+            if (!drawGizmos)
+                return;
+
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, m_MaxDistance);
-        }
-
-        public void RotateTo(Vector2 direction)
-        {
-            Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
-        }
-
-        public void MoveForward()
-        {
-            float moveSpeedPerFrame = m_MoveSpeed * Time.deltaTime;
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            transform.Translate(velocity);
+            Gizmos.DrawWireSphere(transform.position, radius);
         }
     }
 
