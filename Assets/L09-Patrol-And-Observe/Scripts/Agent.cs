@@ -13,21 +13,34 @@ namespace Wirune.L09
         public const byte PATROL_STATE  = 1;
         public const byte OBSERVE_STATE = 2;
 
-        [SerializeField]
-        private float m_MoveSpeed = 2f;
+        public bool drawGizmos = true;
 
-        [SerializeField]
-        private float m_RotateSpeed = 5f;
+        [Space]
+        public float moveSpeed = 2f;
+        public float rotateSpeed = 5f;
 
-        [SerializeField]
-        private Path m_Path;
+        [Space]
+        public float stoppingDistance = 0.1f;
+        public Path path;
+
+        public Vector2 Position
+        {
+            get
+            {
+                return transform.position;
+            }
+            set
+            {
+                transform.position = value;
+            }
+        }
+
+        // Property
+        public Fsm Fsm { get; private set; }
 
         // Non-Serialized
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
-
-        // Property
-        public Fsm Fsm { get; private set; }
 
         void Awake()
         {
@@ -52,30 +65,41 @@ namespace Wirune.L09
             Fsm.Update();
         }
 
+        void OnDrawGizmos()
+        {
+            if (!drawGizmos)
+                return;
+
+            Vector2 target = GetCurrentPoint().Position;
+
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(Position, target);
+        }
+
         // Copied from L05-Movement
-        public void RotateTo(Vector2 direction)
+        public Vector2 Seek(Vector2 target)
+        {
+            Vector2 displacement = (target - Position);
+            Vector2 direction = displacement.normalized;
+
+            return direction * moveSpeed * Time.deltaTime;
+        }
+
+        public void Rotate(Vector2 direction)
         {
             Quaternion lookAt = Quaternion.LookRotation(Vector3.forward, direction);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, m_RotateSpeed);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, rotateSpeed);
         }
+        //
 
-        public void MoveForward(float distance)
-        {
-            float moveSpeedPerFrame = Mathf.Min(m_MoveSpeed * Time.deltaTime, distance);
-            Vector2 velocity = Vector2.up * moveSpeedPerFrame;
-
-            transform.Translate(velocity);
-        }
-
-        // Copied from L08-Patrol
         public Point GetCurrentPoint()
         {
-            return m_Path.GetPoint(m_CurrentPointIndex);
+            return path.GetPoint(m_CurrentPointIndex);
         }
 
         public void NextPoint()
         {
-            if (m_Path.Count <= 1)
+            if (path.Count <= 1)
             {
                 m_CurrentPointIndex = 0;
                 return;
@@ -85,10 +109,10 @@ namespace Wirune.L09
             {
                 m_CurrentPointIndex++;
 
-                if (m_CurrentPointIndex >= m_Path.Count)
+                if (m_CurrentPointIndex >= path.Count)
                 {
                     m_IsForward = false;
-                    m_CurrentPointIndex = m_Path.Count - 2;
+                    m_CurrentPointIndex = path.Count - 2;
                 }
             }
             else

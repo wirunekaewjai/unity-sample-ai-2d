@@ -100,7 +100,7 @@ namespace Wirune.L08
                 if (m_CurrentPointIndex >= path.Count)
                 {
                     m_IsForward = false;
-                    m_CurrentPointIndex = path.Count - 1;
+                    m_CurrentPointIndex = path.Count - 2;
                 }
             }
             else
@@ -110,7 +110,7 @@ namespace Wirune.L08
                 if (m_CurrentPointIndex < 0)
                 {
                     m_IsForward = true;
-                    m_CurrentPointIndex = 0;
+                    m_CurrentPointIndex = 1;
                 }
             }
         }

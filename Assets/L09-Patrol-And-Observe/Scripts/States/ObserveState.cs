@@ -40,7 +40,7 @@ namespace Wirune.L09
                 m_EndTime = Time.time + m_Point.Duration;
             }
 
-            agent.RotateTo(m_Point.GetDirection(m_CurrentIndex));
+            agent.Rotate(m_Point.GetDirection(m_CurrentIndex));
         }
 
         public void OnExit(Agent agent)
