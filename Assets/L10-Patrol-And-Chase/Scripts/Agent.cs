@@ -16,7 +16,6 @@ namespace Wirune.L10
         public const byte OBSERVE_STATE = 2;
         public const byte CHASE_STATE   = 3;
 
-
         public bool drawGizmos = true;
 
         [Space]
@@ -51,30 +50,6 @@ namespace Wirune.L10
         // Non-Serialized
         private bool m_IsForward = true;
         private int m_CurrentPointIndex = 0;
-
-
-//        [SerializeField]
-//        private float m_MoveSpeed = 2f;
-//
-//        [SerializeField]
-//        private float m_RotateSpeed = 5f;
-//
-//        [SerializeField]
-//        private float m_StopDistance = 0.75f;
-//
-//        [SerializeField]
-//        private Path m_Path;
-//
-//        // Non-Serialized
-//        private bool m_IsForward = true;
-//        private int m_CurrentPointIndex = 0;
-//
-//        // Properties
-//        public CircleCollider2D Player { get; private set; }
-//        public Fsm Fsm { get; private set; }
-//
-//        public float StopDistance
-//        { get { return m_StopDistance; } }
 
         void Awake()
         {
