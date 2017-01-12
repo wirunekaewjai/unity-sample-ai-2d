@@ -75,12 +75,14 @@ namespace Wirune.W01
                 Vector2 velocity = Seek(target);
 
                 float remainingDistance = Vector2.Distance(target, position);
-                if (remainingDistance >= stoppingDistance)
+                if (remainingDistance > stoppingDistance)
                 {
                     Position = position + velocity;
                 }
                 else
                 {
+                    Position = target;
+
                     m_Path.RemoveAt(0);
                     IsReached = (m_Path.Count == 0);
                 }
@@ -96,15 +98,15 @@ namespace Wirune.W01
 
             if (m_Path.Count > 1)
             {
-                Gizmos.color = Color.blue;
-                Gizmos.DrawLine(transform.position, m_Path[0]);
-
-                Gizmos.color = Color.cyan;
+                Gizmos.color = Color.yellow;
 
                 for (int i = 0; i < m_Path.Count - 1; i++)
                 {
                     Gizmos.DrawLine(m_Path[i], m_Path[i + 1]);
                 }
+
+                Gizmos.color = Color.red;
+                Gizmos.DrawLine(transform.position, m_Path[0]);
             }
         }
 
@@ -114,6 +116,16 @@ namespace Wirune.W01
             Vector2 direction = displacement.normalized;
 
             return direction * moveSpeed * Time.deltaTime;
+        }
+
+        public Vector2 Truncate(Vector2 velocity, float distance)
+        {
+            if (velocity.magnitude > distance)
+            {
+                velocity = velocity.normalized * distance;
+            }
+
+            return velocity;
         }
 
         public void Rotate(Vector2 direction)
@@ -128,15 +140,23 @@ namespace Wirune.W01
 
             GridGraph graph = Object.FindObjectOfType<GridGraph>();
 
+            Node start = graph.FindNearest(Position);
             Node goal = graph.FindNearest(m_Destination);
 
-            if (IsInside(goal, m_Destination))
+            if (start == goal || start.neighbors.Contains(goal))
             {
-                m_Path.Add(m_Destination);
+                if (IsInside(goal, m_Destination))
+                {
+                    m_Path.Add(m_Destination);
+                }
+                else
+                {
+                    m_Destination = ClosestPoint(goal, m_Destination);
+                    m_Path.Add(m_Destination);
+                }
+
                 return;
             }
-
-            Node start = graph.FindNearest(Position);
 
             List<Node> nodes = AStar.Search(start, goal, heuristic);
             nodes.Remove(start);
@@ -148,20 +168,24 @@ namespace Wirune.W01
                 m_Path.Add(node.position);
             }
 
-            Vector2 closest = ClosestPoint(goal, m_Destination);
-            m_Path.Add(closest);
+            if (IsInside(goal, m_Destination))
+            {
+                m_Destination = ClosestPoint(goal, m_Destination);
+                m_Path.Add(m_Destination);
+            }
         }
 
 
         private Vector2 ClosestPoint(Node node, Vector2 point)
         {
             Bounds b = new Bounds(node.position, node.size);
+            float size = node.size.magnitude;
 
-            Vector2 disp = (m_Destination - node.position);
-            Vector2 closest = b.ClosestPoint(node.position + disp.normalized * 1000f);
+            Vector2 disp = (point - Position);
+            Vector2 closest = b.ClosestPoint(Position + (disp.normalized * size));
 
             float d1 = disp.sqrMagnitude;
-            float d2 = (closest - node.position).sqrMagnitude;
+            float d2 = (closest - Position).sqrMagnitude;
 
             if (d1 >= d2)
             {
@@ -174,12 +198,13 @@ namespace Wirune.W01
         private bool IsInside(Node node, Vector2 point)
         {
             Bounds b = new Bounds(node.position, node.size);
+            float size = node.size.magnitude;
 
-            Vector2 disp = (m_Destination - node.position);
-            Vector2 closest = b.ClosestPoint(node.position + disp.normalized * 1000f);
+            Vector2 disp = (point - Position);
+            Vector2 closest = b.ClosestPoint(Position + (disp.normalized * size));
 
             float d1 = disp.sqrMagnitude;
-            float d2 = (closest - node.position).sqrMagnitude;
+            float d2 = (closest - Position).sqrMagnitude;
 
             return (d1 < d2);
         }

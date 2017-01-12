@@ -11,6 +11,9 @@ namespace Wirune.W01
         public const byte OBSERVE_STATE = 2;
         public const byte CHASE_STATE   = 3;
 
+        public bool drawGizmos = true;
+
+        [Space]
         public GraphAgent agent;
         public PatrolPath path;
         public EyeVision eyeVision;
@@ -51,6 +54,15 @@ namespace Wirune.W01
         void Update()
         {
             Fsm.Update();
+        }
+
+        void OnDrawGizmos()
+        {
+            if (!drawGizmos)
+                return;
+
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, radius);
         }
 
         public PatrolPoint GetCurrentPoint()

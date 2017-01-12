@@ -23,21 +23,33 @@ namespace Wirune.W01
         [SerializeField, HideInInspector]
         private List<Node> m_Nodes = new List<Node>();
 
-        public Node FindNearest(Vector2 position)
+        public Node FindNearest(Vector2 position, bool includeNonWalkable = false)
         {
-//            Vector2 center = transform.position;
-//            float extents = size * division * 0.5f;
+            if (includeNonWalkable)
+            {
+//                Vector2 center = transform.position;
+//                float extents = size * division * 0.5f;
 //
-//            if (position.x >= center.x - extents && position.x <= center.x + extents &&
-//               position.y >= center.y - extents && position.y <= center.y + extents)
-//            {
+//                if (position.x >= center.x - extents && position.x <= center.x + extents &&
+//                    position.y >= center.y - extents && position.y <= center.y + extents)
+//                {
+//                    return (from n in m_Nodes
+//                        where n.walkable
+//                        orderby (n.position - position).sqrMagnitude ascending
+//                        select n).First();
+//                }
+//
+//                return null;
+
                 return (from n in m_Nodes
-                    where n.walkable
                     orderby (n.position - position).sqrMagnitude ascending
                     select n).First();
-//            }
-//
-//            return null;
+            }
+
+            return (from n in m_Nodes
+                where n.walkable
+                orderby (n.position - position).sqrMagnitude ascending
+                select n).First();
         }
 
         public void Generate()

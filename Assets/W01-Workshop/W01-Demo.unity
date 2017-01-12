@@ -976,7 +976,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1340852982}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 4, y: 4, z: 0}
+  m_LocalPosition: {x: 4.25, y: -4.25, z: 0}
   m_LocalScale: {x: 0.9, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1064,9 +1064,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawGizmos: 1
   heuristic: 1
-  moveSpeed: 3
+  moveSpeed: 3.25
   rotateSpeed: 5
-  stoppingDistance: 0.02
+  stoppingDistance: 0.1
 --- !u!114 &1340852988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   heuristic: 0
   moveSpeed: 1.75
   rotateSpeed: 5
-  stoppingDistance: 0.05
+  stoppingDistance: 0.1
 --- !u!114 &1371200732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,6 +1174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40bedb1d1c45a584b89674ad71bb82a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawGizmos: 1
   agent: {fileID: 1371200731}
   path: {fileID: 1713467390}
   eyeVision: {fileID: 1371200733}
@@ -1192,8 +1193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawGizmos: 1
   radius: 3
-  angle: 45
-  division: 6
+  angle: 100
+  division: 12
   onEnter:
     m_PersistentCalls:
       m_Calls: []
