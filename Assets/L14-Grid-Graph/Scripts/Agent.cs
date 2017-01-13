@@ -44,6 +44,70 @@ namespace Wirune.L14
                     Bounds b0 = new Bounds(n0.position, n0.size);
                     Bounds b1 = new Bounds(n1.position, n1.size);
 
+                    // Type B
+//                    Vector2 ps = b0.ClosestPoint(start);
+//                    Vector2 pg = b0.ClosestPoint(goal);
+//                    Vector2 pc = (ps + pg) / 2f;
+//
+//                    Vector2 pcc = b1.ClosestPoint(pc);
+//
+//                    Vector2 min = b0.min;
+//                    Vector2 max = b0.max;
+//
+//                    Vector2 lb = min;
+//                    Vector2 lt = new Vector2(min.x, max.y);
+//                    Vector2 rt = max;
+//                    Vector2 rb = new Vector2(max.x, min.y);
+//
+//                    Vector2 p0 = lb;
+//                    Vector2 p1 = lt;
+//
+//                    Vector2 dir = (n1.position - n0.position).normalized;
+//
+//                    float dx = Mathf.Abs(dir.x);
+//                    float dy = Mathf.Abs(dir.y);
+//
+//                    if (dx > dy)
+//                    {
+//                        if (dir.x < 0)
+//                        {
+//                            // Left
+//                            p0 = lb;
+//                            p1 = lt;
+//                        }
+//                        else
+//                        {
+//                            // Right
+//                            p0 = lt;
+//                            p1 = rb;
+//                        }
+//                    }
+//                    else
+//                    {
+//                        if (dir.y < 0)
+//                        {
+//                            // Bottom
+//                            p0 = rb;
+//                            p1 = lb;
+//                        }
+//                        else
+//                        {
+//                            // Top
+//                            p0 = lt;
+//                            p1 = rt;
+//                        }
+//                    }
+//
+//                    Vector2 size = (p1 - p0);
+//                    Vector2 center = (p0 + p1) / 2f;
+//
+//                    Bounds edge = new Bounds(center, new Vector2(Mathf.Abs(size.x), Mathf.Abs(size.y)));
+//
+//                    pcc = edge.ClosestPoint(pcc);
+//                    m_Path.Insert(0, pcc);
+
+
+                    // Type A
                     Vector2 p0 = b0.ClosestPoint(start);
                     Vector2 p1 = b0.ClosestPoint(goal);
                     Vector2 p2 = (p0 + p1) / 2f;
