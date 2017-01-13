@@ -1,0 +1,4787 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 7
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 4
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_DirectLightInLightProbes: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+  m_LightingDataAsset: {fileID: 0}
+  m_RuntimeCPUUsage: 25
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    accuratePlacement: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &35237895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 35237896}
+  - component: {fileID: 35237897}
+  m_Layer: 0
+  m_Name: Shape (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &35237896
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35237895}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: 7.7, y: 10.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &35237897
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35237895}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &58678192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 58678193}
+  - component: {fileID: 58678194}
+  m_Layer: 0
+  m_Name: Shape (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &58678193
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58678192}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -19.8, y: -1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &58678194
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 58678192}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &92429249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 92429250}
+  - component: {fileID: 92429251}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &92429250
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92429249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 10.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &92429251
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92429249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -4.7113705, y: 1.2040854}
+      - {x: -2.594048, y: 0.90636826}
+      - {x: -1.6290221, y: 1.8774924}
+      - {x: -0.071751595, y: 2.116418}
+      - {x: 1.0729165, y: 3.0921857}
+      - {x: 2.4556818, y: 1.6459932}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.523695, y: 0.31554842}
+      - {x: -3.4994764, y: -1.7905474}
+      - {x: -5.3500113, y: -0.334733}
+--- !u!1 &164662195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 164662196}
+  - component: {fileID: 164662197}
+  m_Layer: 0
+  m_Name: Shape (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &164662196
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164662195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.06, y: 1.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &164662197
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164662195}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &165857561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 165857562}
+  - component: {fileID: 165857563}
+  m_Layer: 0
+  m_Name: Shape (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &165857562
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165857561}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.8, y: 2.6, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &165857563
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165857561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &184073322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 184073323}
+  - component: {fileID: 184073324}
+  m_Layer: 0
+  m_Name: Shape (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &184073323
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184073322}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: 8.2, y: 1.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &184073324
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 184073322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &275450338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 275450339}
+  - component: {fileID: 275450340}
+  m_Layer: 0
+  m_Name: Shape (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &275450339
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275450338}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -3.62, y: -4.36, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &275450340
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 275450338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &579183485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 579183486}
+  - component: {fileID: 579183487}
+  m_Layer: 0
+  m_Name: Shape (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &579183486
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579183485}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4, y: -0.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &579183487
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579183485}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &629458696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 629458698}
+  - component: {fileID: 629458697}
+  m_Layer: 0
+  m_Name: Agent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &629458697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 629458696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eba08242a9394484be272f065823f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1045852002}
+  heuristic: 1
+  radius: 0.5
+  clean: 1
+--- !u!4 &629458698
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 629458696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.65, y: -3.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &639228800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 639228801}
+  - component: {fileID: 639228802}
+  m_Layer: 0
+  m_Name: Shape (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &639228801
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639228800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.8, y: 2.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &639228802
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639228800}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &706059352
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 706059353}
+  - component: {fileID: 706059354}
+  m_Layer: 0
+  m_Name: Shape (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &706059353
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706059352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.2, y: 4.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &706059354
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706059352}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &714486191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 714486192}
+  - component: {fileID: 714486193}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &714486192
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714486191}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.4, y: -3.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &714486193
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714486191}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -4.7113705, y: 1.2040854}
+      - {x: -2.594048, y: 0.90636826}
+      - {x: -1.6290221, y: 1.8774924}
+      - {x: -0.071751595, y: 2.116418}
+      - {x: 1.0729165, y: 3.0921857}
+      - {x: 2.4556818, y: 1.6459932}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.523695, y: 0.31554842}
+      - {x: -3.4994764, y: -1.7905474}
+      - {x: -5.3500113, y: -0.334733}
+--- !u!1 &742335405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 742335407}
+  - component: {fileID: 742335406}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!60 &742335406
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 742335405}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -4.7113705, y: 1.2040854}
+      - {x: -2.594048, y: 0.90636826}
+      - {x: -1.6290221, y: 1.8774924}
+      - {x: -0.071751595, y: 2.116418}
+      - {x: 1.0729165, y: 3.0921857}
+      - {x: 2.4556818, y: 1.6459932}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.523695, y: 0.31554842}
+      - {x: -3.4994764, y: -1.7905474}
+      - {x: -5.3500113, y: -0.334733}
+--- !u!4 &742335407
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 742335405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.79, y: -6.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &790986372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 790986377}
+  - component: {fileID: 790986376}
+  - component: {fileID: 790986375}
+  - component: {fileID: 790986374}
+  - component: {fileID: 790986373}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &790986373
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790986372}
+  m_Enabled: 1
+--- !u!124 &790986374
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790986372}
+  m_Enabled: 1
+--- !u!92 &790986375
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790986372}
+  m_Enabled: 1
+--- !u!20 &790986376
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790986372}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &790986377
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790986372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &866645121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 866645122}
+  - component: {fileID: 866645123}
+  m_Layer: 0
+  m_Name: Shape (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &866645122
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866645121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.8, y: 1.4, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &866645123
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 866645121}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.07241885, y: -1.1167051}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.3729396, y: -1.011018}
+      - {x: -1.568737, y: -0.44480005}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &878516274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 878516275}
+  - component: {fileID: 878516276}
+  m_Layer: 0
+  m_Name: Shape (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &878516275
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878516274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.2, y: 4.4, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &878516276
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878516274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.07241885, y: -1.1167051}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.3729396, y: -1.011018}
+      - {x: -1.568737, y: -0.44480005}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &899914755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 899914756}
+  - component: {fileID: 899914757}
+  m_Layer: 0
+  m_Name: Shape (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &899914756
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 899914755}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -20.3, y: 7.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &899914757
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 899914755}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &918369487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 918369488}
+  - component: {fileID: 918369489}
+  m_Layer: 0
+  m_Name: Shape (29)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &918369488
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918369487}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.4, y: 14.9, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &918369489
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918369487}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.07241885, y: -1.1167051}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.3729396, y: -1.011018}
+      - {x: -1.568737, y: -0.44480005}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &923029360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 923029361}
+  - component: {fileID: 923029362}
+  m_Layer: 0
+  m_Name: Shape (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &923029361
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923029360}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -4.17, y: 4.23, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &923029362
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 923029360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &935730828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 935730829}
+  - component: {fileID: 935730830}
+  m_Layer: 0
+  m_Name: Shape (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &935730829
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935730828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 15.9, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &935730830
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935730828}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1025567735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1025567736}
+  - component: {fileID: 1025567737}
+  m_Layer: 0
+  m_Name: Shape (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1025567736
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025567735}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.2, y: 5.6, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1025567737
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1025567735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1045852001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1045852002}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1045852002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1045852001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.9, y: 17.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1296910274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1296910275}
+  - component: {fileID: 1296910276}
+  m_Layer: 0
+  m_Name: Shape (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1296910275
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296910274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.6, y: 5.4, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1296910276
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296910274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1301712870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1301712871}
+  - component: {fileID: 1301712872}
+  m_Layer: 0
+  m_Name: Shape (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1301712871
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301712870}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.2, y: 5.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1301712872
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301712870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1359187528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1359187529}
+  - component: {fileID: 1359187530}
+  m_Layer: 0
+  m_Name: Shape (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1359187529
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359187528}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.27, y: -0.77, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1359187530
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359187528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1383310870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1383310871}
+  - component: {fileID: 1383310872}
+  m_Layer: 0
+  m_Name: Shape (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1383310871
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383310870}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -1.5, y: 19.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &1383310872
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383310870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1428342535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1428342536}
+  - component: {fileID: 1428342537}
+  m_Layer: 0
+  m_Name: Shape (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1428342536
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428342535}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -12.9, y: 5.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &1428342537
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428342535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1522928882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1522928883}
+  - component: {fileID: 1522928884}
+  m_Layer: 0
+  m_Name: Shape (26)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1522928883
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522928882}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.4, y: 16.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1522928884
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522928882}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1576225624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1576225625}
+  - component: {fileID: 1576225626}
+  m_Layer: 0
+  m_Name: Shape (25)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1576225625
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576225624}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -8.4, y: 12.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &1576225626
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576225624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1599264634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1599264636}
+  - component: {fileID: 1599264635}
+  m_Layer: 0
+  m_Name: Grid Graph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!114 &1599264635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599264634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dba08267acf84870a00ed32d412d757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawGizmos: 1
+  drawMesh: 0
+  meshColor: {r: 0, g: 1, b: 1, a: 1}
+  drawBorder: 1
+  borderColor: {r: 0, g: 0, b: 0, a: 0.072}
+  overallSize: 50
+  minSize: 0.5
+  m_Nodes:
+  - position: {x: -18.75, y: -18.75}
+    size: {x: 12.5, y: 12.5}
+    neighbors: 0100000002000000030000003f000000
+  - position: {x: -6.25, y: -18.75}
+    size: {x: 12.5, y: 12.5}
+    neighbors: 00000000030000003f0000004000000041000000980000009a000000
+  - position: {x: -21.875, y: -9.375}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 0000000003000000040000000500000010000000
+  - position: {x: -15.625, y: -9.375}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 0000000001000000020000000500000010000000110000001600000017000000180000001a0000001b0000001c0000003f0000004d000000
+  - position: {x: -23.4375, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 02000000050000000600000007000000
+  - position: {x: -20.3125, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 0200000003000000040000000600000007000000080000000a0000000b0000000c0000000d00000010000000120000001e000000
+  - position: {x: -23.4375, y: -1.5625}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 040000000500000007000000090000000e0000000f0000000e0100000f010000
+  - position: {x: -21.484375, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0400000005000000060000000800000009000000
+  - position: {x: -20.703125, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0500000007000000090000000a000000
+  - position: {x: -21.484375, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0600000007000000080000000e000000
+  - position: {x: -20.117188, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 05000000080000000b000000
+  - position: {x: -19.726562, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 050000000a0000000c000000
+  - position: {x: -19.335938, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 050000000b0000000d000000
+  - position: {x: -18.945312, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 050000000c0000001e000000
+  - position: {x: -21.484375, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 06000000090000000f000000
+  - position: {x: -21.484375, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 060000000e0000000f01000010010000
+  - position: {x: -17.96875, y: -5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 020000000300000005000000110000001200000013000000
+  - position: {x: -16.40625, y: -5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 03000000100000001200000013000000140000001600000019000000
+  - position: {x: -17.96875, y: -3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 05000000100000001100000013000000150000001e0000001f00000024000000
+  - position: {x: -16.796875, y: -4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1000000011000000120000001400000015000000
+  - position: {x: -16.210938, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1100000013000000
+  - position: {x: -16.796875, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 12000000130000001f00000024000000
+  - position: {x: -15.234375, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 03000000110000001700000019000000
+  - position: {x: -14.6484375, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 030000001600000018000000
+  - position: {x: -14.2578125, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 03000000170000001a000000
+  - position: {x: -15.4296875, y: -5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1100000016000000
+  - position: {x: -13.8671875, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 03000000180000001b000000
+  - position: {x: -13.4765625, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 030000001a0000001c000000
+  - position: {x: -12.890625, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 030000001b0000001d0000004d000000
+  - position: {x: -12.6953125, y: -5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1c0000004d000000
+  - position: {x: -18.359375, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 050000000d000000120000001f000000200000002100000023000000
+  - position: {x: -17.578125, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 12000000150000001e00000021000000230000002400000025000000
+  - position: {x: -18.554688, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1e0000002100000022000000
+  - position: {x: -18.164062, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1e0000001f000000200000002200000023000000
+  - position: {x: -18.164062, y: -1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 200000002100000023000000280000002a000000
+  - position: {x: -17.578125, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1e0000001f0000002100000022000000250000002a0000002f000000
+  - position: {x: -16.796875, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 12000000150000001f0000002500000026000000
+  - position: {x: -16.796875, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1f000000230000002400000026000000270000002f00000030000000
+  - position: {x: -16.210938, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 240000002500000027000000
+  - position: {x: -16.210938, y: -1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 250000002600000030000000
+  - position: {x: -18.164062, y: -1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 22000000290000002a000000
+  - position: {x: -18.164062, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 280000002a0000002b000000
+  - position: {x: -17.578125, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 220000002300000028000000290000002e0000002f00000033000000
+  - position: {x: -18.164062, y: -0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 290000002d0000002e000000
+  - position: {x: -18.554688, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2d00000030010000
+  - position: {x: -18.164062, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2b0000002c0000002e00000031010000
+  - position: {x: -17.578125, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2a0000002b0000002d0000002f000000330000003201000033010000
+  - position: {x: -16.796875, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 23000000250000002a0000002e00000030000000310000003300000034000000
+  - position: {x: -16.210938, y: -1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 25000000270000002f0000003100000032000000
+  - position: {x: -16.210938, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2f000000300000003200000034000000
+  - position: {x: -15.8203125, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3000000031000000340000003500000039000000
+  - position: {x: -16.796875, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2a0000002e0000002f00000034000000340100003501000037010000
+  - position: {x: -16.015625, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2f00000031000000320000003300000039000000370100003d010000
+  - position: {x: -15.4296875, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 320000003600000039000000
+  - position: {x: -15.0390625, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3500000037000000390000003a000000
+  - position: {x: -14.6484375, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 36000000380000003a000000
+  - position: {x: -14.2578125, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 370000003a0000003b000000
+  - position: {x: -15.234375, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 320000003400000035000000360000003a0000003d0100003e010000
+  - position: {x: -14.453125, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 360000003700000038000000390000003d0000003e01000044010000
+  - position: {x: -13.8671875, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 380000003c0000003d000000
+  - position: {x: -13.4765625, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3b0000003d000000
+  - position: {x: -13.671875, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3a0000003b0000003c0000003e00000044010000
+  - position: {x: -12.890625, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3d0000005700000044010000
+  - position: {x: -9.375, y: -9.375}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 00000000010000000300000040000000420000004d0000004e000000500000005100000069000000
+  - position: {x: -4.6875, y: -10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 010000003f000000410000004200000043000000
+  - position: {x: -1.5625, y: -10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 01000000400000004200000043000000440000009a0000009c000000
+  - position: {x: -4.6875, y: -7.8125}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 3f0000004000000041000000430000004500000051000000690000006a0000006e0000006f00000071000000720000007a000000
+  - position: {x: -2.34375, y: -8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 400000004100000042000000440000004500000046000000
+  - position: {x: -0.78125, y: -8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 4100000043000000450000004600000047000000480000009c0000009e000000a0000000
+  - position: {x: -2.34375, y: -7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 420000004300000044000000460000004a000000720000007a0000007b0000007d0000007f000000
+  - position: {x: -1.171875, y: -7.421875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 43000000440000004500000047000000490000004a0000004b000000
+  - position: {x: -0.5859375, y: -7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 44000000460000004800000049000000
+  - position: {x: -0.1953125, y: -7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 440000004700000049000000
+  - position: {x: -0.5859375, y: -7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4600000047000000480000004a0000004b000000
+  - position: {x: -1.171875, y: -6.640625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4500000046000000490000004b0000004c0000007d0000007f00000080000000
+  - position: {x: -0.5859375, y: -6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 46000000490000004a0000004c000000
+  - position: {x: -0.5859375, y: -6.4453125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4a0000004b0000007f00000080000000
+  - position: {x: -11.71875, y: -5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 030000001c0000001d0000003f0000004e0000004f000000
+  - position: {x: -10.15625, y: -5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 3f0000004d00000050000000
+  - position: {x: -11.9140625, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4d000000
+  - position: {x: -8.59375, y: -5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 3f0000004e00000051000000520000005400000056000000
+  - position: {x: -7.03125, y: -5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 3f00000042000000500000005400000056000000690000006b00000073000000
+  - position: {x: -8.7890625, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 500000005300000054000000
+  - position: {x: -8.7890625, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 520000005400000055000000
+  - position: {x: -8.203125, y: -4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 500000005100000052000000530000005500000056000000
+  - position: {x: -8.203125, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5300000054000000560000005b000000
+  - position: {x: -7.03125, y: -3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 500000005100000054000000550000005b0000005c0000005e000000730000007600000088000000
+  - position: {x: -12.3046875, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3e0000005800000089010000
+  - position: {x: -11.9140625, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 570000005900000089010000
+  - position: {x: -11.5234375, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 580000005a00000089010000
+  - position: {x: -11.1328125, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5900000089010000
+  - position: {x: -7.6171875, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 55000000560000005c0000005d000000
+  - position: {x: -7.2265625, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 560000005b0000005d0000005e000000
+  - position: {x: -7.2265625, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b0000005c0000005e0000005f00000061000000
+  - position: {x: -6.640625, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 560000005c0000005d0000006100000088000000
+  - position: {x: -7.2265625, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5d0000006000000061000000
+  - position: {x: -7.2265625, y: -1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5f0000006100000062000000
+  - position: {x: -6.640625, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5d0000005e0000005f000000600000006400000088000000
+  - position: {x: -7.2265625, y: -1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 600000006300000064000000
+  - position: {x: -7.2265625, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 620000006400000065000000
+  - position: {x: -6.640625, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 6100000062000000630000006800000088000000
+  - position: {x: -7.2265625, y: -0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 630000006700000068000000
+  - position: {x: -7.6171875, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6700000096010000
+  - position: {x: -7.2265625, y: -0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 65000000660000006800000096010000
+  - position: {x: -6.640625, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 6400000065000000670000008800000096010000
+  - position: {x: -5.859375, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3f00000042000000510000006a0000006b0000006c000000
+  - position: {x: -5.078125, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 42000000690000006b0000006c0000006e00000070000000
+  - position: {x: -5.859375, y: -5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 51000000690000006a0000006c0000006d0000007300000074000000
+  - position: {x: -5.2734375, y: -5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 690000006a0000006b0000006d000000
+  - position: {x: -5.2734375, y: -4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6b0000006c0000007300000074000000
+  - position: {x: -4.4921875, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 420000006a0000006f00000070000000
+  - position: {x: -4.1015625, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 420000006e0000007000000071000000
+  - position: {x: -4.4921875, y: -5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6a0000006e0000006f000000
+  - position: {x: -3.7109375, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 420000006f00000072000000
+  - position: {x: -3.3203125, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4200000045000000710000007a000000
+  - position: {x: -5.859375, y: -4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 51000000560000006b0000006d00000074000000750000007600000077000000
+  - position: {x: -5.2734375, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6b0000006d0000007300000075000000
+  - position: {x: -5.2734375, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 730000007400000077000000
+  - position: {x: -5.859375, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5600000073000000770000007800000088000000
+  - position: {x: -5.2734375, y: -3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7300000075000000760000007800000079000000
+  - position: {x: -5.2734375, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 76000000770000007900000088000000
+  - position: {x: -4.8828125, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 770000007800000088000000
+  - position: {x: -2.9296875, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4200000045000000720000007b0000007c000000
+  - position: {x: -2.5390625, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 450000007a0000007c0000007d000000
+  - position: {x: -2.5390625, y: -5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7a0000007b0000007d0000007e000000
+  - position: {x: -1.953125, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 450000004a0000007b0000007c0000007e0000007f00000083000000
+  - position: {x: -1.953125, y: -5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7c0000007d000000830000008500000087000000
+  - position: {x: -1.171875, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 450000004a0000004c0000007d00000080000000810000008300000084000000
+  - position: {x: -0.5859375, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4a0000004c0000007f0000008100000082000000
+  - position: {x: -0.5859375, y: -5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7f000000800000008200000084000000
+  - position: {x: -0.1953125, y: -5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 800000008100000084000000
+  - position: {x: -1.171875, y: -5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7d0000007e0000007f0000008400000087000000
+  - position: {x: -0.390625, y: -5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7f00000081000000820000008300000087000000b4000000
+  - position: {x: -1.953125, y: -4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7e0000008600000087000000
+  - position: {x: -1.953125, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 85000000870000008c0000008d000000
+  - position: {x: -0.78125, y: -3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 7e00000083000000840000008500000086000000900000009100000092000000b4000000b5000000b9000000c8000000
+  - position: {x: -4.6875, y: -1.5625}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 560000005e000000610000006400000068000000760000007800000079000000890000008b0000008e0000008f000000950000009600000097000000a0010000a1010000a9010000
+  - position: {x: -2.9296875, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 880000008a0000008b000000
+  - position: {x: -2.5390625, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 890000008c000000
+  - position: {x: -2.9296875, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 88000000890000008e000000
+  - position: {x: -2.1484375, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 860000008a0000008d000000
+  - position: {x: -1.7578125, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 860000008c00000090000000
+  - position: {x: -2.9296875, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 880000008b0000008f000000
+  - position: {x: -2.9296875, y: -1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 880000008e00000095000000
+  - position: {x: -1.3671875, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 870000008d00000091000000
+  - position: {x: -0.9765625, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 870000009000000092000000
+  - position: {x: -0.390625, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 87000000910000009300000094000000c8000000ca000000
+  - position: {x: -0.5859375, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9200000094000000
+  - position: {x: -0.1953125, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9200000093000000ca000000
+  - position: {x: -2.9296875, y: -1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 880000008f00000096000000
+  - position: {x: -2.9296875, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 880000009500000097000000
+  - position: {x: -2.734375, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8800000096000000a9010000aa010000
+  - position: {x: 6.25, y: -18.75}
+    size: {x: 12.5, y: 12.5}
+    neighbors: 01000000990000009a0000009b000000aa000000ab000000f6000000
+  - position: {x: 18.75, y: -18.75}
+    size: {x: 12.5, y: 12.5}
+    neighbors: 98000000ab000000f6000000f7000000
+  - position: {x: 1.5625, y: -10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 0100000041000000980000009b0000009c0000009d000000a1000000a2000000a3000000a4000000a5000000
+  - position: {x: 4.6875, y: -10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 980000009a000000a4000000a5000000a6000000a9000000aa000000ac000000
+  - position: {x: 0.390625, y: -8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 41000000440000009a0000009d0000009e0000009f000000
+  - position: {x: 1.171875, y: -8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9a0000009c0000009f000000a1000000
+  - position: {x: 0.1953125, y: -8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 440000009c0000009f000000a0000000
+  - position: {x: 0.5859375, y: -8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9c0000009d0000009e000000a0000000
+  - position: {x: 0.1953125, y: -8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 440000009e0000009f000000
+  - position: {x: 1.7578125, y: -9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9a0000009d000000a2000000
+  - position: {x: 2.1484375, y: -9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9a000000a1000000a3000000
+  - position: {x: 2.5390625, y: -9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9a000000a2000000a4000000
+  - position: {x: 2.9296875, y: -9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9a0000009b000000a3000000a5000000
+  - position: {x: 3.515625, y: -8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9a0000009b000000a4000000a6000000a7000000a8000000
+  - position: {x: 4.296875, y: -8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9b000000a5000000a7000000a8000000a9000000
+  - position: {x: 3.7109375, y: -8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a5000000a6000000a8000000
+  - position: {x: 4.296875, y: -8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a5000000a6000000a7000000a9000000
+  - position: {x: 5.46875, y: -8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 9b000000a6000000a8000000ac000000
+  - position: {x: 7.8125, y: -10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 980000009b000000ab000000ac000000ad000000b3000000
+  - position: {x: 10.9375, y: -10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 9800000099000000aa000000ad000000b3000000f6000000
+  - position: {x: 7.03125, y: -8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 9b000000a9000000aa000000ad000000ae000000af000000b2000000
+  - position: {x: 8.59375, y: -8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: aa000000ab000000ac000000af000000b2000000b3000000
+  - position: {x: 7.2265625, y: -7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ac000000af000000b0000000
+  - position: {x: 7.6171875, y: -7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ac000000ad000000ae000000b0000000b2000000
+  - position: {x: 7.6171875, y: -7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ae000000af000000b1000000b2000000
+  - position: {x: 7.6171875, y: -6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b0000000b2000000
+  - position: {x: 8.59375, y: -7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ac000000ad000000af000000b0000000b1000000b3000000da000000db000000e2000000
+  - position: {x: 10.9375, y: -7.8125}
+    size: {x: 3.125, y: 3.125}
+    neighbors: aa000000ab000000ad000000b2000000db000000e2000000f6000000f8000000
+  - position: {x: 0.1953125, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8400000087000000b5000000b6000000
+  - position: {x: 0.1953125, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 87000000b4000000b6000000b9000000
+  - position: {x: 0.5859375, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b4000000b5000000b7000000b9000000ba000000
+  - position: {x: 0.9765625, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b6000000b8000000ba000000
+  - position: {x: 1.3671875, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b7000000ba000000bc000000c1000000
+  - position: {x: 0.390625, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 87000000b5000000b6000000ba000000c8000000c9000000
+  - position: {x: 1.171875, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b6000000b7000000b8000000b9000000c1000000c9000000ce000000
+  - position: {x: 2.1484375, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bd000000be000000
+  - position: {x: 1.7578125, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b8000000bd000000c1000000
+  - position: {x: 2.1484375, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bb000000bc000000bf000000c1000000
+  - position: {x: 2.5390625, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bb000000bf000000
+  - position: {x: 2.5390625, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bd000000be000000c0000000c2000000
+  - position: {x: 2.9296875, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bf000000c2000000
+  - position: {x: 1.953125, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b8000000ba000000bc000000bd000000c2000000ce000000
+  - position: {x: 2.734375, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: bf000000c0000000c1000000c3000000ce000000
+  - position: {x: 3.515625, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c2000000c4000000d1000000
+  - position: {x: 4.1015625, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c3000000c5000000d1000000
+  - position: {x: 4.4921875, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c4000000c6000000d1000000
+  - position: {x: 4.8828125, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c5000000c7000000d2000000
+  - position: {x: 5.2734375, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c6000000d2000000
+  - position: {x: 0.390625, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8700000092000000b9000000c9000000ca000000cb000000cc000000
+  - position: {x: 1.171875, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b9000000ba000000c8000000cc000000cd000000ce000000
+  - position: {x: 0.1953125, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9200000094000000c8000000cb000000
+  - position: {x: 0.5859375, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c8000000ca000000cc000000
+  - position: {x: 0.9765625, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c8000000c9000000cb000000cd000000
+  - position: {x: 1.3671875, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c9000000cc000000ce000000
+  - position: {x: 2.34375, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ba000000c1000000c2000000c9000000cd000000cf000000d1000000d8000000
+  - position: {x: 2.734375, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ce000000d0000000d8000000
+  - position: {x: 2.734375, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: cf000000d80000008e020000
+  - position: {x: 3.90625, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c3000000c4000000c5000000ce000000d2000000d6000000d8000000
+  - position: {x: 5.078125, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c6000000c7000000d1000000d3000000d4000000d6000000
+  - position: {x: 5.6640625, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d2000000d4000000
+  - position: {x: 5.6640625, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d2000000d3000000d5000000d7000000
+  - position: {x: 6.0546875, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d4000000d7000000e3000000
+  - position: {x: 5.078125, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d1000000d2000000d7000000d9000000
+  - position: {x: 5.859375, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d4000000d5000000d6000000d9000000e7000000
+  - position: {x: 3.90625, y: -0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ce000000cf000000d0000000d1000000d900000097020000980200009e020000
+  - position: {x: 5.46875, y: -0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d6000000d7000000d8000000ea000000980200009e020000
+  - position: {x: 8.3984375, y: -6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b2000000db000000
+  - position: {x: 8.984375, y: -5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b2000000b3000000da000000dc000000e2000000
+  - position: {x: 9.1796875, y: -5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: db000000dd000000e2000000
+  - position: {x: 9.1796875, y: -4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: dc000000de000000e2000000
+  - position: {x: 9.1796875, y: -4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: dd000000df000000e2000000
+  - position: {x: 9.1796875, y: -4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: de000000e1000000e2000000
+  - position: {x: 8.3984375, y: -3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e1000000e9000000
+  - position: {x: 8.984375, y: -3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: df000000e0000000e2000000e9000000
+  - position: {x: 10.9375, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: b2000000b3000000db000000dc000000dd000000de000000df000000e1000000e9000000ec000000ed000000ee000000f8000000fa000000
+  - position: {x: 6.4453125, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d5000000e4000000e7000000
+  - position: {x: 6.8359375, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e3000000e5000000e7000000
+  - position: {x: 7.2265625, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e4000000e6000000e7000000e8000000
+  - position: {x: 7.6171875, y: -2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e5000000e8000000e9000000
+  - position: {x: 6.640625, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d7000000e3000000e4000000e5000000e8000000ea000000
+  - position: {x: 7.421875, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e5000000e6000000e7000000e9000000ea000000
+  - position: {x: 8.59375, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: e0000000e1000000e2000000e6000000e8000000ea000000eb000000ec000000
+  - position: {x: 7.03125, y: -0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d9000000e7000000e8000000e9000000eb0000009e020000ae020000af020000b0020000
+  - position: {x: 8.59375, y: -0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: e9000000ea000000f3000000b0020000b4020000b5020000b6020000b7020000
+  - position: {x: 10.15625, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: e2000000e9000000ed000000ef000000f3000000
+  - position: {x: 11.328125, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e2000000ec000000ee000000ef000000
+  - position: {x: 12.109375, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e2000000ed000000ef000000f0000000f1000000fa000000
+  - position: {x: 11.328125, y: -1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ec000000ed000000ee000000f0000000f2000000f3000000f4000000
+  - position: {x: 11.9140625, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ee000000ef000000f1000000f2000000
+  - position: {x: 12.3046875, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ee000000f0000000f2000000
+  - position: {x: 11.9140625, y: -1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ef000000f0000000f1000000f4000000
+  - position: {x: 10.15625, y: -0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: eb000000ec000000ef000000f4000000f5000000b7020000bb020000bc020000
+  - position: {x: 11.328125, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ef000000f2000000f3000000f5000000
+  - position: {x: 11.328125, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f3000000f4000000bc020000c1020000
+  - position: {x: 15.625, y: -9.375}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 9800000099000000ab000000b3000000f7000000f8000000f900000003010000
+  - position: {x: 21.875, y: -9.375}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 99000000f6000000f90000000301000004010000
+  - position: {x: 14.0625, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: b3000000e2000000f6000000f9000000fa000000fb000000fc000000fd000000fe000000ff00000001010000
+  - position: {x: 17.1875, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: f6000000f7000000f8000000ff00000001010000020100000301000005010000
+  - position: {x: 12.890625, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e2000000ee000000f8000000fb000000
+  - position: {x: 13.4765625, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f8000000fa000000fc000000
+  - position: {x: 13.8671875, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f8000000fb000000fd000000
+  - position: {x: 14.2578125, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f8000000fc000000fe000000
+  - position: {x: 14.6484375, y: -2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f8000000fd000000ff000000
+  - position: {x: 15.234375, y: -2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f8000000f9000000fe0000000001000001010000
+  - position: {x: 15.4296875, y: -2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ff00000001010000
+  - position: {x: 16.40625, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: f8000000f9000000ff0000000001000002010000
+  - position: {x: 17.96875, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: f90000000101000005010000
+  - position: {x: 20.3125, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: f6000000f7000000f90000000401000005010000060100000d010000
+  - position: {x: 23.4375, y: -4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: f700000003010000060100000d010000
+  - position: {x: 19.53125, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: f900000002010000030100000601000007010000090100000c010000
+  - position: {x: 21.09375, y: -2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 030100000401000005010000090100000c0100000d010000
+  - position: {x: 19.335938, y: -1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 050100000801000009010000
+  - position: {x: 19.335938, y: -0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 07010000090100000a0100000b010000
+  - position: {x: 19.921875, y: -1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 050100000601000007010000080100000a0100000b0100000c010000
+  - position: {x: 19.335938, y: -0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 08010000090100000b010000
+  - position: {x: 19.921875, y: -0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 08010000090100000a0100000c01000041030000
+  - position: {x: 21.09375, y: -0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 0501000006010000090100000b0100000d0100004103000042030000440300004e030000
+  - position: {x: 23.4375, y: -1.5625}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 0301000004010000060100000c010000440300004e030000
+  - position: {x: -23.4375, y: 1.5625}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 060000000f010000130100001c0100002301000024010000
+  - position: {x: -21.484375, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 060000000f0000000e01000010010000110100001301000014010000
+  - position: {x: -20.898438, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0f0000000f0100001101000012010000
+  - position: {x: -20.898438, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0f010000100100001201000014010000
+  - position: {x: -20.507812, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1001000011010000140100001501000019010000
+  - position: {x: -21.484375, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0e0100000f010000140100001c010000
+  - position: {x: -20.703125, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0f01000011010000120100001301000015010000190100001c0100001d010000
+  - position: {x: -20.117188, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 12010000140100001601000019010000
+  - position: {x: -19.726562, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1501000018010000190100001a010000
+  - position: {x: -18.945312, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 30010000
+  - position: {x: -19.335938, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 160100001a010000
+  - position: {x: -19.921875, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 120100001401000015010000160100001a0100001b0100001d0100001e010000
+  - position: {x: -19.335938, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1601000018010000190100001b010000
+  - position: {x: -19.335938, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 190100001a0100001e010000
+  - position: {x: -21.09375, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 0e01000013010000140100001d010000210100002401000025010000
+  - position: {x: -19.921875, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 14010000190100001c0100001e0100001f0100002101000022010000
+  - position: {x: -19.335938, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 190100001b0100001d0100001f01000020010000
+  - position: {x: -19.335938, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1d0100001e0100002001000022010000
+  - position: {x: -18.945312, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1e0100001f010000220100003b010000
+  - position: {x: -19.921875, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1c0100001d0100002201000025010000
+  - position: {x: -19.140625, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1d0100001f0100002001000021010000250100003b0100003c0100004b010000
+  - position: {x: -23.4375, y: 4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 0e0100002401000026010000280100006a0100006b010000
+  - position: {x: -21.09375, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 0e0100001c010000230100002501000026010000270100002b010000
+  - position: {x: -19.53125, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 1c0100002101000022010000240100002b0100002c0100003c0100004b0100004c0100004d0100004e0100004f010000
+  - position: {x: -21.484375, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2301000024010000270100002801000029010000
+  - position: {x: -20.703125, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2401000026010000290100002a0100002b0100002d010000
+  - position: {x: -21.484375, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2301000026010000290100006b010000
+  - position: {x: -20.898438, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2601000027010000280100002a010000
+  - position: {x: -20.507812, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 27010000290100002b0100002d010000
+  - position: {x: -19.921875, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2401000025010000270100002a0100002c0100002d0100002e0100002f010000
+  - position: {x: -19.140625, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 250100002b0100002f0100004f0100005001000051010000
+  - position: {x: -20.117188, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 270100002a0100002b0100002e010000
+  - position: {x: -19.726562, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2b0100002d0100002f010000
+  - position: {x: -19.140625, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2b0100002c0100002e010000510100006c01000079010000
+  - position: {x: -18.554688, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2c0000001701000031010000
+  - position: {x: -18.164062, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2d0000003001000032010000
+  - position: {x: -17.773438, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2e0000003101000033010000
+  - position: {x: -17.382812, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2e0000003201000034010000
+  - position: {x: -16.992188, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 330000003301000035010000
+  - position: {x: -16.601562, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 33000000340100003601000037010000
+  - position: {x: -16.601562, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 350100003701000038010000
+  - position: {x: -16.015625, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 33000000340000003501000036010000390100003a0100003d0100003f010000
+  - position: {x: -16.601562, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3601000039010000
+  - position: {x: -16.210938, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 37010000380100003a010000
+  - position: {x: -15.8203125, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 37010000390100003f010000
+  - position: {x: -18.554688, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 20010000220100003c010000
+  - position: {x: -18.554688, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 22010000250100003b0100004b010000
+  - position: {x: -15.234375, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3400000039000000370100003e0100003f0100004001000041010000
+  - position: {x: -14.453125, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 390000003a0000003d010000410100004201000044010000
+  - position: {x: -15.4296875, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 370100003a0100003d01000040010000
+  - position: {x: -15.0390625, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3d0100003f01000041010000
+  - position: {x: -14.6484375, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3d0100003e010000400100004201000043010000
+  - position: {x: -14.2578125, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3e010000410100004301000044010000
+  - position: {x: -14.2578125, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 410100004201000044010000
+  - position: {x: -13.28125, y: 0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 3a0000003d0000003e0000003e01000042010000430100004501000047010000890100008f010000
+  - position: {x: -13.4765625, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 440100004601000047010000
+  - position: {x: -13.4765625, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4501000047010000480100004a010000
+  - position: {x: -12.890625, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4401000045010000460100004a010000890100008f010000
+  - position: {x: -13.4765625, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 46010000490100004a010000
+  - position: {x: -13.4765625, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 480100004a0100005d010000
+  - position: {x: -12.890625, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 46010000470100004801000049010000600100008f01000099010000
+  - position: {x: -18.554688, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 22010000250100003c0100004c010000
+  - position: {x: -18.554688, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 250100004b0100004d010000
+  - position: {x: -18.554688, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 250100004c0100004e010000
+  - position: {x: -18.554688, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 250100004d0100004f010000
+  - position: {x: -18.554688, y: 4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 250100002c0100004e01000050010000
+  - position: {x: -18.554688, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2c0100004f01000051010000
+  - position: {x: -18.359375, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2c0100002f010000500100005201000079010000
+  - position: {x: -17.773438, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 510100005301000079010000
+  - position: {x: -17.382812, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 520100005601000079010000
+  - position: {x: -15.8203125, y: 4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5501000063010000
+  - position: {x: -15.8203125, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 540100005801000063010000
+  - position: {x: -16.992188, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 530100005701000079010000
+  - position: {x: -16.601562, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 560100005801000079010000
+  - position: {x: -16.015625, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5501000057010000630100006701000079010000
+  - position: {x: -15.0390625, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b01000063010000
+  - position: {x: -14.2578125, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5c0100005e01000061010000
+  - position: {x: -14.6484375, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 590100005c01000064010000
+  - position: {x: -14.2578125, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5a0100005b0100006101000065010000
+  - position: {x: -13.4765625, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 490100005f01000060010000
+  - position: {x: -13.8671875, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5a0100005f01000061010000
+  - position: {x: -13.4765625, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5d0100005e0100006001000061010000
+  - position: {x: -12.890625, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4a0100005d0100005f010000620100008f01000099010000
+  - position: {x: -13.671875, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5a0100005c0100005e0100005f01000062010000
+  - position: {x: -12.890625, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 600100006101000099010000
+  - position: {x: -15.234375, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 54010000550100005801000059010000640100006601000067010000
+  - position: {x: -14.6484375, y: 4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b010000630100006501000066010000
+  - position: {x: -14.2578125, y: 4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5c01000064010000
+  - position: {x: -14.6484375, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 630100006401000068010000
+  - position: {x: -15.234375, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 580100006301000068010000690100007a010000
+  - position: {x: -14.6484375, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 660100006701000069010000
+  - position: {x: -14.6484375, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 67010000680100007b010000
+  - position: {x: -23.4375, y: 7.8125}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 230100006b0100006d0100006e0100006f0100007701000078010000
+  - position: {x: -21.679688, y: 6.4453125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 23010000280100006a010000
+  - position: {x: -18.945312, y: 6.4453125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2f01000079010000
+  - position: {x: -21.679688, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6a0100006e010000
+  - position: {x: -21.679688, y: 8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6a0100006d0100006f010000
+  - position: {x: -21.484375, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 6a0100006e0100007001000078010000
+  - position: {x: -20.898438, y: 9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6f0100007101000078010000
+  - position: {x: -20.507812, y: 9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 700100007401000078010000
+  - position: {x: -18.945312, y: 8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7601000079010000
+  - position: {x: -19.726562, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7501000076010000
+  - position: {x: -20.117188, y: 9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 710100007501000078010000
+  - position: {x: -19.726562, y: 9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 73010000740100007601000078010000
+  - position: {x: -19.140625, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7201000073010000750100007801000079010000
+  - position: {x: -23.4375, y: 10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 6a0100007801000002020000
+  - position: {x: -20.3125, y: 10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 6a0100006f010000700100007101000074010000750100007601000077010000790100008701000002020000
+  - position: {x: -17.1875, y: 7.8125}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 2f0100005101000052010000530100005601000057010000580100006c0100007201000076010000780100007a0100007e010000850100008701000088010000
+  - position: {x: -15.234375, y: 6.640625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 67010000790100007b0100007c0100007e010000
+  - position: {x: -14.6484375, y: 6.4453125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 690100007a0100007c010000
+  - position: {x: -14.6484375, y: 6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7a0100007b0100007d0100007f010000
+  - position: {x: -14.2578125, y: 6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7c0100007f010000
+  - position: {x: -15.234375, y: 7.421875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 790100007a0100007f01000085010000
+  - position: {x: -14.453125, y: 7.421875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7c0100007d0100007e010000800100008101000085010000
+  - position: {x: -13.8671875, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7f01000081010000
+  - position: {x: -13.8671875, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7f010000800100008201000086010000
+  - position: {x: -13.4765625, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 810100008301000086010000
+  - position: {x: -13.0859375, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 820100008401000086010000
+  - position: {x: -12.6953125, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8301000086010000cc010000
+  - position: {x: -14.84375, y: 8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 790100007e0100007f0100008601000088010000
+  - position: {x: -13.28125, y: 8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 810100008201000083010000840100008501000088010000cc010000d0010000
+  - position: {x: -17.1875, y: 10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 78010000790100008801000002020000
+  - position: {x: -14.0625, y: 10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 79010000850100008601000087010000d0010000d3010000d50100000202000003020000
+  - position: {x: -11.71875, y: 0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 5700000058000000590000005a00000044010000470100008a0100008b0100008d0100008f010000
+  - position: {x: -10.7421875, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 890100008b010000
+  - position: {x: -10.7421875, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 890100008a0100008c0100008d010000
+  - position: {x: -10.3515625, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8b0100008d010000
+  - position: {x: -10.546875, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 890100008b0100008c0100008e01000090010000
+  - position: {x: -9.765625, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8d0100009001000094010000
+  - position: {x: -11.71875, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 44010000470100004a010000600100008901000090010000990100009a010000
+  - position: {x: -10.15625, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 8d0100008e0100008f010000970100009a010000
+  - position: {x: -8.0078125, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9301000096010000
+  - position: {x: -8.3984375, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9301000095010000
+  - position: {x: -8.0078125, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 91010000920100009501000096010000
+  - position: {x: -8.984375, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8e0100009501000097010000
+  - position: {x: -8.203125, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9201000093010000940100009601000097010000
+  - position: {x: -7.03125, y: 0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 66000000670000006800000091010000930100009501000098010000a0010000
+  - position: {x: -8.59375, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 900100009401000095010000980100009f010000
+  - position: {x: -7.03125, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 96010000970100009f010000a0010000a2010000
+  - position: {x: -11.71875, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 4a01000060010000620100008f0100009a0100009b0100009e010000
+  - position: {x: -10.15625, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 8f01000090010000990100009e0100009f010000
+  - position: {x: -11.328125, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 990100009c0100009e010000
+  - position: {x: -11.1328125, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9b0100009d0100009e010000
+  - position: {x: -11.1328125, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9c0100009e010000c8010000
+  - position: {x: -10.15625, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 990100009a0100009b0100009c0100009d0100009f010000cf010000d2010000
+  - position: {x: -7.8125, y: 4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 97010000980100009a0100009e010000a2010000b1010000b2010000b3010000b5010000d2010000
+  - position: {x: -5.46875, y: 0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 880000009601000098010000a1010000a2010000
+  - position: {x: -3.90625, y: 0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 88000000a0010000a3010000a4010000a9010000ab010000ac010000
+  - position: {x: -5.46875, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 980100009f010000a0010000a3010000a5010000b1010000
+  - position: {x: -4.296875, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a1010000a2010000a4010000a5010000a6010000
+  - position: {x: -3.515625, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a1010000a3010000a7010000a8010000ab010000ac010000
+  - position: {x: -4.4921875, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a2010000a3010000a6010000
+  - position: {x: -4.1015625, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a3010000a5010000a7010000
+  - position: {x: -3.7109375, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a4010000a6010000a8010000
+  - position: {x: -3.3203125, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a4010000a7010000ad010000
+  - position: {x: -2.734375, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8800000097000000a1010000aa010000ab010000
+  - position: {x: -2.1484375, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 97000000a9010000
+  - position: {x: -2.734375, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a1010000a4010000a9010000ac010000
+  - position: {x: -2.734375, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a1010000a4010000ab010000ad010000ae010000
+  - position: {x: -2.734375, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a8010000ac010000ae010000b9010000ba010000
+  - position: {x: -1.953125, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ac010000ad010000af010000bc010000c0010000
+  - position: {x: -1.171875, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ae010000b0010000c0010000
+  - position: {x: -0.390625, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: af010000c001000092020000
+  - position: {x: -5.859375, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9f010000a2010000b2010000
+  - position: {x: -5.859375, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9f010000b1010000b3010000
+  - position: {x: -5.859375, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9f010000b2010000b4010000b5010000
+  - position: {x: -5.2734375, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: b3010000b6010000
+  - position: {x: -5.859375, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 9f010000b3010000b6010000e2010000
+  - position: {x: -5.078125, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b4010000b5010000b7010000e2010000
+  - position: {x: -4.296875, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b6010000b8010000e3010000
+  - position: {x: -3.515625, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b7010000c5010000e3010000
+  - position: {x: -2.9296875, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ad010000ba010000
+  - position: {x: -2.5390625, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ad010000b9010000bb010000bc010000
+  - position: {x: -2.5390625, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ba010000bc010000bd010000
+  - position: {x: -1.953125, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ae010000ba010000bb010000bf010000c0010000
+  - position: {x: -2.5390625, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bb010000be010000bf010000
+  - position: {x: -2.5390625, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bd010000bf010000c1010000
+  - position: {x: -1.953125, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: bc010000bd010000be010000c0010000c4010000
+  - position: {x: -0.78125, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ae010000af010000b0010000bc010000bf010000c7010000a1020000a6020000
+  - position: {x: -2.5390625, y: 4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: be010000c3010000c4010000
+  - position: {x: -2.9296875, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c3010000c5010000
+  - position: {x: -2.5390625, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c1010000c2010000c4010000c5010000
+  - position: {x: -1.953125, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: bf010000c1010000c3010000c6010000c7010000
+  - position: {x: -2.734375, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: b8010000c2010000c3010000c6010000ed010000
+  - position: {x: -1.953125, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c4010000c5010000c7010000ed010000
+  - position: {x: -0.78125, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c0010000c4010000c6010000ee010000a6020000
+  - position: {x: -11.1328125, y: 6.4453125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9d010000ca010000cf010000
+  - position: {x: -11.5234375, y: 6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ca010000ce010000
+  - position: {x: -11.1328125, y: 6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c8010000c9010000ce010000cf010000
+  - position: {x: -11.9140625, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cd010000ce010000
+  - position: {x: -12.3046875, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8401000086010000cd010000d0010000
+  - position: {x: -11.9140625, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cb010000cc010000ce010000d0010000
+  - position: {x: -11.328125, y: 7.421875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c9010000ca010000cb010000cd010000cf010000d0010000
+  - position: {x: -10.15625, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 9e010000c8010000ca010000ce010000d1010000d2010000
+  - position: {x: -11.71875, y: 8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 8601000088010000cc010000cd010000ce010000d1010000d3010000
+  - position: {x: -10.15625, y: 8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: cf010000d0010000d2010000d4010000
+  - position: {x: -7.8125, y: 7.8125}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 9e0100009f010000cf010000d1010000dd010000de010000e2010000e4010000e6010000f4010000
+  - position: {x: -11.71875, y: 10.15625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 88010000d0010000d4010000d5010000
+  - position: {x: -10.15625, y: 10.15625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d1010000d3010000d6010000d7010000d8010000dd010000
+  - position: {x: -11.71875, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 88010000d3010000d6010000da0100000302000004020000
+  - position: {x: -10.546875, y: 11.328125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d4010000d5010000d7010000d9010000da010000
+  - position: {x: -9.9609375, y: 11.1328125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d4010000d6010000d8010000d9010000
+  - position: {x: -9.5703125, y: 11.1328125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d4010000d7010000dd010000
+  - position: {x: -9.9609375, y: 11.5234375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d6010000d7010000db010000
+  - position: {x: -10.546875, y: 12.109375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d5010000d6010000db010000dc01000004020000
+  - position: {x: -9.9609375, y: 11.9140625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d9010000da010000dc010000
+  - position: {x: -9.9609375, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: da010000db01000005020000
+  - position: {x: -8.59375, y: 10.15625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d2010000d4010000d8010000de010000
+  - position: {x: -7.03125, y: 10.15625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d2010000dd010000df010000e0010000f4010000f7010000
+  - position: {x: -7.2265625, y: 11.1328125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: de010000e0010000
+  - position: {x: -6.640625, y: 11.328125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: de010000df010000e1010000fa010000
+  - position: {x: -6.640625, y: 12.109375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e0010000fa0100000f020000
+  - position: {x: -5.46875, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: b5010000b6010000d2010000e3010000e4010000e5010000
+  - position: {x: -3.90625, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: b7010000b8010000e2010000ea010000eb010000ed010000
+  - position: {x: -5.859375, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d2010000e2010000e5010000e6010000e7010000
+  - position: {x: -5.078125, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e2010000e4010000e7010000e8010000ea010000
+  - position: {x: -5.859375, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d2010000e4010000e7010000e9010000f4010000f5010000
+  - position: {x: -5.2734375, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e4010000e5010000e6010000e8010000e9010000
+  - position: {x: -4.8828125, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e5010000e7010000ec010000
+  - position: {x: -5.2734375, y: 9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e6010000e7010000f5010000
+  - position: {x: -4.296875, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e3010000e5010000eb010000ec010000
+  - position: {x: -3.7109375, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e3010000ea010000
+  - position: {x: -4.4921875, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e8010000ea010000
+  - position: {x: -2.34375, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c5010000c6010000e3010000ee010000
+  - position: {x: -0.78125, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c7010000ed010000ef010000f0010000f2010000e8020000
+  - position: {x: -1.3671875, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ee010000f0010000
+  - position: {x: -0.9765625, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ee010000ef010000f1010000f2010000
+  - position: {x: -0.9765625, y: 8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f0010000f2010000
+  - position: {x: -0.390625, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ee010000f0010000f1010000f3010000ea020000
+  - position: {x: -0.5859375, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f2010000
+  - position: {x: -5.859375, y: 9.765625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d2010000de010000e6010000f5010000f6010000f7010000f8010000
+  - position: {x: -5.2734375, y: 9.5703125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e6010000e9010000f4010000f6010000
+  - position: {x: -5.2734375, y: 9.9609375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f4010000f5010000f8010000
+  - position: {x: -5.859375, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: de010000f4010000f8010000f9010000fa010000
+  - position: {x: -5.2734375, y: 10.3515625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f4010000f6010000f7010000f9010000
+  - position: {x: -5.2734375, y: 10.7421875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f7010000f8010000fa010000
+  - position: {x: -5.46875, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: e0010000e1010000f7010000f9010000fb0100001e0200001f020000
+  - position: {x: -4.4921875, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fa010000fc01000023020000
+  - position: {x: -4.1015625, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fb010000fd01000023020000
+  - position: {x: -3.7109375, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fc010000fe01000023020000
+  - position: {x: -3.3203125, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fd010000ff01000023020000
+  - position: {x: -2.9296875, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fe0100000002000027020000
+  - position: {x: -2.5390625, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ff0100000102000027020000
+  - position: {x: -2.1484375, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0002000027020000
+  - position: {x: -18.75, y: 18.75}
+    size: {x: 12.5, y: 12.5}
+    neighbors: 77010000780100008701000088010000030200000902000015020000450200004a0200005a02000061020000
+  - position: {x: -11.71875, y: 13.28125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 88010000d5010000020200000402000007020000090200000a020000
+  - position: {x: -10.546875, y: 12.890625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d5010000da0100000302000005020000060200000702000008020000
+  - position: {x: -9.9609375, y: 12.6953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: dc0100000402000006020000
+  - position: {x: -9.9609375, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 040200000502000008020000
+  - position: {x: -10.546875, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0302000004020000080200000a020000
+  - position: {x: -9.765625, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0402000006020000070200000a0200000b02000014020000
+  - position: {x: -11.71875, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 02020000030200000a02000015020000
+  - position: {x: -10.15625, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 030200000702000008020000090200000b020000140200001502000016020000
+  - position: {x: -9.1796875, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 080200000a0200000c02000014020000
+  - position: {x: -8.7890625, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0b0200000d02000014020000
+  - position: {x: -8.3984375, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0c0200000e02000014020000
+  - position: {x: -8.0078125, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0d0200001102000014020000
+  - position: {x: -6.640625, y: 12.890625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e101000012020000130200001e020000
+  - position: {x: -7.2265625, y: 13.4765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 12020000
+  - position: {x: -7.6171875, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0e020000
+  - position: {x: -6.8359375, y: 13.4765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0f0200001002000013020000
+  - position: {x: -6.4453125, y: 13.4765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0f0200001202000020020000
+  - position: {x: -8.59375, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 080200000a0200000b0200000c0200000d0200000e0200001602000017020000
+  - position: {x: -10.9375, y: 17.1875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 02020000090200000a020000160200001b020000450200004602000047020000
+  - position: {x: -8.59375, y: 16.40625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 0a020000140200001502000017020000180200001a0200001b0200001c020000
+  - position: {x: -7.6171875, y: 15.8203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 14020000160200001802000019020000
+  - position: {x: -7.6171875, y: 16.210938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1602000017020000190200001a020000
+  - position: {x: -7.2265625, y: 16.210938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 17020000180200001a020000
+  - position: {x: -7.421875, y: 16.796875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1602000018020000190200001c020000
+  - position: {x: -8.59375, y: 17.96875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 15020000160200001c0200001d0200004d0200004e020000
+  - position: {x: -7.421875, y: 17.578125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 160200001a0200001b0200001d020000
+  - position: {x: -7.421875, y: 18.359375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1b0200001c0200004f020000
+  - position: {x: -5.859375, y: 12.890625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: fa0100000f0200001f0200002002000021020000
+  - position: {x: -5.078125, y: 12.890625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: fa0100001e0200002202000023020000
+  - position: {x: -6.0546875, y: 13.4765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 130200001e02000021020000
+  - position: {x: -5.6640625, y: 13.4765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1e0200002002000022020000
+  - position: {x: -5.078125, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1f020000210200002302000024020000
+  - position: {x: -3.90625, y: 13.28125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: fb010000fc010000fd010000fe0100001f02000022020000250200002602000027020000
+  - position: {x: -5.078125, y: 14.453125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2202000025020000
+  - position: {x: -4.296875, y: 14.453125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 230200002402000026020000
+  - position: {x: -3.515625, y: 14.453125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 23020000250200002e020000
+  - position: {x: -2.34375, y: 13.28125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ff010000000200000102000023020000280200002c0200002e0200002f020000
+  - position: {x: -1.3671875, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 27020000290200002c020000
+  - position: {x: -0.9765625, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 280200002a0200002c020000
+  - position: {x: -0.5859375, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 290200002b0200002d020000
+  - position: {x: -0.1953125, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2a0200002d020000
+  - position: {x: -1.171875, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2702000028020000290200002d02000033020000
+  - position: {x: -0.390625, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2a0200002b0200002c0200003302000085030000
+  - position: {x: -2.734375, y: 14.453125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 26020000270200002f0200003002000031020000
+  - position: {x: -1.953125, y: 14.453125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 270200002e0200003202000033020000
+  - position: {x: -2.9296875, y: 15.0390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2e02000031020000
+  - position: {x: -2.5390625, y: 15.0390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2e0200003002000032020000
+  - position: {x: -1.953125, y: 15.234375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2f020000310200003302000037020000
+  - position: {x: -0.78125, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 2c0200002d0200002f02000032020000390200008503000087030000
+  - position: {x: -3.3203125, y: 17.773438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 360200003b020000
+  - position: {x: -4.296875, y: 18.359375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3602000072020000
+  - position: {x: -3.515625, y: 18.359375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 34020000350200003b0200003e0200004002000072020000
+  - position: {x: -1.953125, y: 16.015625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 320200003802000039020000
+  - position: {x: -1.953125, y: 16.796875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 37020000390200003d020000
+  - position: {x: -0.78125, y: 16.40625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 33020000370200003802000041020000420200008703000093030000
+  - position: {x: -2.5390625, y: 17.382812}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3c0200003d020000
+  - position: {x: -2.9296875, y: 17.773438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 34020000360200003c0200003e020000
+  - position: {x: -2.5390625, y: 17.773438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3a0200003b0200003d0200003f020000
+  - position: {x: -1.953125, y: 17.578125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 380200003a0200003c02000041020000
+  - position: {x: -2.9296875, y: 18.164062}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 360200003b0200003f02000040020000
+  - position: {x: -2.5390625, y: 18.164062}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3c0200003e020000
+  - position: {x: -2.9296875, y: 18.554688}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 360200003e02000075020000
+  - position: {x: -1.171875, y: 17.578125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 390200003d02000042020000
+  - position: {x: -0.390625, y: 17.578125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 39020000410200004302000093030000
+  - position: {x: -0.1953125, y: 18.164062}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 420200004402000093030000
+  - position: {x: -0.1953125, y: 18.554688}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4302000093030000
+  - position: {x: -11.71875, y: 19.53125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 020200001502000046020000480200004a0200004b020000
+  - position: {x: -10.546875, y: 19.140625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1502000045020000470200004802000049020000
+  - position: {x: -9.765625, y: 19.140625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1502000046020000490200004d020000
+  - position: {x: -10.546875, y: 19.921875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4502000046020000490200004b020000
+  - position: {x: -9.9609375, y: 19.726562}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 460200004702000048020000
+  - position: {x: -11.71875, y: 21.09375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 02020000450200004b0200004c0200005a0200005b020000
+  - position: {x: -10.546875, y: 20.703125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 45020000480200004a0200004c020000
+  - position: {x: -10.546875, y: 21.484375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4a0200004b0200005b0200005c020000
+  - position: {x: -8.984375, y: 19.140625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1b020000470200004e020000
+  - position: {x: -8.203125, y: 19.140625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1b0200004d0200004f020000
+  - position: {x: -7.421875, y: 19.140625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1d0200004e0200005002000052020000
+  - position: {x: -6.8359375, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4f0200005102000053020000
+  - position: {x: -6.4453125, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 50020000530200006c02000070020000
+  - position: {x: -7.421875, y: 19.921875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4f0200005302000054020000
+  - position: {x: -6.640625, y: 19.921875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5002000051020000520200005602000070020000
+  - position: {x: -7.2265625, y: 20.507812}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 520200005502000056020000
+  - position: {x: -7.2265625, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 540200005602000057020000
+  - position: {x: -6.640625, y: 20.703125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 530200005402000055020000590200007002000073020000
+  - position: {x: -7.2265625, y: 21.289062}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 550200005802000059020000
+  - position: {x: -7.2265625, y: 21.679688}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 570200005902000069020000
+  - position: {x: -6.640625, y: 21.484375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5602000057020000580200006902000073020000
+  - position: {x: -11.71875, y: 22.65625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 020200004a0200005b0200005f0200006102000062020000
+  - position: {x: -10.546875, y: 22.265625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4a0200004c0200005a0200005c0200005d0200005f02000060020000
+  - position: {x: -9.9609375, y: 22.070312}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4c0200005b0200005d0200005e020000
+  - position: {x: -9.9609375, y: 22.460938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b0200005c0200005e02000060020000
+  - position: {x: -9.5703125, y: 22.460938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5c0200005d020000600200006302000067020000
+  - position: {x: -10.546875, y: 23.046875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5a0200005b0200006002000062020000
+  - position: {x: -9.765625, y: 23.046875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5b0200005d0200005e0200005f0200006202000063020000670200006a020000
+  - position: {x: -11.71875, y: 24.21875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 020200005a02000062020000
+  - position: {x: -10.15625, y: 24.21875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 5a0200005f0200006002000061020000670200006a020000
+  - position: {x: -9.1796875, y: 22.460938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5e020000600200006402000067020000
+  - position: {x: -8.7890625, y: 22.460938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 630200006502000067020000
+  - position: {x: -8.3984375, y: 22.460938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 640200006602000068020000
+  - position: {x: -8.0078125, y: 22.460938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 650200006802000069020000
+  - position: {x: -8.984375, y: 23.046875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5e02000060020000620200006302000064020000680200006a020000
+  - position: {x: -8.203125, y: 23.046875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 650200006602000067020000690200006a020000
+  - position: {x: -7.03125, y: 22.65625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 580200005902000066020000680200006b0200007302000087020000
+  - position: {x: -8.59375, y: 24.21875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 600200006202000067020000680200006b020000
+  - position: {x: -7.03125, y: 24.21875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 690200006a02000087020000
+  - position: {x: -6.0546875, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 510200006d02000070020000
+  - position: {x: -5.6640625, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6c0200006e02000070020000
+  - position: {x: -5.2734375, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6d0200006f02000071020000
+  - position: {x: -4.8828125, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6e0200007102000072020000
+  - position: {x: -5.859375, y: 19.921875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 5102000053020000560200006c0200006d0200007102000073020000
+  - position: {x: -5.078125, y: 19.921875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 6e0200006f020000700200007202000073020000
+  - position: {x: -3.90625, y: 19.53125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 35020000360200006f020000710200007402000075020000760200007702000078020000
+  - position: {x: -5.46875, y: 21.09375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 56020000590200006902000070020000710200007402000087020000
+  - position: {x: -3.90625, y: 21.09375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 720200007302000078020000790200007a0200007e02000087020000
+  - position: {x: -2.9296875, y: 18.945312}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 400200007202000076020000
+  - position: {x: -2.9296875, y: 19.335938}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 720200007502000077020000
+  - position: {x: -2.9296875, y: 19.726562}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 720200007602000078020000
+  - position: {x: -2.9296875, y: 20.117188}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 72020000740200007702000079020000
+  - position: {x: -2.9296875, y: 20.507812}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 74020000780200007a020000
+  - position: {x: -2.9296875, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 74020000790200007b0200007e020000
+  - position: {x: -2.5390625, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7a0200007c0200007e020000
+  - position: {x: -2.1484375, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7b0200007d0200007f020000
+  - position: {x: -1.7578125, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7c0200007f02000080020000
+  - position: {x: -2.734375, y: 21.484375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 740200007a0200007b0200007f02000088020000
+  - position: {x: -1.953125, y: 21.484375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7c0200007d0200007e020000800200008502000088020000
+  - position: {x: -1.3671875, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7d0200007f0200008102000085020000
+  - position: {x: -0.9765625, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 800200008302000085020000
+  - position: {x: -0.1953125, y: 20.507812}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8402000096030000
+  - position: {x: -0.5859375, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 810200008402000086020000
+  - position: {x: -0.1953125, y: 20.898438}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 82020000830200008602000096030000
+  - position: {x: -1.171875, y: 21.484375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7f02000080020000810200008602000088020000
+  - position: {x: -0.390625, y: 21.484375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8302000084020000850200008802000096030000
+  - position: {x: -4.6875, y: 23.4375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 690200006b020000730200007402000088020000
+  - position: {x: -1.5625, y: 23.4375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 7e0200007f02000085020000860200008702000096030000
+  - position: {x: 0.1953125, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8a02000092020000
+  - position: {x: 0.5859375, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 890200008b02000092020000
+  - position: {x: 0.9765625, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8a0200008c02000092020000
+  - position: {x: 1.3671875, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8b0200008f02000092020000
+  - position: {x: 2.1484375, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8e0200008f020000
+  - position: {x: 2.734375, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d00000008d020000900200009102000097020000
+  - position: {x: 1.953125, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8c0200008d0200009002000093020000
+  - position: {x: 2.5390625, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8e0200008f02000091020000
+  - position: {x: 2.9296875, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8e0200009002000099020000
+  - position: {x: 0.78125, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: b0010000890200008a0200008b0200008c02000093020000940200009502000096020000a1020000
+  - position: {x: 1.7578125, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8f0200009202000094020000
+  - position: {x: 1.7578125, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 920200009302000095020000
+  - position: {x: 1.7578125, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 920200009402000096020000
+  - position: {x: 1.7578125, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9202000095020000a2020000
+  - position: {x: 3.515625, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d80000008e02000098020000990200009a020000
+  - position: {x: 4.296875, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d8000000d9000000970200009a0200009b0200009c0200009e020000
+  - position: {x: 3.3203125, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 91020000970200009a020000
+  - position: {x: 3.7109375, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9702000098020000990200009b020000
+  - position: {x: 4.1015625, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 980200009a0200009c020000
+  - position: {x: 4.4921875, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 980200009b0200009d0200009e020000
+  - position: {x: 4.4921875, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9c0200009e0200009f020000
+  - position: {x: 5.46875, y: 0.78125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d8000000d9000000ea000000980200009c0200009d0200009f020000a0020000ae020000b2020000b3020000b8020000
+  - position: {x: 4.4921875, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9d0200009e020000a0020000
+  - position: {x: 5.46875, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 9e0200009f020000ab020000b8020000b9020000ba020000
+  - position: {x: 0.78125, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c001000092020000a2020000a3020000a4020000a6020000
+  - position: {x: 1.7578125, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 96020000a1020000a3020000
+  - position: {x: 1.7578125, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a1020000a2020000a4020000
+  - position: {x: 1.953125, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a1020000a3020000a5020000a7020000
+  - position: {x: 2.734375, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a4020000a7020000a9020000
+  - position: {x: 0.78125, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c0010000c7010000a1020000a7020000e8020000e9020000
+  - position: {x: 2.34375, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: a4020000a5020000a6020000ac020000e8020000e9020000
+  - position: {x: 4.4921875, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: aa020000ab020000
+  - position: {x: 3.515625, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a5020000aa020000ac020000
+  - position: {x: 4.296875, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a8020000a9020000ab020000ac020000
+  - position: {x: 5.46875, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: a0020000a8020000aa020000ad020000cc020000
+  - position: {x: 3.90625, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: a7020000a9020000aa020000ad020000ef020000
+  - position: {x: 5.46875, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ab020000ac020000d4020000ef020000
+  - position: {x: 6.640625, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ea0000009e020000af020000b1020000b2020000
+  - position: {x: 7.2265625, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ea000000ae020000b0020000b1020000
+  - position: {x: 7.6171875, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ea000000eb000000af020000b1020000b4020000
+  - position: {x: 7.2265625, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ae020000af020000b0020000
+  - position: {x: 6.4453125, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9e020000ae020000b3020000
+  - position: {x: 6.4453125, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9e020000b2020000b8020000
+  - position: {x: 8.0078125, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: eb000000b0020000b5020000
+  - position: {x: 8.3984375, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: eb000000b4020000b6020000
+  - position: {x: 8.7890625, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: eb000000b5020000b7020000
+  - position: {x: 9.1796875, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: eb000000f3000000b6020000bb020000
+  - position: {x: 6.4453125, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 9e020000a0020000b3020000b9020000
+  - position: {x: 6.4453125, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: a0020000b8020000ba020000
+  - position: {x: 6.640625, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: a0020000b9020000cc020000
+  - position: {x: 9.765625, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f3000000b7020000bc020000bd020000be020000
+  - position: {x: 10.546875, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f3000000f5000000bb020000be020000c0020000c1020000
+  - position: {x: 9.5703125, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bb020000be020000
+  - position: {x: 9.9609375, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bb020000bc020000bd020000bf020000c0020000
+  - position: {x: 9.9609375, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: be020000c0020000c4020000
+  - position: {x: 10.546875, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: bc020000be020000bf020000c2020000c6020000
+  - position: {x: 11.328125, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f5000000bc020000c2020000
+  - position: {x: 11.328125, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c0020000c1020000c3020000cb020000
+  - position: {x: 11.9140625, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c2020000cb020000
+  - position: {x: 9.9609375, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: bf020000c5020000c6020000
+  - position: {x: 9.9609375, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c4020000c6020000c7020000
+  - position: {x: 10.546875, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c0020000c4020000c5020000ca020000cb020000
+  - position: {x: 9.9609375, y: 2.5390625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c5020000c9020000ca020000
+  - position: {x: 9.5703125, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c9020000db020000
+  - position: {x: 9.9609375, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c7020000c8020000ca020000dc020000
+  - position: {x: 10.546875, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: c6020000c7020000c9020000cb020000dd020000de020000
+  - position: {x: 11.71875, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: c2020000c3020000c6020000ca020000df020000e0020000e202000025030000
+  - position: {x: 7.03125, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ab020000ba020000cd020000d1020000d4020000
+  - position: {x: 8.203125, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: cc020000ce020000d0020000d1020000d2020000
+  - position: {x: 8.7890625, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cd020000cf020000d0020000
+  - position: {x: 9.1796875, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ce020000db020000
+  - position: {x: 8.7890625, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cd020000ce020000d2020000
+  - position: {x: 8.203125, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: cc020000cd020000d2020000d3020000d5020000d6020000
+  - position: {x: 8.7890625, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cd020000d0020000d1020000d3020000
+  - position: {x: 8.7890625, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d1020000d2020000d6020000
+  - position: {x: 7.03125, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ad020000cc020000d5020000d9020000ff020000
+  - position: {x: 8.203125, y: 5.078125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d1020000d4020000d6020000d7020000d9020000
+  - position: {x: 8.7890625, y: 4.8828125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d1020000d3020000d5020000d7020000d8020000
+  - position: {x: 8.7890625, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d5020000d6020000d8020000da020000
+  - position: {x: 9.1796875, y: 5.2734375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d6020000d7020000da020000e6020000
+  - position: {x: 8.203125, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d4020000d5020000da02000000030000
+  - position: {x: 8.984375, y: 5.859375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: d7020000d8020000d9020000e6020000e702000000030000
+  - position: {x: 9.5703125, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c8020000cf020000dc020000
+  - position: {x: 9.9609375, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: c9020000db020000dd020000
+  - position: {x: 10.3515625, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ca020000dc020000de020000
+  - position: {x: 10.7421875, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ca020000dd020000df020000
+  - position: {x: 11.1328125, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cb020000de020000e0020000
+  - position: {x: 11.5234375, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: cb020000df020000e1020000e2020000
+  - position: {x: 11.5234375, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e0020000e2020000e3020000
+  - position: {x: 12.109375, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: cb020000e0020000e1020000e4020000e50200002e030000
+  - position: {x: 11.5234375, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e1020000e4020000
+  - position: {x: 11.9140625, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e2020000e3020000e5020000
+  - position: {x: 12.3046875, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e2020000e402000030030000
+  - position: {x: 9.5703125, y: 5.6640625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: d8020000da020000e7020000
+  - position: {x: 9.5703125, y: 6.0546875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: da020000e60200000b030000
+  - position: {x: 0.78125, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ee010000a6020000a7020000e9020000ea020000eb020000
+  - position: {x: 2.34375, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: a6020000a7020000e8020000ec020000ed020000ef020000
+  - position: {x: 0.390625, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f2010000e8020000eb020000
+  - position: {x: 1.171875, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e8020000ea020000ec020000
+  - position: {x: 1.953125, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e9020000eb020000ed020000
+  - position: {x: 2.734375, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e9020000ec020000ee020000ef020000
+  - position: {x: 2.734375, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ed020000ef020000f0020000
+  - position: {x: 4.6875, y: 7.8125}
+    size: {x: 3.125, y: 3.125}
+    neighbors: ac020000ad020000e9020000ed020000ee020000f2020000f3020000f8020000ff0200000103000003030000
+  - position: {x: 2.9296875, y: 9.5703125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: ee020000f1020000f2020000
+  - position: {x: 2.9296875, y: 9.9609375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f0020000f2020000
+  - position: {x: 3.515625, y: 9.765625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ef020000f0020000f1020000f3020000f4020000f5020000
+  - position: {x: 4.296875, y: 9.765625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ef020000f2020000f7020000f8020000
+  - position: {x: 3.3203125, y: 10.3515625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f2020000f5020000
+  - position: {x: 3.7109375, y: 10.3515625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f2020000f4020000f6020000f7020000
+  - position: {x: 3.7109375, y: 10.7421875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f5020000f7020000
+  - position: {x: 4.296875, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: f3020000f5020000f6020000f8020000f9020000fa020000
+  - position: {x: 5.46875, y: 10.15625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: ef020000f3020000f7020000fe020000
+  - position: {x: 4.1015625, y: 11.1328125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f7020000fa020000
+  - position: {x: 4.4921875, y: 11.1328125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: f7020000f9020000fb020000fe020000
+  - position: {x: 4.4921875, y: 11.5234375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fa020000fc020000fe020000
+  - position: {x: 4.4921875, y: 11.9140625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fb020000fd020000fe020000
+  - position: {x: 4.4921875, y: 12.3046875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fc020000fe02000089030000
+  - position: {x: 5.46875, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: f8020000fa020000fb020000fc020000fd0200001c0300001d03000090030000
+  - position: {x: 7.03125, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d4020000ef020000000300000103000002030000
+  - position: {x: 8.59375, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: d9020000da020000ff02000006030000070300000b0300000c0300000d0300000e030000
+  - position: {x: 6.640625, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ef020000ff0200000203000003030000
+  - position: {x: 7.421875, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ff02000001030000040300000503000006030000
+  - position: {x: 6.640625, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: ef0200000103000004030000
+  - position: {x: 7.2265625, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 020300000303000005030000
+  - position: {x: 7.6171875, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 020300000403000008030000
+  - position: {x: 8.203125, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0003000002030000070300000803000009030000
+  - position: {x: 8.984375, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 00030000060300000a0300001003000011030000
+  - position: {x: 8.0078125, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 050300000603000009030000
+  - position: {x: 8.3984375, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 06030000080300000a030000
+  - position: {x: 8.984375, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 07030000090300001203000018030000
+  - position: {x: 9.5703125, y: 6.4453125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e7020000000300000c030000
+  - position: {x: 9.5703125, y: 6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 000300000b0300000d030000
+  - position: {x: 9.5703125, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 000300000c0300000e030000
+  - position: {x: 9.5703125, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 000300000d03000010030000
+  - position: {x: 12.3046875, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1403000059030000
+  - position: {x: 9.5703125, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 070300000e03000011030000
+  - position: {x: 9.5703125, y: 8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 070300001003000012030000
+  - position: {x: 9.765625, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0a030000110300001303000024030000
+  - position: {x: 10.546875, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 120300001603000024030000
+  - position: {x: 12.3046875, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0f030000150300005903000063030000
+  - position: {x: 12.3046875, y: 8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 140300001703000063030000
+  - position: {x: 11.328125, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 130300001703000024030000
+  - position: {x: 12.109375, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1503000016030000240300006303000066030000
+  - position: {x: 9.1796875, y: 9.5703125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0a0300001903000024030000
+  - position: {x: 9.1796875, y: 9.9609375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 180300001a03000024030000
+  - position: {x: 9.1796875, y: 10.3515625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 190300001b03000024030000
+  - position: {x: 9.1796875, y: 10.7421875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1a0300001f03000024030000
+  - position: {x: 6.4453125, y: 11.5234375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fe0200001d030000
+  - position: {x: 6.640625, y: 12.109375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: fe0200001c0300001e03000095030000
+  - position: {x: 7.421875, y: 12.109375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1d0300002203000095030000
+  - position: {x: 9.1796875, y: 11.1328125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1b0300002103000024030000
+  - position: {x: 8.7890625, y: 11.5234375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2103000023030000
+  - position: {x: 9.1796875, y: 11.5234375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 1f030000200300002303000024030000
+  - position: {x: 8.203125, y: 12.109375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 1e0300002303000095030000
+  - position: {x: 8.984375, y: 12.109375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2003000021030000220300002403000095030000
+  - position: {x: 10.9375, y: 10.9375}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 1203000013030000160300001703000018030000190300001a0300001b0300001f03000021030000230300006603000073030000770300007b03000095030000
+  - position: {x: 13.28125, y: 2.34375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: cb0200002603000027030000290300002e0300002f030000
+  - position: {x: 14.2578125, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2503000027030000
+  - position: {x: 14.2578125, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 25030000260300002803000029030000
+  - position: {x: 14.6484375, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2703000029030000
+  - position: {x: 14.453125, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2503000027030000280300002a03000035030000
+  - position: {x: 15.234375, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 290300002b03000035030000
+  - position: {x: 16.015625, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2a0300002c03000037030000
+  - position: {x: 16.601562, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2b0300002d03000037030000
+  - position: {x: 16.992188, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2c03000037030000
+  - position: {x: 12.890625, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: e2020000250300002f0300003003000031030000
+  - position: {x: 13.671875, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 250300002e030000320300003303000035030000
+  - position: {x: 12.6953125, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: e50200002e03000031030000
+  - position: {x: 13.0859375, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2e0300003003000032030000
+  - position: {x: 13.4765625, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2f0300003103000033030000
+  - position: {x: 13.8671875, y: 4.1015625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 2f030000320300003403000035030000
+  - position: {x: 13.8671875, y: 4.4921875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3303000035030000
+  - position: {x: 14.84375, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 290300002a0300002f03000033030000340300003603000037030000
+  - position: {x: 14.84375, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 35030000370300003f0300005c0300005d030000
+  - position: {x: 16.40625, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 2b0300002c0300002d030000350300003603000038030000390300003d0300003f030000
+  - position: {x: 17.382812, y: 3.3203125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3703000039030000
+  - position: {x: 17.382812, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 37030000380300003a0300003d030000
+  - position: {x: 17.773438, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 390300003b0300003d030000
+  - position: {x: 18.164062, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3a0300003c0300003e030000
+  - position: {x: 18.554688, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3b0300003e0300004f030000
+  - position: {x: 17.578125, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 37030000390300003a0300003e03000040030000
+  - position: {x: 18.359375, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3b0300003c0300003d0300004003000052030000
+  - position: {x: 16.40625, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 360300003703000040030000690300006a030000
+  - position: {x: 17.96875, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 3d0300003e0300003f030000550300006a0300006f030000
+  - position: {x: 20.507812, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0b0100000c0100004203000043030000
+  - position: {x: 20.898438, y: 0.1953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0c010000410300004303000044030000
+  - position: {x: 20.898438, y: 0.5859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4103000042030000440300004503000047030000
+  - position: {x: 21.484375, y: 0.390625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 0c0100000d010000420300004303000045030000470300004e030000
+  - position: {x: 20.898438, y: 0.9765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 43030000440300004603000047030000
+  - position: {x: 20.898438, y: 1.3671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 450300004703000049030000
+  - position: {x: 21.484375, y: 1.171875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 43030000440300004503000046030000490300004b0300004e030000
+  - position: {x: 20.117188, y: 2.9296875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4c03000051030000
+  - position: {x: 20.898438, y: 1.7578125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 46030000470300004a0300004b030000
+  - position: {x: 20.898438, y: 2.1484375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 490300004b0300004c030000
+  - position: {x: 21.484375, y: 1.953125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 47030000490300004a0300004c0300004d0300004e030000
+  - position: {x: 20.703125, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 480300004a0300004b0300004d0300005103000054030000
+  - position: {x: 21.484375, y: 2.734375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 4b0300004c0300004e03000054030000
+  - position: {x: 23.4375, y: 1.5625}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 0c0100000d01000044030000470300004b0300004d0300005403000057030000
+  - position: {x: 18.945312, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 3c0300005003000052030000
+  - position: {x: 19.335938, y: 3.7109375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 4f0300005103000052030000
+  - position: {x: 19.921875, y: 3.515625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 480300004c03000050030000520300005303000054030000
+  - position: {x: 19.140625, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3e0300004f03000050030000510300005303000055030000
+  - position: {x: 19.921875, y: 4.296875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 51030000520300005403000055030000
+  - position: {x: 21.09375, y: 3.90625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 4c0300004d0300004e0300005103000053030000550300005603000057030000
+  - position: {x: 19.53125, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 40030000520300005303000054030000560300006f03000084030000
+  - position: {x: 21.09375, y: 5.46875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 54030000550300005703000084030000
+  - position: {x: 23.4375, y: 4.6875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 4e030000540300005603000084030000
+  - position: {x: 13.8671875, y: 6.8359375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b0300005c030000
+  - position: {x: 12.6953125, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 0f030000140300005a03000063030000
+  - position: {x: 13.0859375, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 590300005b03000063030000
+  - position: {x: 13.671875, y: 7.421875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 580300005a0300005c0300005e0300006003000064030000
+  - position: {x: 14.453125, y: 6.640625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 36030000580300005b0300005d0300005e0300005f030000
+  - position: {x: 15.234375, y: 6.640625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 360300005c030000610300006203000069030000
+  - position: {x: 14.2578125, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b0300005c0300005f03000060030000
+  - position: {x: 14.6484375, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5c0300005e03000061030000
+  - position: {x: 14.2578125, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b0300005e030000
+  - position: {x: 15.0390625, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5d0300005f03000062030000
+  - position: {x: 15.4296875, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5d030000610300006b030000
+  - position: {x: 12.890625, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 140300001503000017030000590300005a030000640300006503000066030000
+  - position: {x: 13.4765625, y: 8.0078125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 5b0300006303000065030000
+  - position: {x: 13.4765625, y: 8.3984375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 630300006403000067030000
+  - position: {x: 12.890625, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 170300002403000063030000670300006803000073030000
+  - position: {x: 13.4765625, y: 8.7890625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 650300006603000068030000
+  - position: {x: 13.4765625, y: 9.1796875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 660300006703000074030000
+  - position: {x: 16.015625, y: 6.640625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3f0300005d0300006a0300006b0300006c030000
+  - position: {x: 16.796875, y: 6.640625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 3f03000040030000690300006c0300006e0300006f030000
+  - position: {x: 15.8203125, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 62030000690300006c030000
+  - position: {x: 16.210938, y: 7.2265625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 690300006a0300006b0300006d0300006e030000
+  - position: {x: 16.210938, y: 7.6171875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 6c0300006e030000
+  - position: {x: 16.796875, y: 7.421875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 6a0300006c0300006d0300006f03000070030000
+  - position: {x: 17.96875, y: 7.03125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 40030000550300006a0300006e030000700300007203000084030000
+  - position: {x: 16.796875, y: 8.203125}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 6e0300006f0300007103000072030000
+  - position: {x: 16.796875, y: 8.984375}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 70030000720300007e030000
+  - position: {x: 17.96875, y: 8.59375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 6f03000070030000710300007e0300008103000084030000
+  - position: {x: 12.890625, y: 9.765625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2403000066030000740300007503000077030000
+  - position: {x: 13.4765625, y: 9.5703125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 680300007303000075030000
+  - position: {x: 13.4765625, y: 9.9609375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 73030000740300007603000078030000
+  - position: {x: 13.8671875, y: 9.9609375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7503000078030000
+  - position: {x: 12.890625, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2403000073030000780300007b030000
+  - position: {x: 13.671875, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 750300007603000077030000790300007b030000
+  - position: {x: 14.453125, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 780300007a0300007c030000
+  - position: {x: 15.234375, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 790300007c0300007f030000
+  - position: {x: 13.28125, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 2403000077030000780300007c03000098030000
+  - position: {x: 14.84375, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 790300007a0300007b0300007f0300008203000098030000
+  - position: {x: 16.210938, y: 9.9609375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 7e0300007f030000
+  - position: {x: 16.796875, y: 9.765625}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 71030000720300007d0300007f0300008003000081030000
+  - position: {x: 16.015625, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7a0300007c0300007d0300007e0300008003000082030000
+  - position: {x: 16.796875, y: 10.546875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 7e0300007f0300008103000082030000
+  - position: {x: 17.96875, y: 10.15625}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 720300007e03000080030000820300008303000084030000
+  - position: {x: 16.40625, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 7c0300007f03000080030000810300008303000098030000
+  - position: {x: 17.96875, y: 11.71875}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 81030000820300008403000098030000
+  - position: {x: 21.875, y: 9.375}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 5503000056030000570300006f03000072030000810300008303000098030000
+  - position: {x: 0.390625, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 2d020000330200008603000087030000
+  - position: {x: 0.9765625, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8503000087030000
+  - position: {x: 0.78125, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 330200003902000085030000860300008803000093030000
+  - position: {x: 2.34375, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 870300009103000093030000
+  - position: {x: 4.4921875, y: 12.6953125}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: fd0200008b03000090030000
+  - position: {x: 4.1015625, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8b0300008f030000
+  - position: {x: 4.4921875, y: 13.0859375}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 890300008a0300008f03000090030000
+  - position: {x: 3.7109375, y: 13.4765625}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8e0300008f030000
+  - position: {x: 3.3203125, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8e03000091030000
+  - position: {x: 3.7109375, y: 13.8671875}
+    size: {x: 0.390625, y: 0.390625}
+    neighbors: 8c0300008d0300008f03000091030000
+  - position: {x: 4.296875, y: 13.671875}
+    size: {x: 0.78125, y: 0.78125}
+    neighbors: 8a0300008b0300008c0300008e0300009003000091030000
+  - position: {x: 5.46875, y: 13.28125}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: fe020000890300008b0300008f0300009203000095030000
+  - position: {x: 3.90625, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 880300008d0300008e0300008f0300009203000094030000
+  - position: {x: 5.46875, y: 14.84375}
+    size: {x: 1.5625, y: 1.5625}
+    neighbors: 90030000910300009403000095030000
+  - position: {x: 1.5625, y: 17.1875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 3902000042020000430200004402000087030000880300009403000096030000
+  - position: {x: 4.6875, y: 17.1875}
+    size: {x: 3.125, y: 3.125}
+    neighbors: 9103000092030000930300009503000096030000
+  - position: {x: 9.375, y: 15.625}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 1d0300001e0300002203000023030000240300009003000092030000940300009703000098030000
+  - position: {x: 3.125, y: 21.875}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 82020000840200008602000088020000930300009403000097030000
+  - position: {x: 9.375, y: 21.875}
+    size: {x: 6.25, y: 6.25}
+    neighbors: 950300009603000098030000
+  - position: {x: 18.75, y: 18.75}
+    size: {x: 12.5, y: 12.5}
+    neighbors: 7b0300007c0300008203000083030000840300009503000097030000
+--- !u!4 &1599264636
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599264634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1786675424}
+  - {fileID: 579183486}
+  - {fileID: 1359187529}
+  - {fileID: 1937943705}
+  - {fileID: 164662196}
+  - {fileID: 2024528293}
+  - {fileID: 923029361}
+  - {fileID: 275450339}
+  - {fileID: 742335407}
+  - {fileID: 706059353}
+  - {fileID: 58678193}
+  - {fileID: 639228801}
+  - {fileID: 714486192}
+  - {fileID: 899914756}
+  - {fileID: 1987733301}
+  - {fileID: 866645122}
+  - {fileID: 165857562}
+  - {fileID: 1428342536}
+  - {fileID: 1920400861}
+  - {fileID: 1025567736}
+  - {fileID: 878516275}
+  - {fileID: 1296910275}
+  - {fileID: 35237896}
+  - {fileID: 2126440800}
+  - {fileID: 1301712871}
+  - {fileID: 184073323}
+  - {fileID: 1613995267}
+  - {fileID: 2004388992}
+  - {fileID: 1576225625}
+  - {fileID: 1522928883}
+  - {fileID: 92429250}
+  - {fileID: 2018135413}
+  - {fileID: 935730829}
+  - {fileID: 918369488}
+  - {fileID: 1959869569}
+  - {fileID: 1383310871}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1613995266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1613995267}
+  - component: {fileID: 1613995268}
+  m_Layer: 0
+  m_Name: Shape (23)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1613995267
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1613995266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.8, y: 7.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1613995268
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1613995266}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &1786675423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1786675424}
+  - component: {fileID: 1786675425}
+  m_Layer: 0
+  m_Name: Shape (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1786675424
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1786675423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.633, y: -1.782, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1786675425
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1786675423}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.07241885, y: -1.1167051}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.3729396, y: -1.011018}
+      - {x: -1.568737, y: -0.44480005}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1920400860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1920400861}
+  - component: {fileID: 1920400862}
+  m_Layer: 0
+  m_Name: Shape (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1920400861
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920400860}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: 15.1, y: 8.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &1920400862
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920400860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1937943704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1937943705}
+  - component: {fileID: 1937943706}
+  m_Layer: 0
+  m_Name: Shape (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1937943705
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1937943704}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.36, y: -0.64, z: 0}
+  m_LocalScale: {x: 0.3250916, y: 0.3250916, z: 0.3250916}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1937943706
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1937943704}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1959869568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1959869569}
+  - component: {fileID: 1959869570}
+  m_Layer: 0
+  m_Name: Shape (30)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1959869569
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959869568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.4, y: 16.1, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1959869570
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959869568}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &1987733300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1987733301}
+  - component: {fileID: 1987733302}
+  m_Layer: 0
+  m_Name: Shape (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &1987733301
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987733300}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.4, y: 2.4, z: 0}
+  m_LocalScale: {x: 0.32509, y: 0.32509, z: 0.32509}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &1987733302
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1987733300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
+--- !u!1 &2004388991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2004388992}
+  - component: {fileID: 2004388993}
+  m_Layer: 0
+  m_Name: Shape (24)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2004388992
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004388991}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.8, y: 18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2004388993
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004388991}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!1 &2018135412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2018135413}
+  - component: {fileID: 2018135414}
+  m_Layer: 0
+  m_Name: Shape (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2018135413
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018135412}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: -8.9, y: 20.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &2018135414
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2018135412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &2024528292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2024528293}
+  - component: {fileID: 2024528294}
+  m_Layer: 0
+  m_Name: Shape (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2024528293
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024528292}
+  m_LocalRotation: {x: -0, y: -0, z: -0.26923513, w: 0.9630745}
+  m_LocalPosition: {x: 3.22, y: 2.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -31.238}
+--- !u!61 &2024528294
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024528292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &2126440799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2126440800}
+  - component: {fileID: 2126440801}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &2126440800
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126440799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.6, y: -0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1599264636}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &2126440801
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126440799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -4.7113705, y: 1.2040854}
+      - {x: -2.594048, y: 0.90636826}
+      - {x: -1.6290221, y: 1.8774924}
+      - {x: -0.071751595, y: 2.116418}
+      - {x: 1.0729165, y: 3.0921857}
+      - {x: 2.4556818, y: 1.6459932}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -1.523695, y: 0.31554842}
+      - {x: -3.4994764, y: -1.7905474}
+      - {x: -5.3500113, y: -0.334733}
