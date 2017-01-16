@@ -18,19 +18,20 @@ namespace Wirune.L13
             public float g;
         }
 
-        public static List<Node> Search(List<Node> nodes, Vector2 start, Vector2 goal, Heuristic heuristic)
+        public static List<Vector2> Search(List<Node> nodes, Vector2 start, Vector2 goal, Heuristic heuristic, float radius)
         {
-            List<Node> path = new List<Node>();
+            List<Vector2> path = new List<Vector2>();
             List<Node> opens = new List<Node>();
 
-            Node a = FindNearest(nodes, start);
-            Node b = FindNearest(nodes, goal);
+            Node a = Node.FindNearest(nodes, start);
+            Node b = Node.FindNearest(nodes, goal);
 
+            start = a.ClosestPoint(start);
             goal = b.ClosestPoint(goal);
 
             Dictionary<Node, Cost> costs = new Dictionary<Node, Cost>();
 
-            costs.Add(a, new Cost() { closest = a.ClosestPoint(start) });
+            costs.Add(a, new Cost() { closest = start });
             opens.Add(a);
 
             int limit = 65535;
@@ -55,14 +56,13 @@ namespace Wirune.L13
                         if (!costs.ContainsKey(neighbor))
                         {
                             Vector2 p1 = neighbor.ClosestPoint(p0);
-                            Vector2 p2 = neighbor.ClosestPoint(goal);
 
                             Cost cost = new Cost();
 
                             cost.closest = p1;
                             cost.parent = lowestF;
                             cost.g = costs[lowestF].g + Distance(p0, p1, heuristic);
-                            cost.h = Distance(p2, goal, heuristic);
+                            cost.h = Distance(p1, goal, heuristic);
                             cost.f = cost.g + cost.h;
 
                             costs.Add(neighbor, cost);
@@ -77,32 +77,28 @@ namespace Wirune.L13
 
                     do
                     {
-                        path.Insert(0, node);
-
                         cost = costs[node];
+                        path.Insert(0, cost.closest);
+
                         node = cost.parent;
                     }
                     while(null != node);
+
+                    path.Add(goal);
 
                     // End While-Loop
                     break;
                 }
             }
 
-            return path;
-        }
-
-        private static Node FindNearest(List<Node> nodes, Vector2 position)
-        {
-            foreach (var node in nodes)
+            if (radius > Mathf.Epsilon)
             {
-                if (node.Contains(position))
-                    return node;
+                Smooth(path, radius);
             }
 
-            return (from n in nodes
-                orderby (n.Position - position).sqrMagnitude ascending
-                select n).First();
+            path.RemoveAt(0);
+
+            return path;
         }
 
         private static Node GetLowestF(List<Node> opens, Dictionary<Node, Cost> costs)
@@ -123,6 +119,34 @@ namespace Wirune.L13
 
             // Euclidean
             return Vector2.Distance(a, b);
+        }
+
+        private static void Smooth(List<Vector2> path, float radius)
+        {
+            for (int i = 0; i < path.Count - 2;)
+            {
+                Vector2 p0 = path[i];
+                Vector2 p1 = path[i + 1];
+                Vector2 p2 = path[i + 2];
+
+                Vector2 disp = (p2 - p0);
+                Vector2 dir = disp.normalized;
+                Vector2 origin = p0 + (dir * radius);
+
+                float dist = disp.magnitude - radius;
+
+                RaycastHit2D hit = Physics2D.CircleCast(origin, radius, dir, dist);
+                Collider2D collider = hit.collider;
+
+                if (null == collider || !collider.gameObject.isStatic)
+                {
+                    path.RemoveAt(i + 1);
+                }
+                else
+                {
+                    i++;
+                }
+            }
         }
     }
 }

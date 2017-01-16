@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Wirune.L13
@@ -112,11 +113,56 @@ namespace Wirune.L13
             return Bounds.Intersects(node.Bounds);
         }
 
+        public bool IntersectRay(Ray ray)
+        {
+            return Bounds.IntersectRay(ray);
+        }
+
+        public bool IntersectRay(Ray ray, out float distance)
+        {
+            return Bounds.IntersectRay(ray, out distance);
+        }
+
         public void Encapsulate(Node node)
         {
             m_Bounds.Encapsulate(node.Bounds);
             m_Position = m_Bounds.center;
             m_Size = m_Bounds.size;
+        }
+
+        public static Node FindNearest(List<Node> nodes, Vector2 position)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.Contains(position))
+                    return node;
+            }
+
+            IOrderedEnumerable<Node> ordereds = (from n in nodes
+                orderby (n.ClosestPoint(position) - position).sqrMagnitude ascending
+                select n);
+
+            return ordereds.First();
+        }
+
+        public static Node FindNearest(List<Node> nodes, Vector2 position, params Node[] excludes)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.Contains(position))
+                    return node;
+            }
+
+            IOrderedEnumerable<Node> ordereds = (from n in nodes
+                orderby (n.ClosestPoint(position) - position).sqrMagnitude ascending
+                select n);
+
+            Node first = ordereds.First();
+
+            if (excludes.Contains(first))
+                return null;
+
+            return first;
         }
     }
 }
