@@ -61,6 +61,12 @@ namespace Wirune.L13
             if (drawPath)
             {
                 Gizmos.color = pathColor;
+
+                if (m_Path.Count > 0)
+                {
+                    Gizmos.DrawLine(transform.position, m_Path[0]);
+                }
+
                 for (int i = 0; i < m_Path.Count - 1; i++)
                 {
                     Gizmos.DrawLine(m_Path[i], m_Path[i + 1]);
