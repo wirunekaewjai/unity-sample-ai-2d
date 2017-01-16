@@ -91,8 +91,8 @@ namespace Wirune.L13
 
         private static float Distance(Node a, Node b, Heuristic heuristic)
         {
-            Vector2 p1 = a.Position;
-            Vector2 p2 = b.Position;
+            Vector2 p1 = b.ClosestPoint(a.Position);
+            Vector2 p2 = a.ClosestPoint(b.Position);
 
             if (heuristic == Heuristic.Manhattan)
             {
