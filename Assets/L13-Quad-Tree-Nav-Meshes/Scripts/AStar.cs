@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace Wirune.L14
+namespace Wirune.L13
 {
     // Copied + Edited from 'L11-Points-Of-Visibility'
     public static class AStar 
@@ -38,12 +38,11 @@ namespace Wirune.L14
 
                 if (lowestF != goal)
                 {
-                    List<int> indexes = lowestF.neighbors;
-
-                    int count = indexes.Count;
+                    int count = lowestF.GetNeighborCount();
                     for (int i = 0; i < count; i++)
                     {
-                        Node neighbor = nodes[indexes[i]];
+                        int nodeIndex = lowestF.GetNeighbor(i);
+                        Node neighbor = nodes[nodeIndex];
 
                         if (!costs.ContainsKey(neighbor))
                         {
@@ -78,15 +77,12 @@ namespace Wirune.L14
                 }
             }
 
-//            Clean(path);
-
             return path;
         }
 
         private static Node GetLowestF(List<Node> opens, Dictionary<Node, Cost> costs)
         {
             IOrderedEnumerable<Node> nodes = (from n in opens
-//                where n.walkable
                 orderby costs[n].f ascending
                 select n);
 
@@ -95,8 +91,8 @@ namespace Wirune.L14
 
         private static float Distance(Node a, Node b, Heuristic heuristic)
         {
-            Vector2 p1 = a.position;
-            Vector2 p2 = b.position;
+            Vector2 p1 = a.Position;
+            Vector2 p2 = b.Position;
 
             if (heuristic == Heuristic.Manhattan)
             {
@@ -105,28 +101,6 @@ namespace Wirune.L14
 
             // Euclidean
             return Vector2.Distance(p1, p2);
-        }
-
-        private static void Clean(List<Node> path)
-        {
-            for (int i = 0; i < path.Count - 2;)
-            {
-                Node n0 = path[i];
-                Node n1 = path[i + 1];
-                Node n2 = path[i + 2];
-
-                Vector2 v0 = (n1.position - n0.position).normalized;
-                Vector2 v1 = (n2.position - n1.position).normalized;
-
-                if (Vector2.Dot(v0, v1) >= 0.8f)
-                {
-                    path.RemoveAt(i + 1);
-                }
-                else
-                {
-                    i++;
-                }
-            }
         }
     }
 }

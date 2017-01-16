@@ -7,7 +7,7 @@ namespace Wirune.L12
     public class TestPathFinding : MonoBehaviour
     {
         // SerializeField
-        public FloodFill floodFill;
+        public Graph floodFill;
 
         public Heuristic heuristic = Heuristic.Euclidean;
         public bool smooth = true;

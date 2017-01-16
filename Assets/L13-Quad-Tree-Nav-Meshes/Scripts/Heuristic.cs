@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Wirune.L14
+namespace Wirune.L13
 {
     public enum Heuristic
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Wirune.L12
 {
-    public class FloodFill : MonoBehaviour 
+    public class Graph : MonoBehaviour 
     {
         public float size = 1f;
         public int division = 5;
