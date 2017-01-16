@@ -136,84 +136,33 @@ namespace Wirune.W02
             transform.rotation = Quaternion.RotateTowards(transform.rotation, lookAt, rotateSpeed);
         }
 
+        public void Move(Vector2 direction)
+        {
+            Vector2 velocity = direction * moveSpeed * Time.deltaTime;
+            Vector2 next = Position + velocity;
+
+            Graph graph = FindObjectOfType<Graph>();
+            List<Node> nodes = graph.Nodes;
+           
+            Node a = Node.FindNearest(nodes, Position);
+
+            if (!a.Contains(next))
+            {
+                Node b = Node.FindNearest(nodes, next, a);
+
+                if (null == b)
+                {
+                    next = a.ClosestPoint(next);
+                }
+            }
+
+            Position = next;
+        }
+
         public void CalculatePath()
         {
             m_Path = Graph.Search(Position, m_Destination, heuristic, radius);
-            m_Path.RemoveAt(0);
-
-//            m_Path.Clear();
-//
-//            Graph graph = Object.FindObjectOfType<Graph>();
-//
-//            Node start = graph.FindNearest(Position);
-//            Node goal = graph.FindNearest(m_Destination);
-//
-//            if (start == goal || start.neighbors.Contains(goal))
-//            {
-//                if (IsInside(goal, m_Destination))
-//                {
-//                    m_Path.Add(m_Destination);
-//                }
-//                else
-//                {
-//                    m_Destination = ClosestPoint(goal, m_Destination);
-//                    m_Path.Add(m_Destination);
-//                }
-//
-//                return;
-//            }
-//
-//            List<Node> nodes = AStar.Search(start, goal, heuristic);
-//            nodes.Remove(start);
-//
-//            PathSmoother.Smooth(nodes, 0.5f);
-//
-//            foreach (var node in nodes)
-//            {
-//                m_Path.Add(node.position);
-//            }
-//
-//            if (IsInside(goal, m_Destination))
-//            {
-//                m_Destination = ClosestPoint(goal, m_Destination);
-//                m_Path.Add(m_Destination);
-//            }
         }
-
-
-//        private Vector2 ClosestPoint(Node node, Vector2 point)
-//        {
-//            Bounds b = new Bounds(node.Position, node.Size);
-//            float size = node.Size.magnitude;
-//
-//            Vector2 disp = (point - Position);
-//            Vector2 closest = b.ClosestPoint(Position + (disp.normalized * size));
-//
-//            float d1 = disp.sqrMagnitude;
-//            float d2 = (closest - Position).sqrMagnitude;
-//
-//            if (d1 >= d2)
-//            {
-//                return closest;
-//            }
-//
-//            return point;
-//        }
-//
-//        private bool IsInside(Node node, Vector2 point)
-//        {
-//            Bounds b = new Bounds(node.Position, node.Size);
-//            float size = node.Size.magnitude;
-//
-//            Vector2 disp = (point - Position);
-//            Vector2 closest = b.ClosestPoint(Position + (disp.normalized * size));
-//
-//            float d1 = disp.sqrMagnitude;
-//            float d2 = (closest - Position).sqrMagnitude;
-//
-//            return (d1 < d2);
-//        }
-
     }
 }
 

@@ -17,9 +17,12 @@ namespace Wirune.W02
 
                 Vector2 position = transform.position;
                 Vector2 direction = new Vector2(horizontal, vertical).normalized;
-                Vector2 destination = position + (direction * agent.moveSpeed * Time.deltaTime);
+//                Vector2 destination = position + (direction * agent.moveSpeed * Time.deltaTime);
+//
+//                agent.Destination = destination;
 
-                agent.Destination = destination;
+                agent.Move(direction);
+                agent.Rotate(direction);
             }
         }
     }

@@ -32,69 +32,14 @@ namespace Wirune.W02
         [SerializeField]
         private List<Node> m_Nodes = new List<Node>();
 
+        // Property
+        public List<Node> Nodes { get { return m_Nodes; } }
+
         public static List<Vector2> Search(Vector2 start, Vector2 goal, Heuristic heuristic, float radius)
         {
             var graph = FindObjectOfType<Graph>();
-
-            List<Node> nodes = AStar.Search(graph.m_Nodes, start, goal, heuristic);
-            return CreatePath(nodes, start, goal, radius);
+            return AStar.Search(graph.m_Nodes, start, goal, heuristic, radius + graph.minSize);
         }
-
-        public static List<Vector2> CreatePath(List<Node> nodes, Vector2 start, Vector2 goal, float radius)
-        {
-            List<Vector2> path = new List<Vector2>();
-
-            path.Add(start);
-
-            for (int i = 1; i < nodes.Count; i++)
-            {
-                Node n = nodes[i];
-                path.Add(n.ClosestPoint(path[path.Count - 1]));
-            }
-
-            path.Add(goal);
-
-            // Smoothing
-            for (int i = 0; i < path.Count - 2;)
-            {
-                Vector2 p0 = path[i];
-                Vector2 p2 = path[i + 2];
-
-                Vector2 disp = (p2 - p0);
-                Vector2 dir = disp.normalized;
-                Vector2 origin = p0 + (dir * radius);
-
-                float dist = disp.magnitude - radius;
-
-                RaycastHit2D hit = Physics2D.CircleCast(origin, radius, dir, dist);
-                Collider2D collider = hit.collider;
-
-                if (null == collider || !collider.gameObject.isStatic)
-                {
-                    path.RemoveAt(i + 1);
-                }
-                else
-                {
-                    i++;
-                }
-            }
-
-            return path;
-        }
-
-        public Node FindNearest(Vector2 position)
-        {
-            foreach (var node in m_Nodes)
-            {
-                if (node.Contains(position))
-                    return node;
-            }
-
-            return (from n in m_Nodes
-                orderby (n.Position - position).sqrMagnitude ascending
-                select n).First();
-        }
-
 
         [ContextMenu("Generate")]
         public void Generate()
@@ -255,7 +200,6 @@ namespace Wirune.W02
                         Vector2 c2 = (c0 + c1) / 2f;
 
                         Gizmos.DrawLine(a.Position, c2);
-                        Gizmos.DrawLine(c2, b.Position);
                     }
                 }
             }
