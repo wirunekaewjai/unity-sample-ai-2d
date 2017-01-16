@@ -11,21 +11,27 @@ namespace Wirune.W02
         class Cost
         {
             public Node parent;
+            public Vector2 closest;
 
             public float h;
             public float f;
             public float g;
         }
 
-        public static List<Node> Search(List<Node> nodes, Node start, Node goal, Heuristic heuristic)
+        public static List<Node> Search(List<Node> nodes, Vector2 start, Vector2 goal, Heuristic heuristic)
         {
             List<Node> path = new List<Node>();
             List<Node> opens = new List<Node>();
 
+            Node a = FindNearest(nodes, start);
+            Node b = FindNearest(nodes, goal);
+
+            goal = b.ClosestPoint(goal);
+
             Dictionary<Node, Cost> costs = new Dictionary<Node, Cost>();
 
-            costs.Add(start, new Cost());
-            opens.Add(start);
+            costs.Add(a, new Cost() { closest = a.ClosestPoint(start) });
+            opens.Add(a);
 
             int limit = 65535;
             while (opens.Count > 0 && limit > 0)
@@ -36,8 +42,10 @@ namespace Wirune.W02
 
                 opens.Remove(lowestF);
 
-                if (lowestF != goal)
+                if (lowestF != b)
                 {
+                    Vector2 p0 = costs[lowestF].closest;
+
                     int count = lowestF.GetNeighborCount();
                     for (int i = 0; i < count; i++)
                     {
@@ -46,11 +54,15 @@ namespace Wirune.W02
 
                         if (!costs.ContainsKey(neighbor))
                         {
+                            Vector2 p1 = neighbor.ClosestPoint(p0);
+                            Vector2 p2 = neighbor.ClosestPoint(goal);
+
                             Cost cost = new Cost();
 
+                            cost.closest = p1;
                             cost.parent = lowestF;
-                            cost.g = costs[lowestF].g + Distance(lowestF, neighbor, heuristic);
-                            cost.h = Distance(neighbor, goal, heuristic);
+                            cost.g = costs[lowestF].g + Distance(p0, p1, heuristic);
+                            cost.h = Distance(p2, goal, heuristic);
                             cost.f = cost.g + cost.h;
 
                             costs.Add(neighbor, cost);
@@ -80,6 +92,19 @@ namespace Wirune.W02
             return path;
         }
 
+        private static Node FindNearest(List<Node> nodes, Vector2 position)
+        {
+            foreach (var node in nodes)
+            {
+                if (node.Contains(position))
+                    return node;
+            }
+
+            return (from n in nodes
+                orderby (n.Position - position).sqrMagnitude ascending
+                select n).First();
+        }
+
         private static Node GetLowestF(List<Node> opens, Dictionary<Node, Cost> costs)
         {
             IOrderedEnumerable<Node> nodes = (from n in opens
@@ -89,18 +114,15 @@ namespace Wirune.W02
             return nodes.First();
         }
 
-        private static float Distance(Node a, Node b, Heuristic heuristic)
+        private static float Distance(Vector2 a, Vector2 b, Heuristic heuristic)
         {
-            Vector2 p1 = b.ClosestPoint(a.Position);
-            Vector2 p2 = a.ClosestPoint(b.Position);
-
             if (heuristic == Heuristic.Manhattan)
             {
-                return Mathf.Abs(p1.x - p2.x) + Mathf.Abs(p1.y - p2.y);
+                return Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y);
             }
 
             // Euclidean
-            return Vector2.Distance(p1, p2);
+            return Vector2.Distance(a, b);
         }
     }
 }

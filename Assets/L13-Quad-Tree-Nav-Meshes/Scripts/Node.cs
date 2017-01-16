@@ -18,6 +18,24 @@ namespace Wirune.L13
         [SerializeField]
         private List<int> m_Neighbors = new List<int>();
 
+        public Node()
+        {
+            Position = Vector2.zero;
+            Size = Vector2.zero;
+        }
+
+        public Node(Vector2 position)
+        {
+            Position = position;
+            Size = Vector2.zero;
+        }
+
+        public Node(Vector2 position, Vector2 size)
+        {
+            Position = position;
+            Size = size;
+        }
+
         public Vector2 Position
         {
             get

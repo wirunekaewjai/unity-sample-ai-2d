@@ -25,7 +25,9 @@ namespace Wirune.W02
         [Header("Settings"), Range(1, 1000)]
         public int overallSize = 10;
         public float minSize = 0.5f;
-        public bool merge = true;
+
+        [Space]
+        public ushort mergePass = 1;
 
         [SerializeField]
         private List<Node> m_Nodes = new List<Node>();
@@ -34,10 +36,7 @@ namespace Wirune.W02
         {
             var graph = FindObjectOfType<Graph>();
 
-            var a = graph.FindNearest(start);
-            var b = graph.FindNearest(goal);
-
-            List<Node> nodes = AStar.Search(graph.m_Nodes, a, b, heuristic);
+            List<Node> nodes = AStar.Search(graph.m_Nodes, start, goal, heuristic);
             return CreatePath(nodes, start, goal, radius);
         }
 
@@ -146,10 +145,7 @@ namespace Wirune.W02
 
         private void MergeNodes(List<Node> nodes)
         {
-            if (!merge)
-                return;
-
-            for (int pass = 0; pass < 2; pass++)
+            for (int pass = 0; pass < mergePass; pass++)
             {
                 for (int i = 0; i < nodes.Count - 1; i++)
                 {

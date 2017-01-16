@@ -1577,7 +1577,7 @@ MonoBehaviour:
   connectionColor: {r: 0, g: 0.13103437, b: 1, a: 0.159}
   overallSize: 200
   minSize: 1
-  merge: 1
+  mergePass: 1
   m_Nodes:
   - m_Position: {x: 0, y: -75}
     m_Size: {x: 200, y: 50}
