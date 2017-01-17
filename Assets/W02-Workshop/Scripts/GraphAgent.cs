@@ -67,7 +67,7 @@ namespace Wirune.W02
             Destination = transform.position;
         }
 
-        void Update ()
+        void FixedUpdate()
         {
             if (m_Path.Count > 0)
             {
@@ -127,7 +127,7 @@ namespace Wirune.W02
             Vector2 displacement = (target - Position);
             Vector2 direction = displacement.normalized;
 
-            return direction * moveSpeed * Time.deltaTime;
+            return direction * moveSpeed * Time.fixedDeltaTime;
         }
 
         public void Rotate(Vector2 direction)

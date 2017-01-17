@@ -99,7 +99,7 @@ namespace Wirune.L14
             m_Nodes = new List<Node>();
 
             CreateNodes(m_Nodes, transform.position, overallSize, 10); 
-            MergeNodes(m_Nodes);
+//            MergeNodes(m_Nodes);
             ConnectNodes(m_Nodes);
         }
 
@@ -144,6 +144,17 @@ namespace Wirune.L14
                         node.Position = p2;
                         node.Size = extents;
 
+                        for (int j = 0; j < nodes.Count; j++) 
+                        {
+                            Node b = nodes[j];
+
+                            if (IsMergable(node, b))
+                            {
+                                node.Encapsulate(b);
+                                nodes.RemoveAt(j--);
+                            }
+                        }
+
                         nodes.Add(node);
                     }
                     else
@@ -154,34 +165,34 @@ namespace Wirune.L14
             }
         }
 
-        private void MergeNodes(List<Node> nodes)
-        {
-            int currentCount = nodes.Count;
-
-            for (int pass = 0; pass < mergeIterationLimit; pass++)
-            {
-                for (int i = 0; i < nodes.Count - 1; i++)
-                {
-                    Node a = nodes[i];
-
-                    for (int j = i + 1; j < nodes.Count; j++) 
-                    {
-                        Node b = nodes[j];
-
-                        if (IsMergable(a, b))
-                        {
-                            a.Encapsulate(b);
-                            nodes.RemoveAt(j--);
-                        }
-                    }
-                }
-
-                if (currentCount == nodes.Count)
-                    break;
-
-                currentCount = nodes.Count;
-            }
-        }
+//        private void MergeNodes(List<Node> nodes)
+//        {
+//            int currentCount = nodes.Count;
+//
+//            for (int pass = 0; pass < mergeIterationLimit; pass++)
+//            {
+//                for (int i = 0; i < nodes.Count - 1; i++)
+//                {
+//                    Node a = nodes[i];
+//
+//                    for (int j = i + 1; j < nodes.Count; j++) 
+//                    {
+//                        Node b = nodes[j];
+//
+//                        if (IsMergable(a, b))
+//                        {
+//                            a.Encapsulate(b);
+//                            nodes.RemoveAt(j--);
+//                        }
+//                    }
+//                }
+//
+//                if (currentCount == nodes.Count)
+//                    break;
+//
+//                currentCount = nodes.Count;
+//            }
+//        }
 
         private bool IsMergable(Node a, Node b)
         {

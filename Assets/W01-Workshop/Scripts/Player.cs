@@ -17,7 +17,7 @@ namespace Wirune.W01
             }
         }
 
-        void Update ()
+        void FixedUpdate ()
         {
             if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             {
@@ -26,7 +26,7 @@ namespace Wirune.W01
 
                 Vector2 position = transform.position;
                 Vector2 direction = new Vector2(horizontal, vertical).normalized;
-                Vector2 destination = position + (direction * agent.moveSpeed * Time.deltaTime);
+                Vector2 destination = position + (direction * agent.moveSpeed * Time.fixedDeltaTime);
 
                 agent.Destination = destination;
             }

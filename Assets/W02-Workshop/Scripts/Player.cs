@@ -8,7 +8,7 @@ namespace Wirune.W02
     {
         public GraphAgent agent;
 
-        void Update ()
+        void FixedUpdate ()
         {
             if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             {

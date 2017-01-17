@@ -49,7 +49,7 @@ namespace Wirune.W02
             Fsm.ChangeState(0);
         }
 
-        void Update()
+        void FixedUpdate()
         {
             Fsm.Update();
         }

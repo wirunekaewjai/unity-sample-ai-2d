@@ -134,8 +134,6 @@ namespace Wirune.L14
                 p0 = p0 + (dir * radius);
                 p2 = p2 - (dir * radius);
 
-                float dist = disp.magnitude - radius;
-
                 Collider[] colliders = Physics.OverlapCapsule(p0, p2, radius);
                 bool overlap = false;
 

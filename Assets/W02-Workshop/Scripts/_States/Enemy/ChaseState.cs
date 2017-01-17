@@ -41,7 +41,7 @@ namespace Wirune.W02
             }
             else
             {
-                agent.moveSpeed = Mathf.Lerp(enemy.runSpeed, agent.moveSpeed, 0.2f);
+                agent.moveSpeed = Mathf.Lerp(agent.moveSpeed, m_MoveSpeed, 0.2f);
 
                 if (agent.IsReached)
                 {

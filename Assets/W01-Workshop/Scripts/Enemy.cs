@@ -51,7 +51,7 @@ namespace Wirune.W01
             Fsm.ChangeState(0);
         }
 
-        void Update()
+        void FixedUpdate()
         {
             Fsm.Update();
         }

@@ -64,7 +64,7 @@ namespace Wirune.W01
             Destination = transform.position;
         }
 
-        void Update ()
+        void FixedUpdate ()
         {
             if (m_Path.Count > 0)
             {
