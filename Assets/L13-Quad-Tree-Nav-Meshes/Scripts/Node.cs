@@ -98,6 +98,11 @@ namespace Wirune.L13
             m_Neighbors.Remove(nodeIndex);
         }
 
+        public void ClearNeighbors()
+        {
+            m_Neighbors.Clear();
+        }
+
         public Vector2 ClosestPoint(Vector2 point)
         {
             return Bounds.ClosestPoint(point);
