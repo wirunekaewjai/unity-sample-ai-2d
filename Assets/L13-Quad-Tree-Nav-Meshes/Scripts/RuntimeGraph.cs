@@ -45,7 +45,6 @@ namespace Wirune.L13
 
                 m_Nodes = new List<Node>();
                 StartCoroutine(CreateNodes(m_Nodes, transform.position, overallSize, 10));
-                StartCoroutine(ConnectNodes(m_Nodes));
             }
         }
 
@@ -129,32 +128,6 @@ namespace Wirune.L13
             }
 
             return false;
-        }
-
-        private IEnumerator ConnectNodes(List<Node> nodes)
-        {
-            foreach (var node in nodes)
-            {
-                node.ClearNeighbors();
-            }
-
-            for (int i = 0; i < nodes.Count - 1; i++)
-            {
-                Node a = nodes[i];
-
-                for (int j = i + 1; j < nodes.Count; j++) 
-                {
-                    Node b = nodes[j];
-
-                    if (a.Intersects(b))
-                    {
-                        a.AddNeighbor(j);
-                        b.AddNeighbor(i);
-                    }
-                }
-
-                yield return null;
-            }
         }
 
         private void OnDrawGizmos()

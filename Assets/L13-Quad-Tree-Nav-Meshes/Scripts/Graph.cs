@@ -7,6 +7,8 @@ namespace Wirune.L13
 {
     public class Graph : MonoBehaviour 
     {
+        public const int TTL = 10;
+
         [Header("Debug")]
         public bool drawGizmos = true;
 
@@ -27,7 +29,8 @@ namespace Wirune.L13
         public float minSize = 0.5f;
 
         [Space]
-        public ushort mergeIterationLimit = 10;
+        public bool mergeNode = true;
+//        public ushort mergeIterationLimit = 10;
 
         [SerializeField]
         private List<Node> m_Nodes = new List<Node>();
@@ -48,8 +51,7 @@ namespace Wirune.L13
         {
             m_Nodes = new List<Node>();
 
-            CreateNodes(m_Nodes, transform.position, overallSize, 10); 
-//            MergeNodes(m_Nodes);
+            CreateNodes(m_Nodes, transform.position, overallSize, TTL); 
             ConnectNodes(m_Nodes);
         }
 
@@ -80,14 +82,17 @@ namespace Wirune.L13
                         node.Position = p2;
                         node.Size = Vector2.one * cellSize;
 
-                        for (int j = 0; j < nodes.Count; j++) 
+                        if (mergeNode)
                         {
-                            Node b = nodes[j];
-
-                            if (IsMergable(node, b))
+                            for (int j = 0; j < nodes.Count; j++) 
                             {
-                                node.Encapsulate(b);
-                                nodes.RemoveAt(j--);
+                                Node b = nodes[j];
+
+                                if (IsMergable(node, b))
+                                {
+                                    node.Encapsulate(b);
+                                    nodes.RemoveAt(j--);
+                                }
                             }
                         }
 
@@ -100,35 +105,6 @@ namespace Wirune.L13
                 }
             }
         }
-
-//        private void MergeNodes(List<Node> nodes)
-//        {
-//            int currentCount = nodes.Count;
-//
-//            for (int pass = 0; pass < mergeIterationLimit; pass++)
-//            {
-//                for (int i = 0; i < nodes.Count - 1; i++)
-//                {
-//                    Node a = nodes[i];
-//
-//                    for (int j = i + 1; j < nodes.Count; j++) 
-//                    {
-//                        Node b = nodes[j];
-//
-//                        if (IsMergable(a, b))
-//                        {
-//                            a.Encapsulate(b);
-//                            nodes.RemoveAt(j--);
-//                        }
-//                    }
-//                }
-//
-//                if (currentCount == nodes.Count)
-//                    break;
-//
-//                currentCount = nodes.Count;
-//            }
-//        }
 
         private bool IsMergable(Node a, Node b)
         {
