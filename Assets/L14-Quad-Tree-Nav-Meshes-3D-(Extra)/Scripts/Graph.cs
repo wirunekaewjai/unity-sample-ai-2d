@@ -26,7 +26,7 @@ namespace Wirune.L14
         public float minSize = 0.5f;
 
         [Space]
-        public ushort mergePass = 1;
+        public ushort mergeIterationLimit = 10;
 
         [SerializeField]
         private List<Node> m_Nodes = new List<Node>();
@@ -39,7 +39,9 @@ namespace Wirune.L14
             Graph graph = FindObjectOfType<Graph>();
             GameObject exclude = graph.gameObject;
 
-            return AStar.Search(graph.m_Nodes, start, goal, heuristic, radius + graph.minSize, exclude);
+            radius = Mathf.Max(radius, graph.minSize);
+
+            return AStar.Search(graph.m_Nodes, start, goal, heuristic, radius, exclude);
         }
 
         private void OnDrawGizmos()
@@ -110,16 +112,16 @@ namespace Wirune.L14
 
             Vector3 extents = new Vector3(cellSize, 0, cellSize);
             Vector3 min = center - extents;
-            Vector3 offset = new Vector3(minSize, 0, minSize);
+//            Vector3 offset = new Vector3(minSize, minSize, minSize);
 
-            Vector3 extents3D = new Vector3(cellSize, cellSize, cellSize);
+            Vector3 extents3D = new Vector3(cellSize, size, cellSize);
 
             for (int z = 0; z < 2; z++)
             {
                 for (int x = 0; x < 2; x++)
                 {
-                    Vector3 p0 = min + (new Vector3(x, 0, z) * cellSize) - offset;
-                    Vector3 p1 = min + (new Vector3(x + 1, 0, z + 1) * cellSize) + offset;
+                    Vector3 p0 = min + (new Vector3(x, 0, z) * cellSize);
+                    Vector3 p1 = min + (new Vector3(x + 1, 0, z + 1) * cellSize);
                     Vector3 p2 = (p0 + p1) / 2f;
 
                     Collider[] colliders = Physics.OverlapBox(p2, extents3D);
@@ -154,7 +156,9 @@ namespace Wirune.L14
 
         private void MergeNodes(List<Node> nodes)
         {
-            for (int pass = 0; pass < mergePass; pass++)
+            int currentCount = nodes.Count;
+
+            for (int pass = 0; pass < mergeIterationLimit; pass++)
             {
                 for (int i = 0; i < nodes.Count - 1; i++)
                 {
@@ -171,6 +175,11 @@ namespace Wirune.L14
                         }
                     }
                 }
+
+                if (currentCount == nodes.Count)
+                    break;
+
+                currentCount = nodes.Count;
             }
         }
 

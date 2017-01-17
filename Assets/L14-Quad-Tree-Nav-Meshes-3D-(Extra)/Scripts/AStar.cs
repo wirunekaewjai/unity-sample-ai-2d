@@ -130,7 +130,9 @@ namespace Wirune.L14
 
                 Vector3 disp = (p2 - p0);
                 Vector3 dir = disp.normalized;
-                Vector3 origin = p0 + (dir * radius);
+
+                p0 = p0 + (dir * radius);
+                p2 = p2 - (dir * radius);
 
                 float dist = disp.magnitude - radius;
 

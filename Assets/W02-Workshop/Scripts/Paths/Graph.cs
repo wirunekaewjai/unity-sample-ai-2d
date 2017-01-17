@@ -27,7 +27,7 @@ namespace Wirune.W02
         public float minSize = 0.5f;
 
         [Space]
-        public ushort mergePass = 1;
+        public ushort mergeIterationLimit = 10;
 
         [SerializeField]
         private List<Node> m_Nodes = new List<Node>();
@@ -37,8 +37,10 @@ namespace Wirune.W02
 
         public static List<Vector2> Search(Vector2 start, Vector2 goal, Heuristic heuristic, float radius)
         {
-            var graph = FindObjectOfType<Graph>();
-            return AStar.Search(graph.m_Nodes, start, goal, heuristic, radius + graph.minSize);
+            Graph graph = FindObjectOfType<Graph>();
+            radius = Mathf.Max(radius, graph.minSize);
+
+            return AStar.Search(graph.m_Nodes, start, goal, heuristic, radius);
         }
 
         [ContextMenu("Generate")]
@@ -90,7 +92,9 @@ namespace Wirune.W02
 
         private void MergeNodes(List<Node> nodes)
         {
-            for (int pass = 0; pass < mergePass; pass++)
+            int currentCount = nodes.Count;
+
+            for (int pass = 0; pass < mergeIterationLimit; pass++)
             {
                 for (int i = 0; i < nodes.Count - 1; i++)
                 {
@@ -107,6 +111,11 @@ namespace Wirune.W02
                         }
                     }
                 }
+
+                if (currentCount == nodes.Count)
+                    break;
+
+                currentCount = nodes.Count;
             }
         }
 
