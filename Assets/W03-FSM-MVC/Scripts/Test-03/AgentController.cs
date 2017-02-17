@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Wirune.W03.Test02
+namespace Wirune.W03.Test03
 {
     public class AgentController : Controller<AgentModel, AgentView>
     {

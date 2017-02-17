@@ -635,6 +635,8 @@ GameObject:
   - component: {fileID: 1764723684}
   - component: {fileID: 1764723683}
   - component: {fileID: 1764723682}
+  - component: {fileID: 1764723689}
+  - component: {fileID: 1764723688}
   - component: {fileID: 1764723687}
   m_Layer: 0
   m_Name: Agent
@@ -730,13 +732,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764723681}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef96f54a16b3fb6439431de24aa2d500, type: 3}
+  m_Script: {fileID: 11500000, guid: e204046a7e41abe45b9f71a84a7aa3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  healthSlider: {fileID: 676569338}
+--- !u!114 &1764723688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764723681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50744c6a05d35b54ebbcc70f0144d95e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Model: {fileID: 1764723689}
+  m_View: {fileID: 1764723687}
+--- !u!114 &1764723689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764723681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215ba21cdd9e435448e14426140656c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxHealth: 20
   m_Health: 10
-  speed: 2
-  healthSlider: {fileID: 676569338}
 --- !u!1 &1887931787
 GameObject:
   m_ObjectHideFlags: 0

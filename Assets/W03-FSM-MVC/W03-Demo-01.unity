@@ -232,8 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Model: {fileID: 2001753993}
-  m_Views:
-  - {fileID: 2001753991}
+  m_View: {fileID: 2001753991}
 --- !u!114 &2001753993
 MonoBehaviour:
   m_ObjectHideFlags: 0
