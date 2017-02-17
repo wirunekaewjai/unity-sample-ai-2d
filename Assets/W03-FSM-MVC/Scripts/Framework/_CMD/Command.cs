@@ -27,21 +27,21 @@ namespace Wirune.W03
                 if (attributes.Length > 0)
                 {
                     var attribute = (CommandCallback)attributes[0];
-                    var command = (null != attribute.command) ? attribute.command : method.Name;
+                    var id = (null != attribute.id) ? attribute.id : method.Name;
 
-                    m_Methods.Add(command, method);
+                    m_Methods.Add(id, method);
                 }
             }
         }
 
-        public void OnExecute(object command, params object[] parameters)
+        public void OnExecute(object id, params object[] parameters)
         {
-            if (!m_Methods.ContainsKey(command))
+            if (!m_Methods.ContainsKey(id))
             {
                 return;
             }
 
-            var method = m_Methods[command];
+            var method = m_Methods[id];
             method.Invoke(m_Target, parameters);
         }
     }

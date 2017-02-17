@@ -5,27 +5,27 @@ namespace Wirune.W03
 {
     public class Commander : MonoBehaviour, ICommander
     {
-        private readonly List<ICommand> m_Observers = new List<ICommand>();
+        private readonly List<ICommand> m_Commands = new List<ICommand>();
 
-        public void Execute(object command, params object[] parameters)
+        public void Execute(object id, params object[] parameters)
         {
-            foreach (var observer in m_Observers)
+            for (int i = 0; i < m_Commands.Count; i++)
             {
-                observer.OnExecute(command, parameters);
+                m_Commands[i].OnExecute(id, parameters);
             }
         }
 
-        public void Register(ICommand observer)
+        public void Register(ICommand command)
         {
-            if (!m_Observers.Contains(observer))
+            if (!m_Commands.Contains(command))
             {
-                m_Observers.Add(observer);
+                m_Commands.Add(command);
             }
         }
 
-        public void Unregister(ICommand observer)
+        public void Unregister(ICommand command)
         {
-            m_Observers.Remove(observer);
+            m_Commands.Remove(command);
         }
     }
 }

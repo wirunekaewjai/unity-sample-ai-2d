@@ -9,11 +9,11 @@ namespace Wirune.W03
 {
     public class View : Commander
     {
-        public readonly Command observer = new Command();
+        public readonly Command command = new Command();
 
         protected virtual void Awake()
         {
-            observer.BindCallbackAttribute(this);
+            command.BindCallbackAttribute(this);
         }
     }
 }

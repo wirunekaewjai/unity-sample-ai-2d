@@ -10,7 +10,7 @@ namespace Wirune.W03
     public class Controller<TModel> : MonoBehaviour 
         where TModel : Model
     {
-        private readonly Command m_Observer = new Command();
+        private readonly Command m_Command = new Command();
 
         [SerializeField]
         private TModel m_Model;
@@ -22,15 +22,15 @@ namespace Wirune.W03
 
         protected virtual void Awake()
         {
-            m_Observer.BindCallbackAttribute(this);
+            m_Command.BindCallbackAttribute(this);
         }
 
         protected virtual void OnEnable()
         {
             foreach (var view in m_Views)
             {
-                view.Register(m_Observer);
-                m_Model.Register(view.observer);
+                view.Register(m_Command);
+                m_Model.Register(view.command);
             }
         }
 
@@ -38,8 +38,8 @@ namespace Wirune.W03
         {
             foreach (var view in m_Views)
             {
-                view.Unregister(m_Observer);
-                m_Model.Unregister(view.observer);
+                view.Unregister(m_Command);
+                m_Model.Unregister(view.command);
             }
         }
 

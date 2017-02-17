@@ -4,9 +4,9 @@ namespace Wirune.W03
 {
     public interface ICommander
     {
-        void Register(ICommand observer);
-        void Unregister(ICommand observer);
-        void Execute(object command, params object[] parameters);
+        void Register(ICommand command);
+        void Unregister(ICommand command);
+        void Execute(object id, params object[] parameters);
     }
 }
 

@@ -10,6 +10,6 @@ namespace Wirune.W03
     public interface ICommand
     {
         void BindCallbackAttribute(object target);
-        void OnExecute(object command, params object[] parameters);
+        void OnExecute(object id, params object[] parameters);
     }
 }
