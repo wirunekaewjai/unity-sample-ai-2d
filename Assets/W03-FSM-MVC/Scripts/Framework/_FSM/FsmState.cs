@@ -1,15 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
-
-using UnityEngine;
 
 namespace Wirune.W03
 {
     public abstract class FsmState<T> : IObserver
     {
-//        private readonly Command m_Command = new Command();
-
         private Dictionary<object, MethodInfo> m_Observes = new Dictionary<object, MethodInfo>();
 
         public Fsm<T> Fsm { get; internal set; }
@@ -17,11 +12,13 @@ namespace Wirune.W03
 
         public FsmState()
         {
+            // Find Observe Method Infos by 'ObserveAttribute'
             m_Observes = Observe.FindObserveMethods(this);
         }
 
         public virtual void OnEnter()
         {
+            // Fsm -> FsmState
             Fsm.Register(this);
         }
 
@@ -34,13 +31,11 @@ namespace Wirune.W03
 
         public void OnNotify(object eventID, params object[] parameters)
         {
-            if (!m_Observes.ContainsKey(eventID))
+            if (m_Observes.ContainsKey(eventID))
             {
-                return;
+                var method = m_Observes[eventID];
+                method.Invoke(this, parameters);
             }
-
-            var method = m_Observes[eventID];
-            method.Invoke(this, parameters);
         }
 
         #endregion

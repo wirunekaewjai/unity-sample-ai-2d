@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace Wirune.W03
 {
     public interface IObservable
