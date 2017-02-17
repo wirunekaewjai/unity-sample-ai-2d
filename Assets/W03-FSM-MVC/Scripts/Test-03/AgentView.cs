@@ -5,8 +5,16 @@ namespace Wirune.W03.Test03
 {
     public class AgentView : View
     {
-        public float speed = 2f;
-        public Slider healthSlider;
+        [SerializeField]
+        private float m_Speed = 2f;
+
+        [SerializeField]
+        private Slider m_HealthSlider;
+
+        public float Speed
+        {
+            get { return m_Speed; }
+        }
 
         public Fsm<AgentView> Fsm { get; private set; }
 
@@ -35,13 +43,13 @@ namespace Wirune.W03.Test03
         [Observe(AgentEvent.MaxHealthChanged)]
         void OnMaxHealthChanged(int maxHealth)
         {
-            healthSlider.maxValue = maxHealth;
+            m_HealthSlider.maxValue = maxHealth;
         }
 
         [Observe(AgentEvent.HealthChanged)]
         void OnHealthChanged(int health)
         {
-            healthSlider.value = health;
+            m_HealthSlider.value = health;
         }
 
         [Observe(AgentEvent.Died)]

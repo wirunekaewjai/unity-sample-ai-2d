@@ -23,7 +23,7 @@ namespace Wirune.W03.Test03
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
 
-            Vector3 velocity = new Vector3(h, v, 0) * Owner.speed * Time.deltaTime;
+            Vector3 velocity = new Vector3(h, v, 0) * Owner.Speed * Time.deltaTime;
             Owner.transform.Translate(velocity, Space.World);
         }
 

@@ -17,14 +17,6 @@ namespace Wirune.W03.Test03
             Fsm.ChangeState(1);
         }
 
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-
-            Model.Notify(AgentEvent.MaxHealthChanged, Model.MaxHealth);
-            Model.Notify(AgentEvent.HealthChanged, Model.Health);
-        }
-
         public override void OnNotify(object eventID, params object[] parameters)
         {
             base.OnNotify(eventID, parameters);

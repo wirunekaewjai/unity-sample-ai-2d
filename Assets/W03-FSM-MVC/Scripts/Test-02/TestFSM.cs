@@ -9,6 +9,11 @@ namespace Wirune.W03.Test02
         private int m_MaxHealth = 20;
 
         [SerializeField]
+        private float m_Speed = 2f;
+
+        [SerializeField]
+        private Slider m_HealthSlider;
+
         private int m_Health = 10;
 
         public int MaxHealth
@@ -32,8 +37,10 @@ namespace Wirune.W03.Test02
             }
         }
 
-        public float speed = 2f;
-        public Slider healthSlider;
+        public float Speed
+        {
+            get { return m_Speed; }
+        }
 
         public Fsm<TestFSM> Fsm { get; private set; }
 
@@ -58,12 +65,12 @@ namespace Wirune.W03.Test02
 
         private void OnMaxHealthChanged(int maxHealth)
         {
-            healthSlider.maxValue = maxHealth;
+            m_HealthSlider.maxValue = maxHealth;
         }
 
         private void OnHealthChanged(int health)
         {
-            healthSlider.value = health;
+            m_HealthSlider.value = health;
         }
     }
 }

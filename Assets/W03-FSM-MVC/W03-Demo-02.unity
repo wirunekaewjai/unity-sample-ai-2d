@@ -734,9 +734,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxHealth: 20
-  m_Health: 10
-  speed: 2
-  healthSlider: {fileID: 676569338}
+  m_Speed: 2
+  m_HealthSlider: {fileID: 676569338}
 --- !u!1 &1887931787
 GameObject:
   m_ObjectHideFlags: 0

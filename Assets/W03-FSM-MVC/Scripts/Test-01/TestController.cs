@@ -7,15 +7,13 @@ namespace Wirune.W03.Test01
         [Observe("RequestRandomPoint")]
         void OnRequestRandomPoint()
         {
-            Model.point = Random.Range(0, 100000);
-            View.OnPointChanged(Model.point);
+            Model.Point = Random.Range(0, 100000);
         }
 
         [Observe("RequestSetPoint")]
         void OnRequestSetPoint(int point)
         {
-            Model.point = point;
-            View.OnPointChanged(Model.point);
+            Model.Point = point;
         }
     }
 }
