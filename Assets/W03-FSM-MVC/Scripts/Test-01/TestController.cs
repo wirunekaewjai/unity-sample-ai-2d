@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
-using System;
 
 using UnityEngine;
 
 namespace Wirune.W03.Test01
 {
-    public class TestController : Controller<TestModel>
+    public class TestController : Controller<TestModel, TestView>
     {
-        [CommandCallback]
-        void RequestRandomPoint()
+        [Observe("RequestRandomPoint")]
+        void OnRequestRandomPoint()
         {
-            Model.DoSetPoint(UnityEngine.Random.Range(0, 100000));
+            Model.point = Random.Range(0, 100000);
+            View.OnPointChanged(Model.point);
         }
 
-        [CommandCallback]
-        void RequestSetPoint(int point)
+        [Observe("RequestSetPoint")]
+        void OnRequestSetPoint(int point)
         {
-            Model.DoSetPoint(point);
+            Model.point = point;
+            View.OnPointChanged(Model.point);
         }
     }
 }

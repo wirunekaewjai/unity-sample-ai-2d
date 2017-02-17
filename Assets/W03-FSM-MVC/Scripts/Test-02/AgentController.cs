@@ -4,18 +4,33 @@ using UnityEngine;
 
 namespace Wirune.W03.Test02
 {
-    public class AgentController : Controller<AgentModel>
+    public class AgentController : Controller<AgentModel, AgentView>
     {
-        [CommandCallback]
-        void IncreaseHealth(int value)
+        public Fsm<AgentController> Fsm { get; private set; }
+
+        protected override void Awake()
         {
-            Model.Health += value;
+            base.Awake();
+
+            Fsm = new Fsm<AgentController>(this);
+            Fsm.AddState(1, new AgentControllerState1());
+            Fsm.AddState(2, new AgentControllerState2());
+
+            Fsm.ChangeState(1);
         }
 
-        [CommandCallback]
-        void DecreaseHealth(int damage)
+        protected override void OnEnable()
         {
-            Model.Health -= damage;
+            base.OnEnable();
+
+            Model.Notify(AgentEvent.MaxHealthChanged, Model.MaxHealth);
+            Model.Notify(AgentEvent.HealthChanged, Model.Health);
+        }
+
+        public override void OnNotify(object eventID, params object[] parameters)
+        {
+            base.OnNotify(eventID, parameters);
+            Fsm.Notify(eventID, parameters);
         }
     }
 }

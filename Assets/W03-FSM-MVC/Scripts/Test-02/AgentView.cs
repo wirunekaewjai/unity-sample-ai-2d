@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Wirune.W03.Test02
 {
     public class AgentView : View
     {
         public float speed = 2f;
+        public Slider healthSlider;
+
         public Fsm<AgentView> Fsm { get; private set; }
 
         protected override void Awake()
@@ -20,21 +23,33 @@ namespace Wirune.W03.Test02
             Fsm.ChangeState(1);
         }
 
-        void OnTriggerEnter(Collider c)
+        public override void OnNotify(object eventID, params object[] parameters)
         {
-            if (c.name == "Cube (1)")
-            {
-                Fsm.Execute("Recover");
-            }
-            else if (c.name == "Cube (2)")
-            {
-                Fsm.Execute("TakeDamage", 2);
-            }
+            base.OnNotify(eventID, parameters);
+            Fsm.Notify(eventID, parameters);
         }
 
-        [CommandCallback]
+        void OnTriggerEnter(Collider c)
+        {
+            Notify(AgentEvent.Collect, c);
+        }
+
+        [Observe(AgentEvent.MaxHealthChanged)]
+        void OnMaxHealthChanged(int maxHealth)
+        {
+            healthSlider.maxValue = maxHealth;
+        }
+
+        [Observe(AgentEvent.HealthChanged)]
+        void OnHealthChanged(int health)
+        {
+            healthSlider.value = health;
+        }
+
+        [Observe(AgentEvent.Died)]
         void OnDied()
         {
+            Debug.Log("Died");
             Fsm.ChangeState(2);
         }
     }

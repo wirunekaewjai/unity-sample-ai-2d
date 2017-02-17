@@ -7,41 +7,34 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class Controller<TModel> : MonoBehaviour 
+    public class Controller<TModel, TView> : ObservableBehaviour
         where TModel : Model
+        where TView : View
     {
-        private readonly Command m_Command = new Command();
-
         [SerializeField]
         private TModel m_Model;
         public TModel Model { get { return m_Model; } }
 
         [SerializeField]
-        private List<View> m_Views = new List<View>();
-        public List<View> Views { get { return m_Views; } }
-
-        protected virtual void Awake()
-        {
-            m_Command.BindCallbackAttribute(this);
-        }
+        private TView m_View;
+        public TView View { get { return m_View; } }
 
         protected virtual void OnEnable()
         {
-            foreach (var view in m_Views)
-            {
-                view.Register(m_Command);
-                m_Model.Register(view.command);
-            }
+            // Controller <-> View
+            this.Register(m_View);
+            m_View.Register(this);
+
+            // Model -> View
+            m_Model.Register(m_View);
         }
 
         protected virtual void OnDisable()
         {
-            foreach (var view in m_Views)
-            {
-                view.Unregister(m_Command);
-                m_Model.Unregister(view.command);
-            }
-        }
+            this.Unregister(m_View);
+            m_View.Unregister(this);
 
+            m_Model.Unregister(m_View);
+        }
     }
 }

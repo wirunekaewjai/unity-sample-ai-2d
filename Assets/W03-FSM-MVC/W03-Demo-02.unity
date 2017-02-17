@@ -249,7 +249,6 @@ GameObject:
   m_Component:
   - component: {fileID: 676569337}
   - component: {fileID: 676569338}
-  - component: {fileID: 676569339}
   m_Layer: 5
   m_Name: HP Slider
   m_TagString: Untagged
@@ -326,18 +325,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &676569339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 676569336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78095e54696ea5a499da271bdaf28ab5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 676569338}
 --- !u!1 &1063943284
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +699,7 @@ SphereCollider:
   m_GameObject: {fileID: 1764723681}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -749,6 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  healthSlider: {fileID: 676569338}
 --- !u!114 &1764723688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,9 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Model: {fileID: 1764723689}
-  m_Views:
-  - {fileID: 1764723687}
-  - {fileID: 676569339}
+  m_View: {fileID: 1764723687}
 --- !u!114 &1764723689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,8 +761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215ba21cdd9e435448e14426140656c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  health: 10
+  m_MaxHealth: 20
+  m_Health: 10
 --- !u!1 &1887931787
 GameObject:
   m_ObjectHideFlags: 0

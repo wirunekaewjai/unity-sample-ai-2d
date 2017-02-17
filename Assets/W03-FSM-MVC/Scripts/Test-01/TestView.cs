@@ -10,16 +10,15 @@ namespace Wirune.W03.Test01
         {
             if(Input.GetKeyDown(KeyCode.A))
             {
-                Execute("RequestRandomPoint");
+                Notify("RequestRandomPoint");
             }
             else if(Input.GetKeyDown(KeyCode.S))
             {
-                Execute("RequestSetPoint", 1000);
+                Notify("RequestSetPoint", 1000);
             }
         }
 
-        [CommandCallback]
-        void OnPointChanged(int point)
+        public void OnPointChanged(int point)
         {
             Debug.Log("Point : " + point);
         }

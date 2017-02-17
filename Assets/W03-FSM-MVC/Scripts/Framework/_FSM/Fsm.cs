@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class Fsm<T> : ICommander
+    public class Fsm<T> : IObservable
     {
-        private readonly List<ICommand> m_Commands = new List<ICommand>();
+        private List<IObserver> m_Observers = new List<IObserver>();
 
         private T m_Owner;
         private Dictionary<object, FsmState<T>> m_States;
@@ -45,25 +45,29 @@ namespace Wirune.W03
             }
         }
 
-        public void Execute(object id, params object[] parameters)
+        #region IObservable implementation
+
+        public void Register(IObserver observer)
         {
-            for(int i = 0; i < m_Commands.Count; i++)
+            if (!m_Observers.Contains(observer))
             {
-                m_Commands[i].OnExecute(id, parameters);
+                m_Observers.Add(observer);
             }
         }
 
-        public void Register(ICommand command)
+        public void Unregister(IObserver observer)
         {
-            if (!m_Commands.Contains(command))
+            m_Observers.Remove(observer);
+        }
+
+        public void Notify(object eventID, params object[] parameters)
+        {
+            for (int i = 0; i < m_Observers.Count; i++)
             {
-                m_Commands.Add(command);
+                m_Observers[i].OnNotify(eventID, parameters);
             }
         }
 
-        public void Unregister(ICommand command)
-        {
-            m_Commands.Remove(command);
-        }
+        #endregion
     }
 }

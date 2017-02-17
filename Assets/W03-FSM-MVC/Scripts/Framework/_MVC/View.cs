@@ -7,14 +7,9 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class View : Commander
+    public class View : ObservableBehaviour
     {
-        public readonly Command command = new Command();
-
-        protected virtual void Awake()
-        {
-            command.BindCallbackAttribute(this);
-        }
+        
     }
 }
 

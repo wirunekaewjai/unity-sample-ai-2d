@@ -8,7 +8,7 @@ namespace Wirune.W03.Test02
         {
             base.OnEnter();
 
-            Debug.Log("Enter : State 1");
+            Debug.Log("Enter : View State 1");
             Looper.RegisterUpdate(OnUpdate);
         }
 
@@ -27,17 +27,7 @@ namespace Wirune.W03.Test02
             Owner.transform.Translate(velocity, Space.World);
         }
 
-        [CommandCallback("Recover")]
-        void OnIncreaseHealth()
-        {
-            Owner.Execute("IncreaseHealth", 1);
-        }
 
-        [CommandCallback]
-        void TakeDamage(int damage)
-        {
-            Owner.Execute("DecreaseHealth", damage);
-        }
     }
 }
 

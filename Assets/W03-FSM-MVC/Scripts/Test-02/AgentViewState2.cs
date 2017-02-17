@@ -8,7 +8,7 @@ namespace Wirune.W03.Test02
         {
             base.OnEnter();
 
-            Debug.Log("Enter : State 2");
+            Debug.Log("Enter : View State 2");
             Looper.RegisterUpdate(OnUpdate);
         }
 
@@ -23,7 +23,7 @@ namespace Wirune.W03.Test02
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Owner.Execute("IncreaseHealth", 10);
+                Owner.Notify(AgentEvent.Resurrect);
                 Fsm.ChangeState(1);
             }
         }
