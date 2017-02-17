@@ -6,13 +6,13 @@ namespace Wirune.W03.Test02
 {
     public class AgentController : Controller<AgentModel>
     {
-        [CallbackAttribute]
+        [CommandCallback]
         void IncreaseHealth(int value)
         {
             Model.Health += value;
         }
 
-        [CallbackAttribute]
+        [CommandCallback]
         void DecreaseHealth(int damage)
         {
             Model.Health -= damage;

@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class ObservableBehaviour : MonoBehaviour, IObservable
+    public class Commander : MonoBehaviour, ICommander
     {
-        private readonly List<IObserver> m_Observers = new List<IObserver>();
+        private readonly List<ICommand> m_Observers = new List<ICommand>();
 
         public void Execute(object command, params object[] parameters)
         {
@@ -15,7 +15,7 @@ namespace Wirune.W03
             }
         }
 
-        public void Register(IObserver observer)
+        public void Register(ICommand observer)
         {
             if (!m_Observers.Contains(observer))
             {
@@ -23,7 +23,7 @@ namespace Wirune.W03
             }
         }
 
-        public void Unregister(IObserver observer)
+        public void Unregister(ICommand observer)
         {
             m_Observers.Remove(observer);
         }

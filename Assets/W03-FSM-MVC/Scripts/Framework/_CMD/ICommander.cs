@@ -2,10 +2,10 @@
 
 namespace Wirune.W03
 {
-    public interface IObservable
+    public interface ICommander
     {
-        void Register(IObserver observer);
-        void Unregister(IObserver observer);
+        void Register(ICommand observer);
+        void Unregister(ICommand observer);
         void Execute(object command, params object[] parameters);
     }
 }

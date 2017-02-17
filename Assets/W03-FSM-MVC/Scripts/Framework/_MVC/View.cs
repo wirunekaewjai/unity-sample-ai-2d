@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class View : ObservableBehaviour
+    public class View : Commander
     {
-        public readonly Observer observer = new Observer();
+        public readonly Command observer = new Command();
 
         protected virtual void Awake()
         {

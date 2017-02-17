@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class Fsm<T> : IObservable
+    public class Fsm<T> : ICommander
     {
-        private readonly List<IObserver> m_Observers = new List<IObserver>();
+        private readonly List<ICommand> m_Observers = new List<ICommand>();
 
         private T m_Owner;
         private Dictionary<object, FsmState<T>> m_States;
@@ -53,7 +53,7 @@ namespace Wirune.W03
             }
         }
 
-        public void Register(IObserver observer)
+        public void Register(ICommand observer)
         {
             if (!m_Observers.Contains(observer))
             {
@@ -61,7 +61,7 @@ namespace Wirune.W03
             }
         }
 
-        public void Unregister(IObserver observer)
+        public void Unregister(ICommand observer)
         {
             m_Observers.Remove(observer);
         }

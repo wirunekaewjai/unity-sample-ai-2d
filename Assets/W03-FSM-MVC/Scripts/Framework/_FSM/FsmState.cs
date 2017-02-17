@@ -6,7 +6,7 @@ namespace Wirune.W03
 {
     public abstract class FsmState<T>
     {
-        private readonly Observer m_Observer = new Observer();
+        private readonly Command m_Observer = new Command();
 
         public Fsm<T> Fsm { get; internal set; }
         public T Owner { get { return Fsm.Owner; } }

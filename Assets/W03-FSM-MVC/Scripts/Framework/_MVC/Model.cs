@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public class Model : ObservableBehaviour
+    public class Model : Commander
     {
         protected virtual void Awake()
         {

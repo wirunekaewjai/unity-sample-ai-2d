@@ -10,7 +10,7 @@ namespace Wirune.W03
     public class Controller<TModel> : MonoBehaviour 
         where TModel : Model
     {
-        private readonly Observer m_Observer = new Observer();
+        private readonly Command m_Observer = new Command();
 
         [SerializeField]
         private TModel m_Model;

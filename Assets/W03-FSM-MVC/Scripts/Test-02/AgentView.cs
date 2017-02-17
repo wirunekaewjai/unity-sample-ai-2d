@@ -32,7 +32,7 @@ namespace Wirune.W03.Test02
             }
         }
 
-        [CallbackAttribute("OnDied")]
+        [CommandCallback]
         void OnDied()
         {
             Fsm.ChangeState(2);

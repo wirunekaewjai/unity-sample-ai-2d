@@ -9,7 +9,7 @@ namespace Wirune.W03.Test02
     {
         public Slider slider;
 
-        [CallbackAttribute]
+        [CommandCallback]
         void OnHealthChanged(int health, int maxHealth)
         {
             slider.maxValue = maxHealth;

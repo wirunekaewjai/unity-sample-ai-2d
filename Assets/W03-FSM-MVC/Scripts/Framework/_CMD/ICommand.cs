@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Wirune.W03
 {
-    public interface IObserver
+    public interface ICommand
     {
         void BindCallbackAttribute(object target);
         void OnExecute(object command, params object[] parameters);

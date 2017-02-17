@@ -27,13 +27,13 @@ namespace Wirune.W03.Test02
             Owner.transform.Translate(velocity, Space.World);
         }
 
-        [CallbackAttribute("Recover")]
+        [CommandCallback("Recover")]
         void OnIncreaseHealth()
         {
             Owner.Execute("IncreaseHealth", 1);
         }
 
-        [CallbackAttribute("TakeDamage")]
+        [CommandCallback]
         void TakeDamage(int damage)
         {
             Owner.Execute("DecreaseHealth", damage);

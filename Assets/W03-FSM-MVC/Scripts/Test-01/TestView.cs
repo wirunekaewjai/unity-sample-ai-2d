@@ -18,7 +18,7 @@ namespace Wirune.W03.Test01
             }
         }
 
-        [CallbackAttribute]
+        [CommandCallback]
         void OnPointChanged(int point)
         {
             Debug.Log("Point : " + point);

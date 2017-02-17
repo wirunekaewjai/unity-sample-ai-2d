@@ -9,13 +9,13 @@ namespace Wirune.W03.Test01
 {
     public class TestController : Controller<TestModel>
     {
-        [CallbackAttribute]
+        [CommandCallback]
         void RequestRandomPoint()
         {
             Model.DoSetPoint(UnityEngine.Random.Range(0, 100000));
         }
 
-        [CallbackAttribute]
+        [CommandCallback]
         void RequestSetPoint(int point)
         {
             Model.DoSetPoint(point);
