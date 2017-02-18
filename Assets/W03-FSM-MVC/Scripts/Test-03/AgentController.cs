@@ -11,6 +11,7 @@ namespace Wirune.W03.Test03
             base.Awake();
 
             Fsm = new Fsm<AgentController>(this);
+
             Fsm.AddState(1, new AgentControllerState1());
             Fsm.AddState(2, new AgentControllerState2());
 

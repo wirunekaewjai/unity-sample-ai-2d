@@ -7,6 +7,7 @@ namespace Wirune.W03.Test03
         public override void OnEnter()
         {
             base.OnEnter();
+
             Debug.Log("Enter : Controller State 1");
         }
 
