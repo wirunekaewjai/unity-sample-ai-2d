@@ -6,7 +6,7 @@ namespace Wirune.W04.Test01
 {
     public class AgentView : MonoBehaviour, IView
     {
-        private static readonly float c_Step = 0.25f;
+        private static readonly float c_SmoothStep = 0.25f;
 
         public UnityAction<Collider> TriggerEnterEvent;
 
@@ -35,11 +35,11 @@ namespace Wirune.W04.Test01
 
             if (value < m_CurrentHealth)
             {
-                value += c_Step;
+                value += c_SmoothStep;
             }
             else if (value > m_CurrentHealth)
             {
-                value -= c_Step;
+                value -= c_SmoothStep;
             }
 
             m_HealthSlider.value = value;
@@ -47,7 +47,7 @@ namespace Wirune.W04.Test01
 
         private void OnTriggerEnter(Collider c)
         {
-            TriggerEnterEvent.Invoke(c);
+            Dispatcher.Invoke(TriggerEnterEvent, c);
         }
     }
 }

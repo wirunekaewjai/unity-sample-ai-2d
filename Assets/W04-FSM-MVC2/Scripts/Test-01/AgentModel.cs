@@ -41,7 +41,7 @@ namespace Wirune.W04.Test01
             set
             {
                 m_Health = Mathf.Clamp(value, 0, m_MaxHealth);
-                HealthChangedEvent.Invoke(m_Health);
+                Dispatcher.Invoke(HealthChangedEvent, m_Health);
 
                 if (m_Health == 0)
                 {
@@ -52,14 +52,14 @@ namespace Wirune.W04.Test01
 
         public void OnLoad()
         {
-            MaxHealthChangedEvent.Invoke(MaxHealth);
-            HealthChangedEvent.Invoke(Health);
+            Dispatcher.Invoke(MaxHealthChangedEvent, MaxHealth);
+            Dispatcher.Invoke(HealthChangedEvent, Health);
         }
 
         public void Resurrect()
         {
             Health = MaxHealth;
-            ResurrectEvent.Invoke();
+            Dispatcher.Invoke(ResurrectEvent);
         }
     }
 }
