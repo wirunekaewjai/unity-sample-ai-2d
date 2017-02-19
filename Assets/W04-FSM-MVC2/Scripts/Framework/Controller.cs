@@ -18,10 +18,14 @@ namespace Wirune.W04
         private Dictionary<object, ControllerState<TModel, TView>> m_States;
         private object m_CurrentStateID;
 
+        private Stack<object> m_PreviousStatesIDs;
+
         private void Awake()
         {
             m_States = new Dictionary<object, ControllerState<TModel, TView>>();
             m_CurrentStateID = null;
+
+            m_PreviousStatesIDs = new Stack<object>();
 
             OnAwake();
         }
@@ -58,6 +62,7 @@ namespace Wirune.W04
             if (m_CurrentStateID != null)
             {
                 m_States[m_CurrentStateID].OnExit();
+                m_PreviousStatesIDs.Push(m_CurrentStateID);
             }
 
             m_CurrentStateID = nextStateID;
@@ -66,6 +71,36 @@ namespace Wirune.W04
             {
                 m_States[m_CurrentStateID].OnEnter();
             }
+        }
+
+        public bool GoToPreviousState()
+        {
+            if (m_PreviousStatesIDs.Count > 0)
+            {
+                object previousStateID = m_PreviousStatesIDs.Pop();
+
+                if (m_CurrentStateID != null)
+                {
+                    m_States[m_CurrentStateID].OnExit();
+                }
+
+                m_CurrentStateID = previousStateID;
+
+                if (m_CurrentStateID != null)
+                {
+                    m_States[m_CurrentStateID].OnEnter();
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+
+        public void ClearPreviousStates()
+        {
+            m_PreviousStatesIDs.Clear();
         }
     }
 }
