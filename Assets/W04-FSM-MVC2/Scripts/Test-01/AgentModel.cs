@@ -45,7 +45,7 @@ namespace Wirune.W04.Test01
 
                 if (m_Health == 0)
                 {
-                    DiedEvent.Invoke();
+                    Dispatcher.Invoke(DiedEvent);
                 }
             }
         }
