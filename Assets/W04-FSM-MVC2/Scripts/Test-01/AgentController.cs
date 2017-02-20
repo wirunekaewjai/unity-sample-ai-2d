@@ -4,16 +4,23 @@ using UnityEngine.UI;
 
 namespace Wirune.W04.Test01
 {
-    public class AgentController : Controller<AgentModel, AgentView>
+    public class AgentController : MonoBehaviour
     {
-        protected override void Awake()
+        [SerializeField] private AgentModel m_Model;
+        [SerializeField] private AgentView m_View;
+
+        public Fsm<AgentController> Fsm { get; private set; }
+        public AgentModel Model { get { return m_Model; } }
+        public AgentView View { get { return m_View; } }
+
+        private void Awake()
         {
-            base.Awake();
+            Fsm = new Fsm<AgentController>(this);
 
-            CreateState<AgentControllerState1>(1);
-            CreateState<AgentControllerState2>(2);
+            Fsm.CreateState<AgentControllerState1>(1);
+            Fsm.CreateState<AgentControllerState2>(2);
 
-            ChangeState(1);
+            Fsm.ChangeState(1);
         }
 
         private void Start()

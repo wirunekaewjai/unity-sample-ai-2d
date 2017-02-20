@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Wirune.W04.Test01
 {
-    public class AgentControllerState1 : UpdatableControllerState<AgentModel, AgentView>
+    public class AgentControllerState1 : FsmUpdatableState<AgentController>
     {
         public override void OnEnter()
         {
@@ -12,16 +12,16 @@ namespace Wirune.W04.Test01
 
             Debug.Log("Enter : State 1");
 
-            Model.DiedEvent += OnDied;
-            View.TriggerEnterEvent += OnTriggerEnter;
+            Owner.Model.DiedEvent += OnDied;
+            Owner.View.TriggerEnterEvent += OnTriggerEnter;
         }
 
         public override void OnExit()
         {
             base.OnExit();
 
-            Model.DiedEvent -= OnDied;
-            View.TriggerEnterEvent -= OnTriggerEnter;
+            Owner.Model.DiedEvent -= OnDied;
+            Owner.View.TriggerEnterEvent -= OnTriggerEnter;
         }
 
         private void OnUpdate()
@@ -30,27 +30,27 @@ namespace Wirune.W04.Test01
             var v = Input.GetAxis("Vertical");
 
             var direction = new Vector3(h, v, 0);
-            var velocity = direction * Model.Speed;
+            var velocity = direction * Owner.Model.Speed;
 
-            View.Move(velocity);
+            Owner.View.Move(velocity);
         }
 
         private void OnTriggerEnter(Collider c)
         {
             if (c.name == "Cube (1)")
             {
-                Model.Health += Random.Range(2, 5);
+                Owner.Model.Health += Random.Range(2, 5);
             }
             else if (c.name == "Cube (2)")
             {
-                Model.Health -= Random.Range(2, 5);
+                Owner.Model.Health -= Random.Range(2, 5);
             }
         }
 
         private void OnDied()
         {
             Debug.Log("Died");
-            Controller.ChangeState(2);
+            Fsm.ChangeState(2);
         }
     }
 }

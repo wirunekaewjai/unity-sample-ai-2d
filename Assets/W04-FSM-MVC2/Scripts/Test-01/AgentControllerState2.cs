@@ -4,34 +4,34 @@ using UnityEngine;
 
 namespace Wirune.W04.Test01
 {
-    public class AgentControllerState2 : UpdatableControllerState<AgentModel, AgentView>
+    public class AgentControllerState2 : FsmUpdatableState<AgentController>
     {
         public override void OnEnter()
         {
             base.OnEnter();
 
             Debug.Log("Enter : State 2");
-            Model.ResurrectEvent += OnResurrect;
+            Owner.Model.ResurrectEvent += OnResurrect;
         }
 
         public override void OnExit()
         {
             base.OnExit();
-            Model.ResurrectEvent -= OnResurrect;
+            Owner.Model.ResurrectEvent -= OnResurrect;
         }
 
         private void OnUpdate()
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Model.Resurrect();
+                Owner.Model.Resurrect();
             }
         }
 
         private void OnResurrect()
         {
             Debug.Log("Resurrect");
-            Controller.ChangeState(1);
+            Fsm.ChangeState(1);
         }
     }
 }

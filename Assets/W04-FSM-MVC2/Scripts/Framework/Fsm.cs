@@ -3,35 +3,32 @@ using UnityEngine;
 
 namespace Wirune.W04
 {
-    public class Controller<TModel, TView> : MonoBehaviour
+    public sealed class Fsm<TOwner>
     {
-        [SerializeField]
-        private TModel m_Model;
-        public TModel Model { get { return m_Model; } }
+        private TOwner m_Owner;
+        public TOwner Owner { get { return m_Owner; } }
 
-        [SerializeField]
-        private TView m_View;
-        public TView View { get { return m_View; } }
-
-        private Dictionary<object, ControllerState<TModel, TView>> m_States;
+        private Dictionary<object, FsmState<TOwner>> m_States;
         private object m_CurrentStateID;
 
         private Stack<object> m_PreviousStatesIDs;
 
-        protected virtual void Awake()
+        public Fsm(TOwner owner)
         {
-            m_States = new Dictionary<object, ControllerState<TModel, TView>>();
+            m_Owner = owner;
+
+            m_States = new Dictionary<object, FsmState<TOwner>>();
             m_CurrentStateID = null;
 
             m_PreviousStatesIDs = new Stack<object>();
         }
 
-        protected void CreateState<TState>(object stateID)
-            where TState : ControllerState<TModel, TView>
+        public void CreateState<TState>(object stateID)
+            where TState : FsmState<TOwner>
         {
             var state = System.Activator.CreateInstance<TState>();
-
-            state.Controller = this;
+        
+            state.Fsm = this;
             state.OnCreate();
 
             m_States.Add(stateID, state);

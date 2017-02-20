@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 namespace Wirune.W04
 {
-    public class UpdatableControllerState<TModel, TView> : ControllerState<TModel, TView>
+    public class FsmUpdatableState<TOwner> : FsmState<TOwner>
     {
         private static readonly BindingFlags c_Flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
         private UnityAction m_Update;
