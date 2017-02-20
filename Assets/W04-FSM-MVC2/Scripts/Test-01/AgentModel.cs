@@ -4,7 +4,7 @@ using UnityEngine.Events;
 namespace Wirune.W04.Test01
 {
     [System.Serializable]
-    public class AgentModel : IModel
+    public class AgentModel
     {
         public UnityAction<int> MaxHealthChangedEvent;
         public UnityAction<int> HealthChangedEvent;
@@ -14,7 +14,7 @@ namespace Wirune.W04.Test01
 
         [SerializeField] private float m_Speed = 2f;
         [SerializeField] private int m_MaxHealth = 20;
-        private int m_Health = 10;
+        private int m_Health;
 
         public float Speed
         {
@@ -50,8 +50,10 @@ namespace Wirune.W04.Test01
             }
         }
 
-        public void OnLoad()
+        public void Start()
         {
+            m_Health = 10;
+
             Dispatcher.Invoke(MaxHealthChangedEvent, MaxHealth);
             Dispatcher.Invoke(HealthChangedEvent, Health);
         }

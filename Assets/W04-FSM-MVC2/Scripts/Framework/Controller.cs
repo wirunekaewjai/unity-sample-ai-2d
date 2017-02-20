@@ -4,8 +4,6 @@ using UnityEngine;
 namespace Wirune.W04
 {
     public class Controller<TModel, TView> : MonoBehaviour
-        where TModel : IModel
-        where TView : IView
     {
         [SerializeField]
         private TModel m_Model;
@@ -20,30 +18,12 @@ namespace Wirune.W04
 
         private Stack<object> m_PreviousStatesIDs;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             m_States = new Dictionary<object, ControllerState<TModel, TView>>();
             m_CurrentStateID = null;
 
             m_PreviousStatesIDs = new Stack<object>();
-
-            OnAwake();
-        }
-
-        private void Start()
-        {
-            OnStart();
-            Model.OnLoad();
-        }
-
-        protected virtual void OnAwake()
-        {
-
-        }
-
-        protected virtual void OnStart()
-        {
-            
         }
 
         protected void CreateState<TState>(object stateID)

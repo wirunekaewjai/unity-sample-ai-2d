@@ -6,9 +6,9 @@ namespace Wirune.W04.Test01
 {
     public class AgentController : Controller<AgentModel, AgentView>
     {
-        protected override void OnAwake()
+        protected override void Awake()
         {
-            base.OnAwake();
+            base.Awake();
 
             CreateState<AgentControllerState1>(1);
             CreateState<AgentControllerState2>(2);
@@ -16,12 +16,11 @@ namespace Wirune.W04.Test01
             ChangeState(1);
         }
 
-        protected override void OnStart()
+        private void Start()
         {
-            base.OnStart();
-
             Model.MaxHealthChangedEvent += View.SetMaxHealth;
             Model.HealthChangedEvent += View.SetHealth;
+            Model.Start();
         }
     }
 }

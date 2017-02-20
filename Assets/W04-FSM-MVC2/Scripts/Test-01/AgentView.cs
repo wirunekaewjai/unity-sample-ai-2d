@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Wirune.W04.Test01
 {
-    public class AgentView : MonoBehaviour, IView
+    public class AgentView : MonoBehaviour
     {
         private static readonly float c_SmoothStep = 0.25f;
 

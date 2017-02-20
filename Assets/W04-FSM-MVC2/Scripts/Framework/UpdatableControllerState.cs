@@ -8,8 +8,6 @@ using UnityEngine.Events;
 namespace Wirune.W04
 {
     public class UpdatableControllerState<TModel, TView> : ControllerState<TModel, TView>
-        where TModel : IModel
-        where TView : IView
     {
         private static readonly BindingFlags c_Flags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance;
         private UnityAction m_Update;

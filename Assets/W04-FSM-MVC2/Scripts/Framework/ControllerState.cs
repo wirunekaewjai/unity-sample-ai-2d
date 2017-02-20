@@ -3,8 +3,6 @@
 namespace Wirune.W04
 {
     public class ControllerState<TModel, TView>
-        where TModel : IModel
-        where TView : IView
     {
         public Controller<TModel, TView> Controller { get; internal set; }
         public TModel Model { get { return Controller.Model; } }
