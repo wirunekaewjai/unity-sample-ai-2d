@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace Wirune.W04.Test01
 {
-    public class AgentControllerState1 : ControllerState<AgentModel, AgentView>
+    public class AgentControllerState1 : UpdatableControllerState<AgentModel, AgentView>
     {
         public override void OnEnter()
         {
             base.OnEnter();
 
             Debug.Log("Enter : State 1");
-            Looper.RegisterUpdate(OnUpdate);
 
             Model.DiedEvent += OnDied;
             View.TriggerEnterEvent += OnTriggerEnter;
@@ -21,13 +20,11 @@ namespace Wirune.W04.Test01
         {
             base.OnExit();
 
-            Looper.UnregisterUpdate(OnUpdate);
-
             Model.DiedEvent -= OnDied;
             View.TriggerEnterEvent -= OnTriggerEnter;
         }
 
-        void OnUpdate()
+        private void OnUpdate()
         {
             var h = Input.GetAxis("Horizontal");
             var v = Input.GetAxis("Vertical");
@@ -38,7 +35,7 @@ namespace Wirune.W04.Test01
             View.Move(velocity);
         }
 
-        void OnTriggerEnter(Collider c)
+        private void OnTriggerEnter(Collider c)
         {
             if (c.name == "Cube (1)")
             {
@@ -50,7 +47,7 @@ namespace Wirune.W04.Test01
             }
         }
 
-        void OnDied()
+        private void OnDied()
         {
             Debug.Log("Died");
             Controller.ChangeState(2);
