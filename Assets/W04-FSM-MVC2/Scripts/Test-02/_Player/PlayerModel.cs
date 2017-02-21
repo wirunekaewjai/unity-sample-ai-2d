@@ -1,15 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 namespace Wirune.W04.Test02
 {
-    [System.Serializable]
-    public class PlayerModel
+    public class PlayerModel : MonoBehaviour
     {
-        public UnityAction<int> ScoreChangedEvent;
         public UnityAction<int> HealthChangedEvent;
         public UnityAction DiedEvent;
 
@@ -20,24 +15,13 @@ namespace Wirune.W04.Test02
             set { m_Speed = Mathf.Clamp(value, 0f, 10f); }
         }
 
-        private int m_Score;
-        public int Score
-        {
-            get { return m_Score; }
-            set
-            { 
-                m_Score = Mathf.Clamp(value, 0, 99999);
-                Dispatcher.Invoke(ScoreChangedEvent, m_Score);
-            }
-        }
-
-        private int m_Health;
+        private int m_Health = 3;
         public int Health
         {
             get { return m_Health; }
             set
             { 
-                m_Health = Mathf.Clamp(value, 0, 99);
+                m_Health = Mathf.Clamp(value, 0, 10);
                 Dispatcher.Invoke(HealthChangedEvent, m_Health);
 
                 if (m_Health == 0)
@@ -47,10 +31,5 @@ namespace Wirune.W04.Test02
             }
         }
 
-        public void Start()
-        {
-            Health = 10;
-            Score = 0;
-        }
     }
 }

@@ -8,8 +8,7 @@ namespace Wirune.W04.Test02
 {
     public class PlayerView : MonoBehaviour
     {
-        public UnityAction HitEvent;
-
+        [SerializeField] private bool m_DrawDebugLine;
         [SerializeField] private Transform m_Transform;
 
         public Vector2 Position
@@ -17,26 +16,27 @@ namespace Wirune.W04.Test02
             get { return m_Transform.position; }
         }
 
-        public void UpdateVelocity(Vector2 velocity)
+        public void OnVelocityChanged(Vector2 velocity)
         {
             m_Transform.Translate(velocity * Time.deltaTime, Space.World);
         }
 
-        public void UpdateLookAt(Vector2 target)
+        public void OnTargetChanged(Vector2 target)
         {
             var self = (Vector2)m_Transform.position;
             var direction = (target - self);
 
             m_Transform.up = direction;
-//            Debug.DrawLine(self, target, Color.red);
+
+            if (m_DrawDebugLine)
+            {
+                Debug.DrawLine(self, target, Color.red);
+            }
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnEnable()
         {
-            if (other.gameObject.tag == "Respawn")
-            {
-                Dispatcher.Invoke(HitEvent);
-            }
+            m_Transform.position = Vector2.zero;
         }
     }
 }

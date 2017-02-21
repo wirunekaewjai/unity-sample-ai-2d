@@ -8,15 +8,27 @@ namespace Wirune.W04.Test02
 {
     public class HUDView : MonoBehaviour
     {
+        [SerializeField] private GameObject m_Panel;
+
         [SerializeField] private Text m_HealthView;
         [SerializeField] private Text m_ScoreView;
 
-        public void UpdateHealth(int health)
+        public void ShowPanel()
+        {
+            m_Panel.SetActive(true);
+        }
+
+        public void HidePanel()
+        {
+            m_Panel.SetActive(false);
+        }
+
+        public void OnHealthChanged(int health)
         {
             m_HealthView.text = "HEALTH: " + health.ToString("D2");
         }
 
-        public void UpdateScore(int score)
+        public void OnScoreChanged(int score)
         {
             m_ScoreView.text = "SCORE: "+ score.ToString("D5");
         }
