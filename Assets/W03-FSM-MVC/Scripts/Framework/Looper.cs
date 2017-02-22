@@ -1,68 +1,77 @@
 ﻿using System.Collections.Generic;
-using System;
-
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Wirune.W03
 {
     public sealed class Looper : MonoBehaviour
     {
-        private Action m_UpdateCallback;
-        private Action m_FixedUpdateCallback;
-        private Action m_LateUpdateCallback;
+        private UnityAction m_UpdateCallback;
+        private UnityAction m_FixedUpdateCallback;
+        private UnityAction m_LateUpdateCallback;
 
         private void Update()
         {
-            if (null != m_UpdateCallback)
-            {
-                m_UpdateCallback.Invoke();
-            }
+            Dispatcher.Invoke(m_UpdateCallback);
         }
 
         private void FixedUpdate()
         {
-            if (null != m_FixedUpdateCallback)
-            {
-                m_FixedUpdateCallback.Invoke();
-            }
+            Dispatcher.Invoke(m_FixedUpdateCallback);
         }
 
         private void LateUpdate()
         {
-            if (null != m_LateUpdateCallback)
-            {
-                m_LateUpdateCallback.Invoke();
-            }
+            Dispatcher.Invoke(m_LateUpdateCallback);
         }
 
-        public static void RegisterUpdate(Action action)
+        public static void RegisterUpdate(UnityAction action)
         {
             Instance.m_UpdateCallback += action;
         }
 
-        public static void UnregisterUpdate(Action action)
+        public static void UnregisterUpdate(UnityAction action)
         {
-            Instance.m_UpdateCallback -= action;
+            if (null != s_Instance)
+            {
+                s_Instance.m_UpdateCallback -= action;
+            }
         }
 
-        public static void RegisterFixedUpdate(Action action)
+        public static void RegisterFixedUpdate(UnityAction action)
         {
             Instance.m_FixedUpdateCallback += action;
         }
 
-        public static void UnregisterFixedUpdate(Action action)
+        public static void UnregisterFixedUpdate(UnityAction action)
         {
-            Instance.m_FixedUpdateCallback -= action;
+            if (null != s_Instance)
+            {
+                s_Instance.m_UpdateCallback -= action;
+            }
         }
 
-        public static void RegisterLateUpdate(Action action)
+        public static void RegisterLateUpdate(UnityAction action)
         {
             Instance.m_LateUpdateCallback += action;
         }
 
-        public static void UnregisterLateUpdate(Action action)
+        public static void UnregisterLateUpdate(UnityAction action)
         {
-            Instance.m_LateUpdateCallback -= action;
+            if (null != s_Instance)
+            {
+                s_Instance.m_LateUpdateCallback -= action;
+            }
+        }
+
+        public static Coroutine RegisterCoroutine(System.Collections.IEnumerator enumerator)
+        {
+            return Instance.StartCoroutine(enumerator);
+        }
+
+        public static void UnregisterCoroutine(Coroutine coroutine)
+        {
+            Instance.StopCoroutine(coroutine);
         }
 
         private static Looper s_Instance = null;
@@ -77,7 +86,7 @@ namespace Wirune.W03
 
                 if (null == s_Instance)
                 {
-                    GameObject g = new GameObject("FSM Manager");
+                    GameObject g = new GameObject("Looper");
 
                     s_Instance = g.AddComponent<Looper>();
                     s_Instance.transform.SetSiblingIndex(0);
